@@ -10,8 +10,6 @@ import BlogPage from "./Pages/BlogPage";
 function App() {
   return (
     <BrowserRouter>
-      
-
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route path="/" index element={<HomePage />} />
