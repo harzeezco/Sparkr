@@ -1,14 +1,17 @@
-import HeroSection from "./HeroSection"
-
+import HeroSection from "./HeroSection";
+import SpeechSection from "./SpeechSection";
 
 const HomePage = () => {
   return (
     <div>
-      <section className="bg-colorDark">
+      <section aria-labelledby="hero" className="bg-colorDark">
         <HeroSection />
+      </section>
+      <section aria-labelledby="speech" className="bg-orangePrimary relative">
+        <SpeechSection />
       </section>
     </div>
   );
-}
+};
 
-export default HomePage
+export default HomePage;
