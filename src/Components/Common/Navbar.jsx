@@ -6,7 +6,7 @@ const links = ["about us", "services", "project", "blog", "contact"];
 
 const Navbar = () => {
   return (
-    <div className="m-auto flex w-full lg:max-w-[80vw]  items-center justify-between px-6 py-6">
+    <div className="m-auto flex w-full items-center justify-between px-6 py-6 lg:max-w-[85vw]">
       <img src={Logo} alt="Logo Image of Route Agency" />
 
       <nav className="hidden md:block" id="nav-menu">

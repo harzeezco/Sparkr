@@ -1,54 +1,21 @@
 import VideoToggle from "../../assets/Images/VideoToggle.png";
 import Video from "../../assets/Images/Video.png";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import useCounter from "../../Hooks/useCounter";
 
 const HeroSection = () => {
   const domRef = useRef();
-  const domRef1 = useRef();
+  const domRef2 = useRef();
+  const domRef3 = useRef();
 
-  useEffect(() => {
-    let initialValue = 0;
-    const value = parseInt(domRef.current.dataset.value);
-    const increment = Math.ceil(value / 1000)
-    const el = domRef.current;
-    
-
-    const increaseCount = setInterval(() => {
-      initialValue += increment;
-        if (initialValue > value) {
-          el.textContent = value;
-          clearInterval(increaseCount);
-          return;
-        }
-      el.textContent = initialValue;
-    }, 100);
-
-    return () => clearInterval(increaseCount);
-  }, []);
-
-   useEffect(() => {
-     let initialValue = 0;
-     const value = parseInt(domRef1.current.dataset.value);
-     const increment = Math.ceil(value / 1000);
-     const el = domRef1.current;
-
-     const increaseCount = setInterval(() => {
-       initialValue += increment;
-       if (initialValue > value) {
-         el.textContent = `0${value}`;
-         clearInterval(increaseCount);
-         return;
-       }
-       el.textContent = initialValue;
-     }, 100);
-
-     return () => clearInterval(increaseCount);
-   }, []);
-
+  const counter = useCounter(domRef);
+  const counter2 = useCounter(domRef2);
+  const counter3 = useCounter(domRef3);
+  
   return (
     <div
       id="hero"
-      className="m-auto w-full px-6  pb-[6rem] pt-16 lg:max-w-[80vw]"
+      className="m-auto w-full px-6  pb-[6rem] pt-16 lg:max-w-[85vw]"
     >
       <div className="grid">
         <h1 className="whitespace-nowrap font-primary text-4xl font-bold capitalize text-white md:hidden lg:text-[5rem]">
@@ -59,14 +26,14 @@ const HeroSection = () => {
             We Are
           </h1>
 
-          <p className="order-first  leading-[30px] text-colorwhite-100 md:order-last ">
+          <p className="order-first  leading-[30px] text-colorwhite-100 md:order-last">
             We are helping people to grow their business. We are providing the
             best designs and development service for your next dream project.
           </p>
           <img className="" src={VideoToggle} alt="" />
         </div>
 
-        <h1 className="font-primary text-4xl font-bold capitalize leading-snug text-orangePrimary sm:text-[50px] lg:text-[5.2rem]">
+        <h1 className="font-primary text-4xl font-bold capitalize leading-snug tracking-[-1px] text-orangePrimary sm:text-[50px] lg:text-[5rem]">
           building <span className="text-white">digital</span> brands
         </h1>
       </div>
@@ -75,8 +42,8 @@ const HeroSection = () => {
         <div className="order-last md:order-first">
           <div className=" border-b-[1px] border-colorwhite-100 pb-4">
             <h1 className="font-primary text-[30px] leading-[65px] text-white sm:text-[35px] lg:text-[54px]">
-              <span data-value="05" ref={domRef1}>
-                {" "}
+              0
+              <span data-value="05" ref={counter}>
                 0
               </span>
               <span className="text-orangePrimary">+</span>
@@ -87,8 +54,7 @@ const HeroSection = () => {
           </div>
           <div className=" border-b-[1px] border-colorwhite-100 pb-4 pt-2">
             <h1 className="font-primary text-[30px] leading-[65px] text-white sm:text-[35px] lg:text-[54px]">
-              <span data-value="17" ref={domRef}>
-                {" "}
+              <span data-value="17" ref={counter2}>
                 0
               </span>
               <span className="text-orangePrimary">+</span>
@@ -99,8 +65,7 @@ const HeroSection = () => {
           </div>
           <div className=" border-b-[1px] border-colorwhite-100 pb-4 pt-4">
             <h1 className="font-primary text-[30px] leading-[65px] text-white sm:text-[35px] lg:text-[54px]">
-              <span data-value="96" ref={domRef}>
-                {" "}
+              <span data-value="96" ref={counter3}>
                 0
               </span>
               <span className="text-orangePrimary ">%</span>
@@ -110,7 +75,7 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-        <figure className="w-[97%] justify-self-end">
+        <figure className="md:w-[97%]  justify-self-end">
           <img className=" " src={Video} alt="" />
         </figure>
       </div>
