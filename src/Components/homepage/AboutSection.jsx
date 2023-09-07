@@ -18,7 +18,7 @@ const AboutSection = () => {
           alt="The image showing our meeting curriculum"
         />
 
-        <div className="">
+        <article className="">
           <p className="leading-[30px] text-white opacity-[70%] sm:text-[18px]">
             Located in Lagos, we are a professional creative design agency that
             has done many projects with various clients across the world.
@@ -31,10 +31,10 @@ const AboutSection = () => {
             past.
           </p>
 
-          <button className="rounded-[2px] bg-orangePrimary px-4 py-3 text-[16px] font-medium capitalize text-white ">
+          <button className="rounded-[2px] bg-orangePrimary px-8 py-4 text-[16px] font-medium capitalize text-white ">
             learn more
           </button>
-        </div>
+        </article>
       </div>
     </div>
   );

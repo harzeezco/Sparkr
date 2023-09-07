@@ -33,7 +33,7 @@ const HeroSection = () => {
           <img className="" src={VideoToggle} alt="" />
         </div>
 
-        <h1 className="font-primary text-4xl font-bold capitalize leading-snug tracking-[-1px] text-orangePrimary sm:text-[50px] lg:text-[5rem]">
+        <h1 className="font-primary text-4xl font-bold capitalize leading-snug tracking-[-1px] text-orangePrimary sm:text-[50px] lg:text-[5.2rem]">
           building <span className="text-white">digital</span> brands
         </h1>
       </div>
