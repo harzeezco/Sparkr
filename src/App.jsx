@@ -6,6 +6,7 @@ import ProjectPage from "./Pages/ProjectPage";
 import ContactPage from "./Pages/ContactPage";
 import BlogPage from "./Pages/BlogPage";
 import LandingPage from "./Pages/LandingPage";
+import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );

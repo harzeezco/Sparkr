@@ -18,6 +18,9 @@ const HomePage = () => {
       <section aria-labelledby="service" className="bg-colorDark">
         <ServiceSection />
       </section>
+      {/* <section aria-labelledby="project" className="bg-colorDark">
+        <ServiceSection />
+      </section> */}
     </div>
   );
 };
