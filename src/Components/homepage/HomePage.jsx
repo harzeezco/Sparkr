@@ -1,5 +1,6 @@
 import AboutSection from "./AboutSection";
 import HeroSection from "./HeroSection";
+import ProjectSection from "./ProjectSection";
 import ServiceSection from "./ServiceSection";
 import SpeechSection from "./SpeechSection";
 
@@ -18,6 +19,9 @@ const HomePage = () => {
       <section aria-labelledby="service" className="bg-colorDark">
         <ServiceSection />
       </section>
+      <section aria-labelledby="project" className="bg-colorDark">
+        <ProjectSection />
+      </section> 
     </div>
   );
 };

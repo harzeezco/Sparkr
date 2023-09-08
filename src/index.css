@@ -6,4 +6,12 @@
   .heading-secondary {
     @apply font-primary capitalize text-[1.12rem] md:text-4xl  font-bold
   }
+
+  .heading-primary {
+    @apply  font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]
+  }
+
+  .project-btn {
+    @appl
+  }
 }
