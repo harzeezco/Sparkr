@@ -34,7 +34,7 @@ const HeroSection = () => {
           <img className="" src={VideoToggle} alt="" />
         </div>
 
-        <h1 className="font-primary text-4xl font-bold capitalize leading-snug tracking-[-1px] text-orangePrimary sm:text-[50px] lg:text-[5.2rem]">
+        <h1 className="whitespace-nowrap font-primary text-4xl font-bold capitalize leading-snug tracking-[-1px] text-orangePrimary sm:text-[7vw] lg:text-[6.5vw]">
           building <span className="text-white">digital</span> brands
         </h1>
       </div>
@@ -48,7 +48,7 @@ const HeroSection = () => {
             percent_symb="+"
           />
           <Counter
-            data_value="17"
+            data_value="60"
             counter={counter2}
             pagh_text="design awards"
             percent_symb="+"

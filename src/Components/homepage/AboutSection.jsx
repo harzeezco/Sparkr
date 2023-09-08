@@ -31,9 +31,7 @@ const AboutSection = () => {
             past.
           </p>
 
-          <button className="rounded-[2px] bg-orangePrimary px-8 py-4 text-[16px] font-medium capitalize text-white ">
-            learn more
-          </button>
+          <button className="btn-primary">learn more</button>
         </article>
       </div>
     </div>

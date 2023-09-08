@@ -7,11 +7,15 @@
     @apply font-primary capitalize text-[1.12rem] md:text-4xl  font-bold
   }
 
+  .btn-primary {
+    @apply rounded-[2px] bg-orangePrimary px-8 py-4  text-[16px] font-medium capitalize text-white w-full sm:w-auto
+  }
+
   .heading-primary {
     @apply  font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]
   }
 
   .project-btn {
-    @appl
+    @apply rounded-2xl border border-white px-4 py-1 text-sm font-normal text-white opacity-[70%] capitalize
   }
 }
