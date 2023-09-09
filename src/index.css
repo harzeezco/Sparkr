@@ -19,3 +19,35 @@
     @apply rounded-2xl border border-white px-4 py-1 text-sm font-normal text-white opacity-[70%] capitalize
   }
 }
+
+body {
+  overflow-x: hidden;
+}
+
+/* .service::after {
+  content: url('./assets//Images/ServiceSlider.png');
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  animation: running-cycle 20s linear infinite;
+  background-size: contain;
+}
+
+.service::before {
+  content: url('./assets//Images/ServiceSlider.png');
+  position: absolute;
+  left: -200%;
+  width: 100%;
+  animation: run-cycle 20s linear infinite;
+  background-size: contain;
+}
+
+@keyframes run-cycle {
+  0% { left:  -200%;  }
+  100% { left: 200%; }
+}
+
+@keyframes running-cycle {
+  0% { left: -100%; }
+  100% { left: 100%; }
+} */

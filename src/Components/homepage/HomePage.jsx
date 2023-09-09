@@ -1,8 +1,11 @@
 import AboutSection from "./AboutSection";
 import HeroSection from "./HeroSection";
+import ProcessSection from "./ProcessSection";
 import ProjectSection from "./ProjectSection";
 import ServiceSection from "./ServiceSection";
+import ServiceSliderSection from "./ServiceSliderSection";
 import SpeechSection from "./SpeechSection";
+import TestimonialSection from "./TestimonialSection";
 
 const HomePage = () => {
   return (
@@ -21,7 +24,16 @@ const HomePage = () => {
       </section>
       <section aria-labelledby="project" className="bg-colorDark">
         <ProjectSection />
-      </section> 
+      </section>
+      <section aria-labelledby="process" className="bg-colorDark">
+        <ProcessSection />
+      </section>
+      <section aria-labelledby="service-slider" className="bg-colorDarkLight">
+        <ServiceSliderSection />
+      </section>
+      <section aria-labelledby="testimonial" className="bg-orangePrimary">
+        <TestimonialSection />
+      </section>
     </div>
   );
 };

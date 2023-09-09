@@ -11,7 +11,7 @@ const AppLayout = () => {
       <main>
         <Outlet />
       </main>
-      <footer>
+      <footer className="bg-colorDark">
         <Footer />
       </footer>
     </div>

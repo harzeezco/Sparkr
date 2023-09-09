@@ -1,13 +1,16 @@
 import Logo from "../../assets/Icons/route.svg";
 import MessageIcon from "../../assets/Icons/Message.svg";
 import ToggleSwitch from "./Toggle";
+import { Link } from "react-router-dom";
 
 const links = ["about us", "services", "project", "blog", "contact"];
 
 const Navbar = () => {
   return (
     <div className="m-auto flex w-full items-center justify-between px-6 py-6 lg:max-w-[85vw]">
-      <img src={Logo} alt="Logo Image of Route Agency" />
+      <Link to={'/'}>
+        <img src={Logo} alt="Logo Image of Route Agency" />
+      </Link>
 
       <nav className="hidden md:block" id="nav-menu">
         <ul
@@ -15,7 +18,11 @@ const Navbar = () => {
           className="flex items-center justify-between gap-6 text-base font-normal capitalize text-colorwhite-100"
         >
           {links.map((link) => {
-            return <li key={link}>{link}</li>;
+            return (
+              <Link to={link} key={link}>
+                {link}
+              </Link>
+            );
           })}
         </ul>
       </nav>

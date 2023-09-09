@@ -20,7 +20,7 @@ const Card = ({img, job_title }) => {
         <button className="project-btn">design</button>
         <button className="project-btn">development</button>
       </div>
-      <h3 className="text-[1.3rem] font-bold text-white md:text-3xl">
+      <h3 className="text-[1.3rem] font-bold text-white md:text-[2.4vw] whitespace-nowrap">
      {job_title}
       </h3>
     </article>

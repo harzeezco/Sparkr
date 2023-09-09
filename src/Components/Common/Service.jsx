@@ -9,9 +9,9 @@ const Service = ({ service, onToggleService }) => {
 
   return (
     <div className="mt-8">
-      <div className="flex items-center justify-between  py-4 ">
+      <div className="flex items-center justify-between  pb-6 ">
         <h3 className="heading-secondary text-white ">{job}</h3>
-        <button onClick={() => onToggleService(id, true)}>
+        <button onMouseOver={() => onToggleService(id, true)}>
           <img
             src={Open}
             className="h-[18px]"
@@ -21,7 +21,7 @@ const Service = ({ service, onToggleService }) => {
       </div>
 
       {borderb && (
-        <hr className="mb-4 border-b-[1px] text-white opacity-[30%]" />
+        <hr className="mb-6 border-b-[1px] text-white opacity-[30%]" />
       )}
 
       {isOpen && (
@@ -31,7 +31,7 @@ const Service = ({ service, onToggleService }) => {
             <h3 className="heading-secondary uppercase text-orangePrimary">
               {work} <span className="capitalize ">Design</span>
             </h3>
-            <button onClick={() => onToggleService(id, false)}>
+            <button onMouseEnter={() => onToggleService(id, false)}>
               <img
                 className="h-[18px]"
                 src={Close}

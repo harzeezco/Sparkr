@@ -6,7 +6,7 @@ const AboutSection = () => {
       id="about"
       className="m-auto w-full px-6  pb-[6rem] pt-20 lg:max-w-[85vw]"
     >
-      <h1 className="font-weight-lg font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]">
+      <h1 className="font-weight-lg font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px] leading-10">
         our <span className="text-orangePrimary">approach </span> is to <br />
         solve problem
       </h1>
