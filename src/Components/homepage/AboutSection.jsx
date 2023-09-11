@@ -4,21 +4,21 @@ const AboutSection = () => {
   return (
     <div
       id="about"
-      className="m-auto w-full px-6  pb-[6rem] pt-20 lg:max-w-[85vw]"
+      className="m-auto w-full px-4  pb-[6rem] pt-20 lg:max-w-[85vw]"
     >
       <h1 className="font-weight-lg font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px] leading-10">
         our <span className="text-orangePrimary">approach </span> is to <br />
         solve problem
       </h1>
 
-      <div className="flex flex-col items-center justify-between gap-x-20 pt-12 md:flex-row">
+      <div className="flex flex-col items-center justify-between gap-x-20 pt-12 md:flex-row gap-y-10">
         <img
           className="w-full max-w-[450px]"
           src={Meeting}
           alt="The image showing our meeting curriculum"
         />
 
-        <article className="">
+        <article className="order-first md:order-last">
           <p className="leading-[30px] text-white opacity-[70%] sm:text-[18px]">
             Located in Lagos, we are a professional creative design agency that
             has done many projects with various clients across the world.

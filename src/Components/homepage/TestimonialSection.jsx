@@ -1,9 +1,53 @@
-import { useEffect, useState } from "react";
+
 import BlockQuote from "../../assets/Icons/Union.svg";
+
+
+
+// Create a corresponding CSS file for styling
+
+// function Carousel({ items }) {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   useEffect(() => {
+//     const inCreaseActiveTestimonial = setTimeout(() => {
+//       setCurrentIndex((prev) => (prev + 1) % items.length);
+//     }, 1000);
+
+//     return () => {
+//       clearTimeout(inCreaseActiveTestimonial);
+//     };
+//   }, [currentIndex, items]);
+//   console.log(items[currentIndex].id);
+
+//   return (
+//     <div className="carousel-slide">
+//       <p className="lg:[42px] text-[20px] leading-7 text-white md:text-[30px] md:leading-[50px] lg:text-[2.9vw]">
+//         {items[currentIndex].text}
+//       </p>
+//       <div className="flex justify-between pt-6">
+//         <div className="">
+//           <h4 className="text-[20px] font-bold leading-8 text-white md:text-2xl">
+//             {items[currentIndex].name}
+//           </h4>
+//           <p className="text-white opacity-[70%]">
+//             {items[currentIndex].address}
+//           </p>
+//         </div>
+//         <div className="flex items-center gap-x-1">
+        
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// Carousel.propTypes = {
+//   items: PropTypes.array,
+// };
 
 const testimoanials = [
   {
-    id: 1,
+    id: 0,
     text: ` Route agency team are just amazing. We have had some personal
             websites and dashboards. The team always delivered on time. The best
             quality with endless iterations. Good Job!`,
@@ -11,14 +55,14 @@ const testimoanials = [
     address: "Los Angeles, CA",
   },
   {
-    id: 2,
+    id: 1,
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo
           enim eaque voluptates ea vero corrupti d.`,
     name: "Ismail",
     address: "USA, CA",
   },
   {
-    id: 3,
+    id: 2,
     text: `  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
           assumenda consectetur, vitae molestiae natus explicabo illo, ipsam
           expedita excepturi quidem `,
@@ -26,7 +70,7 @@ const testimoanials = [
     address: "Lagos, CA",
   },
   {
-    id: 4,
+    id: 3,
     text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
           repellat distinctio id maxime in accusamus neque officiis officia enim
           iure illo cupiditate quibusdam, saepe`,
@@ -34,7 +78,7 @@ const testimoanials = [
     address: "Nigeria, CA",
   },
   {
-    id: 5,
+    id: 4,
     text: `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore
           magni quibusdam eius odio aliquam voluptatum pariatur nam impedit odit
           voluptatem `,
@@ -44,25 +88,10 @@ const testimoanials = [
 ];
 
 const TestimonialSection = () => {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const inCreaseActiveTestimonial = setTimeout(() => {
-      setActive((prev) => (prev + 1) % testimoanials.length);
-    }, 3000);
-
-    return () => {
-      clearTimeout(inCreaseActiveTestimonial);
-    };
-  }, [active]);
-
-  console.log(active);
+ 
 
   return (
-    <div
-      id="testimonial"
-      className="m-auto w-full  px-6 py-14  lg:max-w-[85vw]"
-    >
+    <div id="testimonial" className="m-auto w-full px-4 py-14 lg:max-w-[85vw]">
       <blockquote className=" grid md:grid-cols-[120px_1fr]">
         <div className="flex h-20 w-20 items-center justify-center rounded-full bg-colorDark p-2">
           <img
@@ -73,64 +102,21 @@ const TestimonialSection = () => {
         </div>
 
         <article className="">
-          {/* <p className="lg:[42px] text-[20px] leading-7 text-white md:text-[30px] md:leading-[50px] lg:text-[2.9vw]">
-            Route agency team are just amazing. We have had some personal
-            websites and dashboards. The team always delivered on time. The best
-            quality with endless iterations. Good Job!
-          </p> */}
-          <div className="flex justify-between pt-6">
-            {/* <div className="">
-              <h4 className="text-[20px] font-bold leading-8 text-white md:text-2xl">
-                Elizabeth
-              </h4>
-              <p className="text-white opacity-[70%]">Los Angeles, CA</p>
-            </div> */}
-            <>
-              {testimoanials
-                .filter((items, i) => i === active)
-                .map((activeItems) => {
-                  return (
-                    <div key={activeItems.id}>
-                      <p className="lg:[42px] text-[20px] leading-7 text-white md:text-[30px] md:leading-[50px] lg:text-[2.9vw]">
-                        {activeItems.text}
-                      </p>
+         <div id="carousel" className="carousel slide carousel-fade" data-ride="carousel">
+    <ol className="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" className="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div className="carousel-inner">
+        <div className="active item"></div>
+        <div className="item"></div>
+        <div className="item"></div>
+    </div>
+    <a className="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+    <a className="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+</div>
 
-                      <div className="">
-                        <h4 className="text-[20px] font-bold leading-8 text-white md:text-2xl">
-                          {activeItems.name}
-                        </h4>
-                        <p className="text-white opacity-[70%]">
-                          {activeItems.address}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-            </>
-
-            <div className="flex items-center gap-x-1">
-              <button
-                className="h-3 w-3 rounded-full bg-white opacity-[70%]"
-                onClick={() => setActive(1)}
-              ></button>
-              <button
-                className="h-3 w-3 rounded-full bg-white opacity-[70%]"
-                onClick={() => setActive(2)}
-              ></button>
-              <button
-                className="h-5 w-3 rounded-full bg-white"
-                onClick={() => setActive(3)}
-              ></button>
-              <button
-                className="h-3 w-3 rounded-full bg-white opacity-[70%]"
-                onClick={() => setActive(4)}
-              ></button>
-              <button
-                className="h-3 w-3 rounded-full bg-white opacity-[70%]"
-                onClick={() => setActive(5)}
-              ></button>
-            </div>
-          </div>
         </article>
       </blockquote>
     </div>

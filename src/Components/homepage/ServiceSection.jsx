@@ -46,7 +46,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <div className="m-auto w-full px-6  pb-[6rem] lg:max-w-[85vw]" id="service">
+    <div className="m-auto w-full px-4  pb-[6rem] lg:max-w-[85vw]" id="service">
       <h1 className="heading-primary">
         <span className="text-orangePrimary">services </span> we provide
       </h1>

@@ -14,6 +14,12 @@ const useCounter = (value) => {
         clearInterval(increaseCount);
         return;
       }
+
+      if (domValue < 10) {
+        el.textContent = `0${domValue}`;
+        clearInterval(increaseCount);
+        return;
+      }
       el.textContent = initialValue;
     }, 100);
 

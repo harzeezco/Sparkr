@@ -7,7 +7,7 @@ import Card from "../Common/Card";
 
 const ProjectSection = () => {
   return (
-    <div id="project" className="m-auto w-full px-6  pb-[6rem] lg:max-w-[85vw]">
+    <div id="project" className="m-auto w-full px-4  pb-[6rem] lg:max-w-[85vw]">
       <h1 className="heading-primary">
         our latest <span className="text-orangePrimary">project</span>
       </h1>

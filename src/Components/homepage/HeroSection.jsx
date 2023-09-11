@@ -16,7 +16,7 @@ const HeroSection = () => {
   return (
     <div
       id="hero"
-      className="m-auto w-full px-6  pb-[6rem] pt-16 lg:max-w-[85vw]"
+      className="m-auto w-full px-4 pt-10  pb-[6rem] md:pt-16 lg:max-w-[85vw]"
     >
       <div className="grid">
         <h1 className="whitespace-nowrap font-primary text-4xl font-bold capitalize text-white md:hidden lg:text-[5.2rem]">
@@ -31,10 +31,10 @@ const HeroSection = () => {
             We are helping people to grow their business. We are providing the
             best designs and development service for your next dream project.
           </p>
-          <img className="" src={VideoToggle} alt="" />
+          <img className="mt-8 md:mt-0" src={VideoToggle} alt="Video play" />
         </div>
 
-        <h1 className="whitespace-nowrap font-primary text-4xl font-bold capitalize leading-snug tracking-[-1px] text-orangePrimary sm:text-[7vw] lg:text-[6.5vw]">
+        <h1 className="md:whitespace-nowrap leading-[50px] font-primary text-[40px] font-bold capitalize md:leading-snug tracking-[-1px] text-orangePrimary sm:text-[7vw] lg:text-[6.5vw]">
           building <span className="text-white">digital</span> brands
         </h1>
       </div>

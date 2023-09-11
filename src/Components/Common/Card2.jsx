@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const Card2 = ({ num, heading, prgh }) => {
   return (
     <div className="bg-colorDarkLight p-5">
-      <div className="mb-2 flex items-center gap-x-5">
+      <div className="mb-2 flex items-center gap-x-4">
         <h3 className="text-[20px] font-medium text-orangePrimary md:text-[30px]">
           {num}
         </h3>

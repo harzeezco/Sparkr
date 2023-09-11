@@ -16,9 +16,9 @@ const Card = ({img, job_title }) => {
       </div>
 
       <div className="my-6 flex gap-x-4">
-        <button className="project-btn">website</button>
-        <button className="project-btn">design</button>
-        <button className="project-btn">development</button>
+        <button className="project-btn cursor-auto">website</button>
+        <button className="project-btn cursor-auto">design</button>
+        <button className="project-btn cursor-auto">development</button>
       </div>
       <h3 className="text-[1.3rem] font-bold text-white md:text-[2.4vw] whitespace-nowrap">
      {job_title}
