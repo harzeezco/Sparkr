@@ -1,22 +1,14 @@
 import VideoToggle from "../../assets/Images/VideoToggle.png";
 import Video from "../../assets/Images/Video.png";
-import { useRef } from "react";
-import useCounter from "../../Hooks/useCounter";
-import Counter from "../Common/Counter";
+import RegularList from "../general/RegularList";
+import { COUNT_DETAILS } from "../../lib/data";
+import CounterDetails from "../data-display/CounterDetails";
 
 const HeroSection = () => {
-  const domRef = useRef();
-  const domRef2 = useRef();
-  const domRef3 = useRef();
-
-  const counter = useCounter(domRef);
-  const counter2 = useCounter(domRef2);
-  const counter3 = useCounter(domRef3);
-
   return (
     <div
       id="hero"
-      className="m-auto w-full px-4 pt-10  pb-[6rem] md:pt-16 lg:max-w-[85vw]"
+      className="m-auto w-full px-4 pb-[6rem]  pt-10 md:pt-16 lg:max-w-[85vw]"
     >
       <div className="grid">
         <h1 className="whitespace-nowrap font-primary text-4xl font-bold capitalize text-white md:hidden lg:text-[5.2rem]">
@@ -34,30 +26,17 @@ const HeroSection = () => {
           <img className="mt-8 md:mt-0" src={VideoToggle} alt="Video play" />
         </div>
 
-        <h1 className="md:whitespace-nowrap leading-[50px] font-primary text-[40px] font-bold capitalize md:leading-snug tracking-[-1px] text-orangePrimary sm:text-[7vw] lg:text-[6.5vw]">
+        <h1 className="font-primary text-[40px] font-bold capitalize leading-[50px] tracking-[-1px] text-orangePrimary sm:text-[7vw] md:whitespace-nowrap md:leading-snug lg:text-[6.5vw]">
           building <span className="text-white">digital</span> brands
         </h1>
       </div>
 
       <div className="grid grid-cols-1 items-center pt-10  md:grid-cols-[300px_minmax(0,_1fr)]">
         <div className="order-last md:order-first">
-          <Counter
-            data_value="5"
-            counter={counter}
-            pagh_text="years of exprerience"
-            percent_symb="+"
-          />
-          <Counter
-            data_value="60"
-            counter={counter2}
-            pagh_text="design awards"
-            percent_symb="+"
-          />
-          <Counter
-            data_value="97"
-            counter={counter3}
-            pagh_text="Clients satisfactions"
-            percent_symb="%"
+          <RegularList
+            items={COUNT_DETAILS}
+            itemComponent={CounterDetails}
+            resourceName="item"
           />
         </div>
         <figure className="justify-self-end md:w-[97%]">

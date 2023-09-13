@@ -1,45 +1,16 @@
 import { useState } from "react";
-import Service from "../Common/Service";
-
-const service_data = [
-  {
-    id: 1,
-    job: "Graphic design",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-  },
-  {
-    id: 2,
-    job: "illustrations",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-  },
-  {
-    id: 3,
-    job: "logo & branding",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-  },
-  {
-    id: 4,
-    job: "development",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: false,
-  },
-];
+import RegularList from "../general/RegularList";
+import { SERVICE_DATA } from "../../lib/data";
+import ServiceDetails from "../data-display/ServiceDetails";
 
 const ServiceSection = () => {
-  const [services, setServices] = useState(service_data);
+  const [services, setServices] = useState(SERVICE_DATA);
 
   const handleService = (id, condition) => {
     setServices((prev) =>
       prev.map((current) => {
         return current.id === id
-          ? { ...current, isOpen: condition, borderb: true  }
+          ? { ...current, isOpen: condition, borderb: true }
           : { ...current };
       }),
     );
@@ -57,13 +28,19 @@ const ServiceSection = () => {
       </p>
 
       <div className="mx-auto mt-10">
-        {services.map((service) => (
+        <RegularList
+          items={services}
+          itemComponent={ServiceDetails}
+          resourceName="service"
+          onToggleService={handleService}
+        />
+        {/* {services.map((service) => (
           <Service
             key={service.id}
             service={service}
-            onToggleService={handleService}
+            
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );

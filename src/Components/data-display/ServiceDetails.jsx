@@ -4,7 +4,7 @@ import Open from "../../assets/Icons/upArrow.svg";
 import Close from "../../assets/Icons/delete.svg";
 import WorkImage from "../../assets/Images/Video.png";
 
-const Service = ({ service, onToggleService }) => {
+const ServiceDetails = ({ service, onToggleService }) => {
   const { id, work, job, isOpen, borderb } = service;
 
   return (
@@ -50,10 +50,10 @@ const Service = ({ service, onToggleService }) => {
   );
 };
 
-Service.propTypes = {
+ServiceDetails.propTypes = {
   service: PropTypes.object,
   borderb: PropTypes.bool,
   onToggleService: PropTypes.func,
 };
 
-export default Service;
+export default ServiceDetails;

@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 import upArrow from "../../assets/Icons/upArrow.svg";
 
-const Card = ({img, job_title }) => {
+const Card = ({ card }) => {
+  const { img, job_title } = card;
   return (
     <article className="mb-6">
       <div className="group relative">
@@ -20,16 +21,17 @@ const Card = ({img, job_title }) => {
         <button className="project-btn cursor-auto">design</button>
         <button className="project-btn cursor-auto">development</button>
       </div>
-      <h3 className="text-[1.3rem] font-bold text-white md:text-[2.4vw] whitespace-nowrap">
-     {job_title}
+      <h3 className="whitespace-nowrap text-[1.3rem] font-bold text-white md:text-[2.4vw]">
+        {job_title}
       </h3>
     </article>
   );
 };
 
 Card.propTypes = {
-   img: PropTypes.node,
-   job_title: PropTypes.string
-}
+  card: PropTypes.object,
+  img: PropTypes.node,
+  job_title: PropTypes.string,
+};
 
 export default Card;

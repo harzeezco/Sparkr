@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 
-const Counter = ({ counter, pagh_text, percent_symb, data_value }) => {
+const CounterDetails = ({ item }) => {
+  const { counter, pagh_text, percent_symb, data_value } = item;
+
   const num =
     "font-primary text-[40px] leading-[65px] text-white sm:text-[35px] lg:text-[54px]";
 
@@ -20,11 +22,12 @@ const Counter = ({ counter, pagh_text, percent_symb, data_value }) => {
   );
 };
 
-Counter.propTypes = {
+CounterDetails.propTypes = {
+  item: PropTypes.object,
   counter: PropTypes.object,
   pagh_text: PropTypes.string,
   percent_symb: PropTypes.string,
   data_value: PropTypes.string,
 };
 
-export default Counter;
+export default CounterDetails;

@@ -4,11 +4,10 @@ import s1 from "../../assets/Icons/Facebook.svg";
 import s2 from "../../assets/Icons/Linkedin.svg";
 import s3 from "../../assets/Icons/Twitter.svg";
 import s4 from "../../assets/Icons/Instagram.svg";
-import Line from '../../assets/Images/Line.png'
+import Line from "../../assets/Images/Line.png";
+import { FOOTER_1_NAV_LINKS, FOOTER_2_NAV_LINKS } from "../../lib/data";
 
-
-const aboutNavs = ["home", "about us", "services", "project"];
-const supportNavs = ["blog", "contact", "menu"];
+import FooterNavDetails from "../data-display/FooterNavDetails";
 
 const Footer = () => {
   return (
@@ -83,38 +82,24 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <nav>
-          <h3 className="text-[20px] font-bold capitalize leading-8 text-white">
-            about
-          </h3>
-          <ul className="mt-7 grid gap-y-4 capitalize text-white opacity-[70%]">
-            {aboutNavs.map((items) => (
-              <li key={items}>{items}</li>
-            ))}
-          </ul>
-        </nav>
 
-        <nav>
-          <h3 className="text-[20px] font-bold capitalize leading-8 text-white">
-            support
-          </h3>
-          <ul className="mt-7 grid gap-y-4 capitalize text-white opacity-[70%]">
-            {supportNavs.map((items) => (
-              <li key={items}>{items}</li>
-            ))}
-          </ul>
-        </nav>
+        <FooterNavDetails
+          heading="about"
+          items={FOOTER_1_NAV_LINKS}
+          link={true}
+        />
 
-        <nav>
-          <h3 className="text-[20px] font-bold capitalize leading-8 text-white">
-            join community
-          </h3>
-          <ul>
-            <li className="mt-7 capitalize text-white opacity-[70%]">
-              Community@agency.com
-            </li>
-          </ul>
-        </nav>
+        <FooterNavDetails
+          heading="support"
+          items={FOOTER_2_NAV_LINKS}
+          link={true}
+        />
+
+        <FooterNavDetails
+          heading="join community"
+          link={false}
+          content="Community@agency.com"
+        />
       </div>
 
       <hr className="my-8 w-full border-b-[1px] text-white opacity-[30%]" />

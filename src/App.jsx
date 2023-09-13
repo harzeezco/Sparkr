@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AppLayout from "./Components/AppLayout";
 import AboutPage from "./Pages/AboutPage";
 import ServicePage from "./Pages/ServicePage";
 import ProjectPage from "./Pages/ProjectPage";
@@ -7,6 +6,7 @@ import ContactPage from "./Pages/ContactPage";
 import BlogPage from "./Pages/BlogPage";
 import LandingPage from "./Pages/LandingPage";
 import ErrorPage from "./Pages/ErrorPage";
+import AppLayout from "./Components/layouts/AppLayout";
 
 function App() {
   return (
@@ -27,4 +27,3 @@ function App() {
 }
 
 export default App;
-
