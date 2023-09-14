@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Container from "../layouts/Container";
 import RegularList from "../general/RegularList";
-import { SERVICE_DATA } from "../../lib/data";
 import ServiceDetails from "../data-display/ServiceDetails";
+
+import { SERVICE_DATA } from "../../lib/data";
 
 const ServiceSection = () => {
   const [services, setServices] = useState(SERVICE_DATA);
@@ -17,7 +19,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <div className="m-auto w-full px-4  pb-[6rem] lg:max-w-[85vw]" id="service">
+    <Container id="service" pb="[6rem]" pt="0">
       <h1 className="heading-primary">
         <span className="text-orangePrimary">services </span> we provide
       </h1>
@@ -34,15 +36,8 @@ const ServiceSection = () => {
           resourceName="service"
           onToggleService={handleService}
         />
-        {/* {services.map((service) => (
-          <Service
-            key={service.id}
-            service={service}
-            
-          />
-        ))} */}
       </div>
-    </div>
+    </Container>
   );
 };
 

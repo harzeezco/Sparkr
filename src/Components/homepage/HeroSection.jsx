@@ -1,15 +1,15 @@
+import RegularList from "../general/RegularList";
+import CounterDetails from "../data-display/CounterDetails";
+import Container from "../layouts/Container";
+
+import { COUNT_DETAILS } from "../../lib/data";
+
 import VideoToggle from "../../assets/Images/VideoToggle.png";
 import Video from "../../assets/Images/Video.png";
-import RegularList from "../general/RegularList";
-import { COUNT_DETAILS } from "../../lib/data";
-import CounterDetails from "../data-display/CounterDetails";
 
 const HeroSection = () => {
   return (
-    <div
-      id="hero"
-      className="m-auto w-full px-4 pb-[6rem]  pt-10 md:pt-16 lg:max-w-[85vw]"
-    >
+    <Container id="hero" pb="[6rem]" pt="10">
       <div className="grid">
         <h1 className="whitespace-nowrap font-primary text-4xl font-bold capitalize text-white md:hidden lg:text-[5.2rem]">
           We Are
@@ -43,7 +43,7 @@ const HeroSection = () => {
           <img src={Video} alt="" />
         </figure>
       </div>
-    </div>
+    </Container>
   );
 };
 

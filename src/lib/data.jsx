@@ -2,6 +2,10 @@ import CounterRef from "../Components/general/CounterRef";
 import Card1Image from "../assets/Images/Card1.png";
 import Card2Image from "../assets/Images/Card2.png";
 import Card3Image from "../assets/Images/Card3.png";
+import Facebook from "../assets/Icons/Facebook.svg";
+import Linkedin from "../assets/Icons/Linkedin.svg";
+import Twitter from "../assets/Icons/Twitter.svg";
+import Instagram from "../assets/Icons/Instagram.svg";
 
 export const NAV_LINKS = [
   {
@@ -189,5 +193,28 @@ export const PROCESS_DETAILS = [
     prgh: `We start by learn and research based on client brief and resource
              to gain about the needs, goals, product and requirements. We are
              providing the best.`,
+  },
+];
+
+export const SOCIAL_LINKS = [
+  {
+    name: "Facebook",
+    icon: Facebook,
+    url: "https://github.com",
+  },
+  {
+    name: "Twitter",
+    icon: Twitter,
+    url: "https://twitter.com/",
+  },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    url: "https://www.figma.com",
+  },
+  {
+    name: "Linkedin",
+    icon: Linkedin,
+    url: "https://www.figma.com",
   },
 ];

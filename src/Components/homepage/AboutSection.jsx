@@ -1,17 +1,15 @@
 import Meeting from "../../assets/Images/meeting.png";
+import Container from "../layouts/Container";
 
 const AboutSection = () => {
   return (
-    <div
-      id="about"
-      className="m-auto w-full px-4  pb-[6rem] pt-20 lg:max-w-[85vw]"
-    >
-      <h1 className="font-weight-lg font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px] leading-10">
+    <Container id="about" pb="[6rem]" pt="20">
+      <h1 className="font-weight-lg font-primary text-[30px] font-bold capitalize leading-10 text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]">
         our <span className="text-orangePrimary">approach </span> is to <br />
         solve problem
       </h1>
 
-      <div className="flex flex-col items-center justify-between gap-x-20 pt-12 md:flex-row gap-y-10">
+      <div className="flex flex-col items-center justify-between gap-x-20 gap-y-10 pt-12 md:flex-row">
         <img
           className="w-full max-w-[450px]"
           src={Meeting}
@@ -34,7 +32,7 @@ const AboutSection = () => {
           <button className="btn-primary">learn more</button>
         </article>
       </div>
-    </div>
+    </Container>
   );
 };
 

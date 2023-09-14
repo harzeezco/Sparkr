@@ -1,10 +1,12 @@
-import { PROJECT_CARD_DETAILS } from "../../lib/data";
+import Container from "../layouts/Container";
 import RegularList from "../general/RegularList";
 import Card from "../layouts/Card";
 
+import { PROJECT_CARD_DETAILS } from "../../lib/data";
+
 const ProjectSection = () => {
   return (
-    <div id="project" className="m-auto w-full px-4  pb-[6rem] lg:max-w-[85vw]">
+    <Container id="project" pb="[6rem]" pt="0">
       <h1 className="heading-primary">
         our latest <span className="text-orangePrimary">project</span>
       </h1>
@@ -19,7 +21,7 @@ const ProjectSection = () => {
       <div className="mt-8 text-center">
         <button className="btn-primary">view all project</button>
       </div>
-    </div>
+    </Container>
   );
 };
 
