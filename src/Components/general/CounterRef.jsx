@@ -9,7 +9,7 @@ const CounterRef = () => {
   const counter1 = useCounter(count1Ref);
   const counter2 = useCounter(countRef2);
   const counter3 = useCounter(countRef3);
-
+   
   return { counter1, counter2, counter3 };
 };
 

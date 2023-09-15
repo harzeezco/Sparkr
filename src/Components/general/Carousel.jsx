@@ -1,55 +1,57 @@
-import { useRef, useState } from "react";
 import PropTypes from "prop-types";
+import useCarouselSlide from "../../Hooks/useCarouselSlide";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import BlockQuote from "../../assets/Icons/Union.svg";
+
 const TestimonialsCarousel = ({ testimonials }) => {
-  const sliderRef = useRef(null);
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const settings = {
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    beforeChange: (current, next) => {
-      setActiveSlide(next);
-    },
-  };
-
-  const goToSlide = (index) => {
-    sliderRef.current.slickGoTo(index);
-    setActiveSlide(index);
-  };
+  const { activeSlide, sliderRef, settings, goToSlide } = useCarouselSlide();
 
   return (
-    <div className="w-full">
+    <article className="relative w-full">
       <Slider {...settings} ref={sliderRef}>
         {testimonials.map((testimonial, index) => (
-          <div key={testimonial.id} className="p-4 text-center">
-            <p className="text-lg text-gray-600">{testimonial.text}</p>
-            <p className="text-lg font-semibold">{testimonial.name}</p>
-            <p className="text-gray-500">{testimonial.address}</p>
+          <div key={testimonial.id} className="p-4">
+            <div className="grid justify-start p-4 md:grid-cols-[120px_1fr]">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-colorDark p-2">
+                <img
+                  className="h-6"
+                  src={BlockQuote}
+                  alt="Image of the testimonial quote icon"
+                />
+              </div>
+
+              <article className="mt-6 md:mt-0">
+                <h3 className="sm:pb-5 text-[20px] leading-[30px] text-white  sm:text-[30px] lg:text-[40px] lg:leading-[60px]">
+                  {testimonial.text}
+                </h3>
+                <div className="pt-6">
+                  <h4 className="text-2xl text-[20px] font-bold leading-[30px] text-white lg:leading-9">
+                    {testimonial.name}
+                  </h4>
+                  <p className="leading-6 text-white opacity-[70%]">
+                    {testimonial.address}
+                  </p>
+                </div>
+              </article>
+            </div>
           </div>
         ))}
       </Slider>
-      <div className="mt-4 flex justify-center">
+      <div className="sm:absolute sm:bottom-[40px] pl-5 md:pl-0 right-0 flex sm:justify-center ">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`${
-              activeSlide === index ? "bg-blue-500" : "bg-gray-300"
-            } mx-2 rounded px-4 py-2 font-bold text-white hover:bg-blue-700`}
-          >
-            {index + 1}
-          </button>
+              activeSlide === index ? "bg-white" : "py-2 opacity-[50%]"
+            } mx-2 rounded-full bg-white px-2 hover:bg-white`}
+          ></button>
         ))}
       </div>
-    </div>
+    </article>
   );
 };
 

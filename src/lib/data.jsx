@@ -7,6 +7,8 @@ import Linkedin from "../assets/Icons/Linkedin.svg";
 import Twitter from "../assets/Icons/Twitter.svg";
 import Instagram from "../assets/Icons/Instagram.svg";
 
+
+
 export const NAV_LINKS = [
   {
     id: 1,
@@ -49,7 +51,7 @@ export const FOOTER_1_NAV_LINKS = [
   {
     id: 3,
     link: "services",
-    path: "/services",
+    path: "/service",
   },
   {
     id: 4,
@@ -198,23 +200,71 @@ export const PROCESS_DETAILS = [
 
 export const SOCIAL_LINKS = [
   {
+    id: 1,
     name: "Facebook",
     icon: Facebook,
     url: "https://github.com",
   },
   {
+    id: 2,
     name: "Twitter",
     icon: Twitter,
     url: "https://twitter.com/",
   },
   {
+    id: 3,
     name: "Instagram",
     icon: Instagram,
     url: "https://www.figma.com",
   },
   {
+    id: 4,
     name: "Linkedin",
     icon: Linkedin,
     url: "https://www.figma.com",
   },
 ];
+
+export const TESTIMONIALS_DETAILS = [
+  {
+    id: 0,
+    text: ` Route agency team are just amazing. We have had some personal
+            websites and dashboards. The team always delivered on time. The best
+            quality with endless iterations. Good Job!`,
+    name: "Elizabeth",
+    address: "Los Angeles, CA",
+  },
+  {
+    id: 1,
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo
+          enim eaque voluptates ea vero corrupti d.`,
+    name: "Ismail",
+    address: "USA, CA",
+  },
+  {
+    id: 2,
+    text: `  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          assumenda consectetur, vitae molestiae natus explicabo illo, ipsam
+          expedita excepturi quidem `,
+    name: "Azeez",
+    address: "Lagos, CA",
+  },
+  {
+    id: 3,
+    text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
+          repellat distinctio id maxime in accusamus neque officiis officia enim
+          iure illo cupiditate quibusdam, saepe`,
+    name: "Wakil",
+    address: "Nigeria, CA",
+  },
+  {
+    id: 4,
+    text: `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore
+          magni quibusdam eius odio aliquam voluptatum pariatur nam impedit odit
+          voluptatem `,
+    name: "Adam",
+    address: "Norway, CA",
+  },
+];
+
+

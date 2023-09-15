@@ -5,6 +5,7 @@ const RegularList = ({
   resourceName,
   itemComponent: ItemComponent,
   link,
+  onToggleService,
 }) => {
   return (
     <>
@@ -13,6 +14,7 @@ const RegularList = ({
           key={item.id}
           {...{ [resourceName]: item }}
           link={link}
+          onToggleService={onToggleService}
         />
       ))}
     </>
@@ -24,6 +26,7 @@ RegularList.propTypes = {
   itemComponent: PropTypes.func,
   resourceName: PropTypes.string,
   link: PropTypes.bool,
+  onToggleService: PropTypes.func,
 };
 
 export default RegularList;

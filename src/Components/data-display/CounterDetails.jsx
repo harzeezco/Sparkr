@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const CounterDetails = ({ item }) => {
   const { counter, pagh_text, percent_symb, data_value } = item;
-
+ 
   const num =
     "font-primary text-[40px] leading-[65px] text-white sm:text-[35px] lg:text-[54px]";
 
