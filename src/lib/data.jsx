@@ -1,13 +1,19 @@
 import CounterRef from "../Components/general/CounterRef";
-import Card1Image from "../assets/Images/Card1.png";
-import Card2Image from "../assets/Images/Card2.png";
-import Card3Image from "../assets/Images/Card3.png";
+import Card1Image from "../assets/Images/Projects/Card1.png";
+import Card2Image from "../assets/Images/projects/Card2.png";
+import Card3Image from "../assets/Images/Projects/Card3.png";
+import Card4Image from "../assets/Images/Projects/Card4.png";
+import Card5Image from "../assets/Images/Projects/Card5.png";
+import Card6Image from "../assets/Images/Projects/Card6.png";
+import Card7Image from "../assets/Images/Projects/Card7.png";
+import Card8Image from "../assets/Images/Projects/Card8.png";
+import Card9Image from "../assets/Images/Project-Details/Card9.png";
+import Card10Image from "../assets/Images/Project-Details/Card10.png";
+import Card11Image from "../assets/Images/Project-Details/Card11.png";
 import Facebook from "../assets/Icons/Facebook.svg";
 import Linkedin from "../assets/Icons/Linkedin.svg";
 import Twitter from "../assets/Icons/Twitter.svg";
 import Instagram from "../assets/Icons/Instagram.svg";
-
-
 
 export const NAV_LINKS = [
   {
@@ -122,8 +128,57 @@ export const PROJECT_CARD_DETAILS = [
   },
   {
     id: 4,
-    img: Card3Image,
+    img: Card8Image,
     job_title: "Agency Landing Page Design",
+  },
+  {
+    id: 5,
+    img: Card4Image,
+    job_title: "Agency Landing Page Design",
+  },
+  {
+    id: 6,
+    img: Card5Image,
+    job_title: "Agency Landing Page Design",
+  },
+  {
+    id: 7,
+    img: Card6Image,
+    job_title: "Agency Landing Page Design",
+  },
+  {
+    id: 8,
+    img: Card7Image,
+    job_title: "Agency Landing Page Design",
+  },
+];
+
+export const PROJECT_DETAILS = [
+  {
+    id: 1,
+    poster: Card10Image,
+    clients: "Dropmail",
+    services: "UI/UX Designer, Web Designer",
+    year: 2022,
+    about: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
+    problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
+    process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
+    solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
+    firstFooterImg: Card9Image,
+    secondFooterImg: Card11Image,
+  },
+  {
+    id: 2,
+    poster: Card10Image,
+    clients: "Dropmail",
+    services: "UI/UX Designer, Web Designer",
+    year: 2022,
+    about: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
+    problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
+    process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
+    solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
+    firstFooterImg: Card9Image,
+    secondFooterImg: Card11Image,
   },
 ];
 
@@ -262,5 +317,3 @@ export const TESTIMONIALS_DETAILS = [
     address: "Norway, CA",
   },
 ];
-
-
