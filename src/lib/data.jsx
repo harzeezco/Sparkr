@@ -125,11 +125,6 @@ export const PROJECT_CARD_DETAILS = [
     img: Card3Image,
     job_title: "Agency Landing Page Design",
   },
-  {
-    id: 5,
-    img: Card1Image,
-    job_title: "Email Marketing Tool Landing Page",
-  },
 ];
 
 export const SERVICE_DATA = [
@@ -237,7 +232,8 @@ export const TESTIMONIALS_DETAILS = [
   {
     id: 1,
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo
-          enim eaque voluptates ea vero corrupti d.`,
+          enim eaque voluptates ea vero corrupti molestiae natus explicabo illo, ipsam
+          expedita `,
     name: "Ismail",
     address: "USA, CA",
   },

@@ -24,6 +24,11 @@ body {
   overflow-x: hidden;
 }
 
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
 /* .service::after {
   content: url('./assets//Images/ServiceSlider.png');
   position: absolute;

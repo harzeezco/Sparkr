@@ -8,7 +8,7 @@ const Card = ({ card }) => {
     <article className="mb-6">
       <div className="group relative">
         <img src={img} alt="Your Image" className="w-full" />
-        <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-1000 group-hover:opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-9000 group-hover:opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center text-white">
           <button className="z-100 relative flex h-10 w-10 items-center justify-center rounded-full bg-orangePrimary  opacity-0 transition-opacity duration-1000 group-hover:opacity-100">
             <img className="h-[15px]" src={upArrow} alt="" />
