@@ -1,14 +1,16 @@
 import Logo from "../../assets/Icons/route.svg";
 import MessageIcon from "../../assets/Icons/Message.svg";
-import ToggleSwitch from "./Toggle";
-import { Link } from "react-router-dom";
+import ToggleSwitch from "../general/Toggle";
 
-const links = ["about us", "services", "project", "blog", "contact"];
+import RegularList from "../general/RegularList";
+import { NAV_LINKS } from "../../lib/data";
+import NavLink from "../navigation/NavLink";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="m-auto flex w-full items-center justify-between px-4 py-6 lg:max-w-[85vw]">
-      <Link to={'/'}>
+      <Link to={"/"}>
         <img src={Logo} alt="Logo Image of Route Agency" />
       </Link>
 
@@ -17,13 +19,11 @@ const Navbar = () => {
           role="list"
           className="flex items-center justify-between gap-6 text-base font-normal capitalize text-colorwhite-100"
         >
-          {links.map((link) => {
-            return (
-              <Link to={link} key={link}>
-                {link}
-              </Link>
-            );
-          })}
+          <RegularList
+            items={NAV_LINKS}
+            resourceName="navlink"
+            itemComponent={NavLink}
+          />
         </ul>
       </nav>
 

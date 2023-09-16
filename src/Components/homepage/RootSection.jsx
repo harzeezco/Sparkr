@@ -7,9 +7,9 @@ import ServiceSliderSection from "./ServiceSliderSection";
 import SpeechSection from "./SpeechSection";
 import TestimonialSection from "./TestimonialSection";
 
-const HomePage = () => {
+const RootSection = () => {
   return (
-    <div>
+    <main>
       <section aria-labelledby="hero" className="bg-colorDark">
         <HeroSection />
       </section>
@@ -34,8 +34,8 @@ const HomePage = () => {
       <section aria-labelledby="testimonial" className="bg-orangePrimary">
         <TestimonialSection />
       </section>
-    </div>
+    </main>
   );
 };
 
-export default HomePage;
+export default RootSection;
