@@ -3,6 +3,7 @@ import RegularList from "../general/RegularList";
 
 import { PROJECT_CARD_DETAILS } from "../../lib/data";
 import ProjectDetails from "../data-display/ProjectDetails";
+import { Link } from "react-router-dom";
 
 const ProjectSection = () => {
   const display_4_projects = PROJECT_CARD_DETAILS.slice(0, 4);
@@ -21,7 +22,7 @@ const ProjectSection = () => {
       </div>
 
       <div className="mt-8 text-center">
-        <button className="btn-primary">view all project</button>
+        <Link to='/project' className="btn-primary">view all project</Link>
       </div>
     </Container>
   );

@@ -22,6 +22,7 @@ const AboutSection = () => {
             positive changes in the world & never setting for what worked in the
             past."
       />
+      
     </Container>
   );
 };
