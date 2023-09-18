@@ -11,7 +11,7 @@ const ProjectSection = () => {
   const { theme } = useTheme();
 
   return (
-    <Container id="project" pb="[6rem]" pt="0">
+    <Container id="project">
       <h1
         className={`font-primary text-[30px] font-bold capitalize text-${theme} theme-transition sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
       >

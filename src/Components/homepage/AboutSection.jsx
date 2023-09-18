@@ -9,7 +9,7 @@ const AboutSection = () => {
   const isLightMode = theme === "light" ? "text-light-primary" : "text-dark"
 
   return (
-    <Container id="about" pb="[6rem]" pt="20">
+    <Container id="about"  pt="20">
       <h1
         className={`font-weight-lg font-primary theme-transition text-[30px] font-bold capitalize leading-10 ${isLightMode} sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
       >

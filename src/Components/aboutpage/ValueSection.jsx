@@ -8,7 +8,7 @@ const ValueSection = () => {
   const { theme } = useTheme();
 
   return (
-    <Container id="value" pb="[3rem]" pt="10">
+    <Container id="value">
       <h1
         className={`font-primary text-3xl font-bold capitalize leading-10 text-${theme} theme-transition sm:text-[3.2rem] sm:leading-[60px] lg:text-[6vw] lg:leading-[80px]`}
       >

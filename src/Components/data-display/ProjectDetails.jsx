@@ -16,7 +16,7 @@ const ProjectDetails = ({ card }) => {
     navigate(`/project/${id}`);
   };
 
-  const project_btn = `rounded-2xl border border-${theme} px-4 py-1 text-sm font-normal text-${theme}-primary opacity-[70%] capitalize`;
+  const project_btn = `rounded-2xl border border-${theme} px-4 py-1 text-sm font-normal text-${theme}-primary opacity-[70%] capitalize theme-transition`;
 
   return (
     <article className="mb-6">
@@ -50,7 +50,7 @@ const ProjectDetails = ({ card }) => {
         </button>
       </div>
       <h3
-        className={`whitespace-nowrap text-[1.3rem] font-bold text-${theme} md:text-[2.4vw]`}
+        className={`theme-transition whitespace-nowrap text-[1.3rem] font-bold text-${theme} md:text-[2.4vw]`}
       >
         {job_title}
       </h3>

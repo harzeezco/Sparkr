@@ -1,8 +1,4 @@
-// import RegularList from "../general/RegularList";
-// import CounterDetails from "../data-display/CounterDetails";
 import Container from "../layouts/Container";
-
-// import { COUNT_DETAILS } from "../../lib/data";
 
 import VideoToggle from "../../assets/Images/VideoToggle.png";
 import Video from "../../assets/Images/Video.png";
@@ -14,8 +10,8 @@ const HeroSection = () => {
   const isLightMode = theme === "light" ? "text-light-primary" : "text-dark";
 
   return (
-    <Container id="hero" pb="[6rem]" pt="10">
-      <div className="grid">
+    <Container id="hero">
+      <div className="grid pt-12 ">
         <h1
           className={`whitespace-nowrap font-primary text-4xl font-bold capitalize ${isLightMode} theme-transition md:hidden lg:text-[5.2rem]`}
         >
@@ -42,11 +38,9 @@ const HeroSection = () => {
         </h1>
       </div>
 
-     
-        <figure className="pt-10">
-          <img className="w-full" src={Video} alt="working in progress" />
-        </figure>
-  
+      <figure className="pt-10">
+        <img className="w-full" src={Video} alt="working in progress" />
+      </figure>
     </Container>
   );
 };

@@ -10,7 +10,7 @@ const ValueDetails = ({ items }) => {
       <img className="h-6" src={icon} alt={`${alt} image`} />
       <div className="">
         <h3
-          className={`text-xl font-bold capitalize leading-[30px] text-${theme}`}
+          className={`text-xl font-bold capitalize leading-[30px] text-${theme} theme-transition`}
         >
           {header}
         </h3>

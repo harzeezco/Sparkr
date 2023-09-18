@@ -9,10 +9,10 @@ const Projects = () => {
   const { theme } = useTheme();
 
   return (
-    <Container id="project" pb="[6rem]" pt="10">
-      <section>
+    <Container id="project">
+      <section className="pt-12">
         <h1
-          className={`whitespace-nowrap font-primary text-3xl font-bold capitalize leading-10 text-${theme} theme-transition sm:text-[3.2rem] sm:leading-[60px] lg:text-[6.5vw] lg:leading-[95px]`}
+          className={`whitespace-nowrap font-primary text-3xl font-bold capitalize text-${theme} theme-transition sm:text-[3.2rem] lg:text-[6.5vw]`}
         >
           our latest <span className="text-orangePrimary"> project </span>
         </h1>

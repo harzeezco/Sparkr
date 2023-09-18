@@ -1,6 +1,7 @@
 import CommunitySection from "./CommunitySection";
 import HeroSection from "./HeroSection";
 import IdeaSection from "./IdeaSection";
+import TeamSection from "./Teamsection";
 import ValueSection from "./ValueSection";
 
 const RootSection = () => {
@@ -17,6 +18,9 @@ const RootSection = () => {
       </section>
       <section aria-labelledby="value">
         <CommunitySection />
+      </section>
+      <section aria-labelledby="value">
+        <TeamSection />
       </section>
     </main>
   );

@@ -32,10 +32,10 @@ const ProjectDetails = () => {
   const major_heading = `pb-3 font-primary text-[36px] leading-[48px] text-${theme} theme-transition`;
 
   return (
-    <Container pb="[6rem]" pt="10">
-      <section className="theme-transition">
+    <Container>
+      <section className="theme-transition pt-12">
         <h1
-          className={`mb-10 font-primary text-[35px] font-bold leading-[40px] text-${theme} theme-transition md:leading-[64px] lg:text-[54px]`}
+          className={`mb-10  font-primary  text-[35px] font-bold leading-[40px] text-${theme} theme-transition md:leading-[64px] lg:text-[54px]`}
         >
           {job_title}
         </h1>

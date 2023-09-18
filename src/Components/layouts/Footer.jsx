@@ -1,7 +1,6 @@
 import FooterNavDetails from "../data-display/FooterNavDetails";
 import RegularList from "../general/RegularList";
 import SocialLink from "../navigation/SocialLink";
-import Container from "./Container";
 
 import upArrow from "../../assets/Icons/upArrow2.svg";
 import LogoLightMode from "../../assets/Icons/LogoLightMode.svg";
@@ -21,7 +20,7 @@ const Footer = () => {
   const isLight = theme === "light" ? "bg-light-secondary" : "bg-light-primary";
 
   return (
-    <Container pb="14" pt="20" id="footer">
+    <div className="lg:max-w-[85vw] m-auto px-4 pb-10" id="footer">
       <div className="grid grid-cols-1 items-center gap-y-6 md:grid-cols-[1fr_40%]">
         <h1
           className={`font-weight-lg font-primary text-[30px] font-bold capitalize leading-10 text-${theme} theme-transition sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
@@ -77,12 +76,14 @@ const Footer = () => {
           heading="about"
           items={FOOTER_1_NAV_LINKS}
           link={true}
+          mt="7"
         />
 
         <FooterNavDetails
           heading="support"
           items={FOOTER_2_NAV_LINKS}
           link={true}
+          mt="7"
         />
 
         <FooterNavDetails
@@ -97,7 +98,7 @@ const Footer = () => {
       <p className="text-center text-sm">
         Copyright 2023 all rights Flowgiri reserved
       </p>
-    </Container>
+    </div>
   );
 };
 

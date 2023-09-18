@@ -1,13 +1,14 @@
 import { TESTIMONIALS_DETAILS } from "../../lib/data";
 import TestimonialsCarousel from "../general/Carousel";
+import Container from "../layouts/Container";
 
 
 
 const TestimonialSection = () => {
   return (
-    <div id="testimonial" className="m-auto w-full px-4 py-14 lg:max-w-[85vw]">
+    <Container id="testimonial" py="[3rem]">
       <TestimonialsCarousel testimonials={TESTIMONIALS_DETAILS} />
-    </div>
+    </Container>
   );
 };
 

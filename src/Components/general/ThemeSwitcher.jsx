@@ -47,7 +47,7 @@ function ThemeSwitcher() {
   return (
     <div
       className={`
-        flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border-2 ${
+        flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 ${
           isDark ? "border-colorSlate hover:border-white" : "border-gray-900"
         } bg-inherit transition  focus:hover:border-white`}
     >

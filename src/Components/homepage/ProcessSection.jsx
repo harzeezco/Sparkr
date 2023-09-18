@@ -8,7 +8,7 @@ const ProcessSection = () => {
   const { theme } = useTheme();
 
   return (
-    <Container id="process" pb="[6rem]" pt="0">
+    <Container id="process" pt="20">
       <h1
         className={`font-weight-lg font-primary text-[30px] font-bold capitalize leading-10 text-${theme} sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
       >

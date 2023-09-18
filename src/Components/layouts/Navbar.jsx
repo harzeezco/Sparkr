@@ -14,10 +14,8 @@ import useTheme from "../../Hooks/useTheme";
 const Navbar = () => {
   const { theme } = useTheme();
 
-  const isLightMode = theme === "light" ? "text-orangePrimary" : "text-white";
-
   return (
-    <div className="m-auto flex w-full items-center justify-between px-4 py-6 lg:max-w-[85vw] theme-transition">
+    <div className="theme-transition m-auto flex w-full items-center justify-between px-4 py-7 pb-6 lg:max-w-[85vw]">
       <Link to={"/"}>
         <ImageWrapper
           srcForDarkMode={LogoDarkMode}
@@ -41,7 +39,7 @@ const Navbar = () => {
 
       <div className="hidden md:inline-flex">
         <div
-          className={`inline-flex items-center gap-x-1  text-base font-normal capitalize ${isLightMode} theme-transition`}
+          className={`inline-flex items-center gap-x-1  text-base font-normal capitalize text-${theme} theme-transition`}
         >
           <ImageWrapper
             srcForDarkMode={MessageDarkMode}

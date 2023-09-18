@@ -22,6 +22,12 @@ import Step from "../assets/Images/Value/Step.png";
 import Phone from "../assets/Images/Value/Phone.png";
 import Message from "../assets/Images/Value/Message.png";
 import Profile from "../assets/Images/Value/Profile.png";
+import Founder from "../assets/Images/Teams/Founder.png";
+import CEO from "../assets/Images/Teams/CEO.png";
+import Co_founder from "../assets/Images/Teams/Co-founder.png";
+import Designer from "../assets/Images/Teams/Designer.png";
+import Marketer from "../assets/Images/Teams/Marketer.png";
+import Developer from "../assets/Images/Teams/Developer.png";
 
 export const NAV_LINKS = [
   {
@@ -490,5 +496,44 @@ export const VALUE_DETAILS = [
     icon: Love,
     header: "We Give Our Best",
     prgh_text: "We lead with empathy and take care of one another.",
+  },
+];
+
+export const TEAMS_DETAILS = [
+  {
+    id: 1,
+    img: Founder,
+    name: "Rohit Sharma",
+    position: "Co-Founder",
+  },
+  {
+    id: 2,
+    img: CEO,
+    name: "CEO",
+    position: "Shikhar Dhawan",
+  },
+  {
+    id: 3,
+    img: Co_founder,
+    name: "Virat Kohli",
+    position: "Founder",
+  },
+  {
+    id: 4,
+    img: Designer,
+    name: "KL Rahul",
+    position: "Designer",
+  },
+  {
+    id: 5,
+    img: Developer,
+    name: "SK Yadav",
+    position: "Developer",
+  },
+  {
+    id: 1,
+    img: Marketer,
+    name: "Rishabh Pant",
+    position: "Marketer",
   },
 ];

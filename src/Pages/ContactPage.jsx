@@ -1,6 +1,11 @@
+import RootSection from "../Components/contactpage/RootSection";
 
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return (
+    <>
+      <RootSection />
+    </>
+  );
 };
 
 export default ContactPage;
