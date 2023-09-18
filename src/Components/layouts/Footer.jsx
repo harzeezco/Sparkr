@@ -4,7 +4,7 @@ import SocialLink from "../navigation/SocialLink";
 import Container from "./Container";
 
 import upArrow from "../../assets/Icons/upArrow2.svg";
-import Logo from "../../assets/Icons/Route.svg";
+import Logo from "../../assets/Icons/route.svg";
 import Line from "../../assets/Images/Line.png";
 import {
   FOOTER_1_NAV_LINKS,

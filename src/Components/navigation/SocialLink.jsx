@@ -17,7 +17,7 @@ const SocialLink = ({ items }) => {
 };
 
 SocialLink.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.object,
   icon: PropTypes.node,
   name: PropTypes.string,
   url: PropTypes.string,

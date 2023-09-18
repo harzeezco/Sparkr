@@ -1,7 +1,7 @@
 import Container from "../layouts/Container";
 import { PROCESS_DETAILS } from "../../lib/data";
 import RegularList from "../general/RegularList";
-import Card2 from "../layouts/Card2";
+import Card from "../layouts/Card";
 
 const ProcessSection = () => {
   return (
@@ -15,7 +15,7 @@ const ProcessSection = () => {
         <RegularList
           items={PROCESS_DETAILS}
           resourceName="item"
-          itemComponent={Card2}
+          itemComponent={Card}
         />
       </div>
     </Container>

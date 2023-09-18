@@ -1,10 +1,13 @@
 import Container from "../layouts/Container";
 import RegularList from "../general/RegularList";
-import Card from "../layouts/Card";
 
 import { PROJECT_CARD_DETAILS } from "../../lib/data";
+import ProjectDetails from "../data-display/ProjectDetails";
+import { Link } from "react-router-dom";
 
 const ProjectSection = () => {
+  const display_4_projects = PROJECT_CARD_DETAILS.slice(0, 4);
+
   return (
     <Container id="project" pb="[6rem]" pt="0">
       <h1 className="heading-primary">
@@ -12,14 +15,14 @@ const ProjectSection = () => {
       </h1>
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
         <RegularList
-          items={PROJECT_CARD_DETAILS}
-          itemComponent={Card}
+          items={display_4_projects}
+          itemComponent={ProjectDetails}
           resourceName="card"
         />
       </div>
 
       <div className="mt-8 text-center">
-        <button className="btn-primary">view all project</button>
+        <Link to='/project' className="btn-primary">view all project</Link>
       </div>
     </Container>
   );
