@@ -1,23 +1,26 @@
 import PropTypes from "prop-types";
+import useTheme from "../../Hooks/useTheme";
 
 const CounterDetails = ({ item }) => {
-  const { counter, pagh_text, percent_symb, data_value } = item;
- 
-  const num =
-    "font-primary text-[40px] leading-[65px] text-white sm:text-[35px] lg:text-[54px]";
+  const { counter, header, prgh_text, percent_symb, data_value } = item;
+  const { theme } = useTheme();
 
-  const numPrgh =
-    "text-[18px] capitalize leading-[35px] tracking-wider text-colorwhite-100";
+  const num = `font-primary font-bold text-[40px] leading-[65px] text-${theme} sm:text-[35px] lg:text-[54px] theme-transition`;
 
   return (
-    <div className=" border-b-[1px] border-colorwhite-100 pb-4 pt-4">
+    <div className="pb-4 pt-4">
       <h1 className={`${num}`}>
         <span data-value={data_value} ref={counter}>
-          0
+          {data_value}
         </span>
-        <span className="text-orangePrimary ">{percent_symb}</span>
+        <span className="text-orangePrimary">{percent_symb}</span>
       </h1>
-      <p className={`${numPrgh}`}>{pagh_text}</p>
+      <h2
+        className={`text-xl font-bold capitalize leading-[30px] text-${theme} pt-2`}
+      >
+        {header}
+      </h2>
+      <p className="pt-2 leading-[30px]">{prgh_text}</p>
     </div>
   );
 };
@@ -25,7 +28,8 @@ const CounterDetails = ({ item }) => {
 CounterDetails.propTypes = {
   item: PropTypes.object,
   counter: PropTypes.object,
-  pagh_text: PropTypes.string,
+  prgh_text: PropTypes.string,
+  header: PropTypes.string,
   percent_symb: PropTypes.string,
   data_value: PropTypes.string,
 };

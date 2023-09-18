@@ -5,9 +5,11 @@ const NavLink = ({ navlink }) => {
   const { link, path } = navlink;
 
   return (
-    <Link to={path} key={link}>
-      {link}
-    </Link>
+    <li>
+      <Link to={path} key={link}>
+        {link}
+      </Link>
+    </li>
   );
 };
 

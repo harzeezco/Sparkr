@@ -11,9 +11,17 @@ import Card9Image from "../assets/Images/Project-Details/Card9.png";
 import Card10Image from "../assets/Images/Project-Details/Card10.png";
 import Card11Image from "../assets/Images/Project-Details/Card11.png";
 import Facebook from "../assets/Icons/Facebook.svg";
-import Linkedin from "../assets/Icons/Linkedin.svg";
-import Twitter from "../assets/Icons/Twitter.svg";
-import Instagram from "../assets/Icons/Instagram.svg";
+import Linkedin from "../assets/Icons/LinkedinDark.svg";
+import Twitter from "../assets/Icons/TwitterDark.svg";
+import Instagram from "../assets/Icons/InstagramDark.svg";
+import LinkedinLight from "../assets/Icons/LinkedinLight.svg";
+import TwitterLight from "../assets/Icons/TwitterLight.svg";
+import InstagramLight from "../assets/Icons/InstagramLight.svg";
+import Love from "../assets/Images/Value/Love.png";
+import Step from "../assets/Images/Value/Step.png";
+import Phone from "../assets/Images/Value/Phone.png";
+import Message from "../assets/Images/Value/Message.png";
+import Profile from "../assets/Images/Value/Profile.png";
 
 export const NAV_LINKS = [
   {
@@ -89,22 +97,25 @@ const { counter1, counter2, counter3 } = CounterRef;
 export const COUNT_DETAILS = [
   {
     id: 1,
-    data_value: "5",
-    pagh_text: "years of exprerience",
+    data_value: "05",
+    header: "years of exprerience",
+    prgh_text: "We have over 5+ years of experience in this design industry.",
     percent_symb: "+",
     counter: counter1,
   },
   {
     id: 2,
     data_value: "60",
-    pagh_text: "design awards",
+    header: "design awards",
+    prgh_text: "We have achieved over 60 design awards for our awesome work. ",
     percent_symb: "+",
     counter: counter2,
   },
   {
     id: 3,
-    data_value: "5",
-    pagh_text: "Clients satisfactions",
+    data_value: "97",
+    header: "Client Satisfaction",
+    prgh_text: "Our client is 97% satisfied with our work and services",
     percent_symb: "%",
     counter: counter3,
   },
@@ -367,24 +378,29 @@ export const SOCIAL_LINKS = [
     id: 1,
     name: "Facebook",
     icon: Facebook,
+    iconLight: Facebook,
     url: "https://github.com",
   },
   {
     id: 2,
     name: "Twitter",
     icon: Twitter,
+    iconLight: TwitterLight,
     url: "https://twitter.com/",
   },
   {
     id: 3,
     name: "Instagram",
     icon: Instagram,
+    iconLight: InstagramLight,
+    iconDark: Facebook,
     url: "https://www.figma.com",
   },
   {
     id: 4,
     name: "Linkedin",
     icon: Linkedin,
+    iconLight: LinkedinLight,
     url: "https://www.figma.com",
   },
 ];
@@ -429,5 +445,50 @@ export const TESTIMONIALS_DETAILS = [
           voluptatem `,
     name: "Adam",
     address: "Norway, CA",
+  },
+];
+
+export const VALUE_DETAILS = [
+  {
+    id: 1,
+    alt: "joy",
+    icon: Profile,
+    header: "We Value Our People First",
+    prgh_text: "We lead with empathy and take care of one another.",
+  },
+  {
+    id: 2,
+    alt: "message",
+    icon: Message,
+    header: "We are Passionate",
+    prgh_text: "We lead with empathy and take care of one another.",
+  },
+  {
+    id: 3,
+    alt: "love",
+    icon: Love,
+    header: "We Stay Humble",
+    prgh_text: "We lead with empathy and take care of one another.",
+  },
+  {
+    id: 4,
+    alt: "Smile",
+    icon: Phone,
+    header: "We Live Joyfully",
+    prgh_text: "We lead with empathy and take care of one another.",
+  },
+  {
+    id: 5,
+    alt: "Step",
+    icon: Step,
+    header: "We Improve Daily",
+    prgh_text: "We lead with empathy and take care of one another.",
+  },
+  {
+    id: 6,
+    alt: "love",
+    icon: Love,
+    header: "We Give Our Best",
+    prgh_text: "We lead with empathy and take care of one another.",
   },
 ];

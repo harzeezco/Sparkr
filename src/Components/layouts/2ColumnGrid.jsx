@@ -29,10 +29,10 @@ const ColumnGrid2 = ({
             <span className="text-orangePrimary">{header_highlight}</span>
           </h2>
         )}
-        <p className="leading-[30px] text-white opacity-[70%] sm:text-[18px]">
+        <p className="leading-[30px] sm:text-[18px]">
           {first_prgh}
         </p>
-        <p className="md:mb-8 md:pt-8 leading-[30px] text-white opacity-[70%] sm:text-[18px]">
+        <p className="md:mb-8 md:pt-8 leading-[30px] sm:text-[18px]">
           {second_prgh}
         </p>
 

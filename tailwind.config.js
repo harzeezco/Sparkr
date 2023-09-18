@@ -29,6 +29,7 @@ export default {
         colorDarkLight: "#1F2021",
         "colorwhite-100": "#aeaeb0",
         toggle: "#f4f4f5",
+        bg_Light: "#f9f9f9"
       },
       fontFamily: {
         primary: ["Syne", "sans-serif"],

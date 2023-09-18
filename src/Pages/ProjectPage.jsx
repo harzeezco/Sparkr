@@ -5,7 +5,7 @@ import ProjectDetails from "../Components/projectDetailsPage/ProjectDetails";
 
 const ProjectPage = () => {
   return (
-    <main className="bg-colorDark">
+    <main>
       <Routes>
         <Route index element={<Projects />} />
         <Route path="/:id" element={<ProjectDetails />} />

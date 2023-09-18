@@ -15,9 +15,6 @@
     @apply  font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]
   }
 
-  .project-btn {
-    @apply rounded-2xl border border-white px-4 py-1 text-sm font-normal text-white opacity-[70%] capitalize 
-  }
 }
 
 body {
@@ -29,30 +26,38 @@ body {
   display: none !important;
 }
 
-/* .service::after {
-  content: url('./assets//Images/ServiceSlider.png');
-  position: absolute;
-  left: -100%;
-  width: 100%;
-  animation: running-cycle 20s linear infinite;
-  background-size: contain;
+.theme-transition {
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-.service::before {
-  content: url('./assets//Images/ServiceSlider.png');
-  position: absolute;
-  left: -200%;
-  width: 100%;
-  animation: run-cycle 20s linear infinite;
-  background-size: contain;
+.bg-light-primary {
+  background-color: #FFFEFE;
 }
 
-@keyframes run-cycle {
-  0% { left:  -200%;  }
-  100% { left: 200%; }
+.text-light-primary {
+  color: #111111;
 }
 
-@keyframes running-cycle {
-  0% { left: -100%; }
-  100% { left: 100%; }
-} */
+.text-light {
+  color: #181818;
+}
+
+.bg-dark-secondary {
+  background-color: #1F2021;
+}
+
+.bg-dark{
+  background-color: #121418;
+}
+
+.text-dark {
+  color: #FFF;
+}
+
+.text-dark-primary {
+  color: #B3B3B3;
+}
+
+.bg-light-secondary {
+  background-color: #EAEAEA;
+}
