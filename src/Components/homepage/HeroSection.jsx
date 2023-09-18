@@ -42,18 +42,11 @@ const HeroSection = () => {
         </h1>
       </div>
 
-      <div className="pt-10">
-        {/* <div className="order-last md:order-first">
-          <RegularList
-            items={COUNT_DETAILS}
-            itemComponent={CounterDetails}
-            resourceName="item"
-          />
-        </div> */}
-        <figure className="">
+     
+        <figure className="pt-10">
           <img className="w-full" src={Video} alt="working in progress" />
         </figure>
-      </div>
+  
     </Container>
   );
 };

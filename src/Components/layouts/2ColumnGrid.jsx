@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import useTheme from "../../Hooks/useTheme";
 
 const ColumnGrid2 = ({
   img,
@@ -10,6 +11,8 @@ const ColumnGrid2 = ({
   header,
   header_highlight,
 }) => {
+  const { theme } = useTheme();
+
   return (
     <div className="flex flex-col items-center justify-between gap-x-20 gap-y-10 pt-12 md:flex-row">
       <img
@@ -24,15 +27,15 @@ const ColumnGrid2 = ({
         `}
       >
         {header && (
-          <h2 className="font-primary text-4xl leading-[48px] pb-4 text-white font-bold">
+          <h2
+            className={`pb-4 font-primary text-4xl leading-[48px] text-${theme} font-bold`}
+          >
             {header}{" "}
             <span className="text-orangePrimary">{header_highlight}</span>
           </h2>
         )}
-        <p className="leading-[30px] sm:text-[18px]">
-          {first_prgh}
-        </p>
-        <p className="md:mb-8 md:pt-8 leading-[30px] sm:text-[18px]">
+        <p className="leading-[30px] sm:text-[18px]">{first_prgh}</p>
+        <p className="leading-[30px] sm:text-[18px] md:mb-8 md:pt-8">
           {second_prgh}
         </p>
 

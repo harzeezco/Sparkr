@@ -7,6 +7,7 @@ const Card = ({ item }) => {
 
   const isLight =
     theme === "light" ? "bg-light-secondary" : "bg-dark-secondary";
+  
   return (
     <div className={`${isLight} p-5`}>
       <div className="mb-2 flex items-center gap-x-4">

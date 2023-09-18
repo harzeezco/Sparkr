@@ -7,7 +7,7 @@ const HeroSection = () => {
   const { theme } = useTheme();
 
   return (
-    <Container id="hero" pb="[6rem]" pt="10">
+    <Container id="hero" pb="[3rem]" pt="10">
       <h1
         className={`whitespace-nowrap font-primary text-3xl font-bold capitalize leading-10 text-${theme} theme-transition sm:text-[3.2rem] sm:leading-[60px] lg:text-[6.5vw] lg:leading-[90px]`}
       >
