@@ -2,7 +2,7 @@
 
 const ServiceSliderSection = () => {
   return (
-    <div id="service-slider" className=" w-full pb-[6rem] relative">
+    <div id="service-slider" className=" w-full pb-[3rem] relative">
       <div className='service'>
         {/* <img src={ServiceSlider} alt="" className="h-18 w-full object-cover" /> */}
       </div>

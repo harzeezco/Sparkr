@@ -1,16 +1,30 @@
 import PropTypes from "prop-types";
+import useTheme from "../../Hooks/useTheme";
+import ImageWrapper from "../data-display/ImageWrapper";
 
 const SocialLink = ({ items }) => {
-  const { icon, url, name } = items;
+  const { icon, url, name, iconLight } = items;
+  const { theme } = useTheme();
+
+  const isLight =
+    theme === "light" ? "bg-light-secondary" : "bg-dark-secondary";
+
   return (
-    <li className="flex items-center justify-center bg-colorDarkLight p-4">
+    <li
+      className={`flex items-center justify-center ${isLight} theme-transition p-4`}
+    >
       <a
         aria-label={`${name}`}
         target="_blank"
         href={`${url}`}
         rel="noopener noreferrer"
       >
-        <img className="h-4" src={icon} alt={`{${name} Logo}`} />
+        <ImageWrapper
+          className="h-4"
+          src={iconLight}
+          srcForDarkMode={icon}
+          alt={`{${name} Logo}`}
+        />
       </a>
     </li>
   );

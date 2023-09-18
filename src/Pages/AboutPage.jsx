@@ -1,7 +1,10 @@
+import RootSection from "../Components/aboutpage/RootSection";
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <>
+      <RootSection />
+    </>
   );
 };
 

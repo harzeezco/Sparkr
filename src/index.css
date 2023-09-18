@@ -15,44 +15,129 @@
     @apply  font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]
   }
 
-  .project-btn {
-    @apply rounded-2xl border border-white px-4 py-1 text-sm font-normal text-white opacity-[70%] capitalize 
-  }
+}
+
+:root {
+  --form-control-color: rebeccapurple;
+  --form-control-disabled: #959495;
 }
 
 body {
   overflow-x: hidden;
 }
 
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+.form-control--disabled {
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #FF463A;
+  border: none;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #fff;
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+} */
+
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+
 .slick-prev,
 .slick-next {
   display: none !important;
 }
 
-/* .service::after {
-  content: url('./assets//Images/ServiceSlider.png');
-  position: absolute;
-  left: -100%;
-  width: 100%;
-  animation: running-cycle 20s linear infinite;
-  background-size: contain;
+.theme-transition {
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-.service::before {
-  content: url('./assets//Images/ServiceSlider.png');
-  position: absolute;
-  left: -200%;
-  width: 100%;
-  animation: run-cycle 20s linear infinite;
-  background-size: contain;
+.bg-light-primary {
+  background-color: #FFFEFE;
 }
 
-@keyframes run-cycle {
-  0% { left:  -200%;  }
-  100% { left: 200%; }
+.text-light-primary {
+  color: #111111;
 }
 
-@keyframes running-cycle {
-  0% { left: -100%; }
-  100% { left: 100%; }
-} */
+.text-light {
+  color: #181818;
+}
+
+.bg-dark-secondary {
+  background-color: #1F2021;
+}
+
+.bg-dark{
+  background-color: #121418;
+}
+
+.text-dark {
+  color: #FFF;
+}
+
+.text-dark-primary {
+  color: #B3B3B3;
+}
+
+.bg-light-secondary {
+  background-color: #EAEAEA;
+}
+

@@ -1,16 +1,22 @@
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
-import upArrow from "../../assets/Icons/upArrow.svg";
+import upArrowDark from "../../assets/Icons/upArrowDark.svg";
+import upArrowLight from "../../assets/Icons/upArrowLight.svg";
+import ImageWrapper from "./ImageWrapper";
+import useTheme from "../../Hooks/useTheme";
 
 const ProjectDetails = ({ card }) => {
   const navigate = useNavigate();
+  const { theme } = useTheme();
 
   const { img, job_title, id } = card;
 
   const handleNavigateToProjectDetails = () => {
     navigate(`/project/${id}`);
   };
+
+  const project_btn = `rounded-2xl border border-${theme} px-4 py-1 text-sm font-normal text-${theme}-primary opacity-[70%] capitalize theme-transition`;
 
   return (
     <article className="mb-6">
@@ -22,17 +28,30 @@ const ProjectDetails = ({ card }) => {
             onClick={handleNavigateToProjectDetails}
             className="z-100 relative flex h-10 w-10 items-center justify-center rounded-full bg-orangePrimary  opacity-0 transition-opacity duration-1000 group-hover:opacity-100"
           >
-            <img className="h-[15px]" src={upArrow} alt="" />
+            <ImageWrapper
+              className="h-[15px]"
+              srcForDarkMode={upArrowDark}
+              src={upArrowLight}
+              alt="arrow"
+            />
           </button>
         </div>
       </div>
 
       <div className="my-6 flex gap-x-4">
-        <button className="project-btn cursor-auto">website</button>
-        <button className="project-btn cursor-auto">design</button>
-        <button className="project-btn cursor-auto">development</button>
+        <button className={`${project_btn} theme-transition cursor-auto`}>
+          website
+        </button>
+        <button className={`${project_btn} theme-transition cursor-auto`}>
+          design
+        </button>
+        <button className={`${project_btn} theme-transition cursor-auto`}>
+          development
+        </button>
       </div>
-      <h3 className="whitespace-nowrap text-[1.3rem] font-bold text-white md:text-[2.4vw]">
+      <h3
+        className={`theme-transition whitespace-nowrap text-[1.3rem] font-bold text-${theme} md:text-[2.4vw]`}
+      >
         {job_title}
       </h3>
     </article>

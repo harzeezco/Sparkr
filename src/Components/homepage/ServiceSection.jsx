@@ -3,7 +3,7 @@ import Container from "../layouts/Container";
 
 const ServiceSection = () => {
   return (
-    <Container id="service" pb="[6rem]" pt="0">
+    <Container id="service" pt="20">
       <Services header={true} />
     </Container>
   );
