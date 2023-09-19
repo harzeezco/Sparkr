@@ -1,11 +1,11 @@
-import RootSection from "../Components/aboutpage/RootSection";
 
-const AboutPage = () => {
-  return (
-    <>
+import RootSection from "../Components/aboutpage/RootSection";
+return (
+   <>
       <RootSection />
     </>
   );
 };
+
 
 export default AboutPage;
