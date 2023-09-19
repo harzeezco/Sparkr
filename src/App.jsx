@@ -1,27 +1,25 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AboutPage from "./Pages/AboutPage";
-import ServicesPage from "./Pages/ServicesPage";
-import ProjectPage from "./Pages/ProjectPage";
-import ContactPage from "./Pages/ContactPage";
-import BlogPage from "./Pages/BlogPage";
-import HomePage from "./Pages/HomePage";
-import ErrorPage from "./Pages/ErrorPage";
-import AppLayout from "./Components/layouts/AppLayout";
+import { BrowserRouter } from "react-router-dom";
+import Cursor from "./Components/general/Cursor";
+import AnimateRoute from "./Components/general/AnimateRoute";
+import { useEffect } from "react";
+import useTheme from "./Hooks/useTheme";
 
 function App() {
+  const { theme } = useTheme();
+
+  const isLight = theme === "light" ? "#fff" : "#121418";
+  console.log();
+  useEffect(() => {
+    document.body.style.backgroundColor = `${isLight}`;
+    // Clean up by resetting the background color when the component unmounts
+    return () => {
+      document.body.style.backgroundColor = "";
+    };
+  });
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route path="/" index element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/service" element={<ServicesPage />} />
-          <Route path="/project/*" element={<ProjectPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Route>
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      {/* <Cursor /> */}
+      <AnimateRoute />
     </BrowserRouter>
   );
 }

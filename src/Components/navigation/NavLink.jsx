@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import ScrollToTopLink from "../general/ScrollToTopLink";
 
 const NavLink = ({ navlink }) => {
   const { link, path } = navlink;
 
   return (
     <li>
-      <Link to={path} key={link}>
+      <ScrollToTopLink to={path} key={link}>
         {link}
-      </Link>
+      </ScrollToTopLink>
     </li>
   );
 };

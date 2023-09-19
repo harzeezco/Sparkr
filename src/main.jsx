@@ -3,11 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import ThemeProvider from "./Contexts/ThemeContexts.jsx";
+import Home from "./page.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ThemeProvider>
+    {/* <ThemeProvider>
       <App />
-    </ThemeProvider>
+    </ThemeProvider> */}
+    <Home />
   </React.StrictMode>,
 );

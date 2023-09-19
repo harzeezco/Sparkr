@@ -14,13 +14,14 @@ import {
 } from "../../lib/data";
 import ImageWrapper from "../data-display/ImageWrapper";
 import useTheme from "../../Hooks/useTheme";
+import ScrollToTopLink from "../general/ScrollToTopLink";
 
 const Footer = () => {
   const { theme } = useTheme();
   const isLight = theme === "light" ? "bg-light-secondary" : "bg-light-primary";
 
   return (
-    <div className="lg:max-w-[85vw] m-auto px-4 pb-10" id="footer">
+    <div className="m-auto px-4 pb-10 lg:max-w-[85vw]" id="footer">
       <div className="grid grid-cols-1 items-center gap-y-6 md:grid-cols-[1fr_40%]">
         <h1
           className={`font-weight-lg font-primary text-[30px] font-bold capitalize leading-10 text-${theme} theme-transition sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
@@ -28,11 +29,13 @@ const Footer = () => {
           let’s make your <br />{" "}
           <span className="text-orangePrimary">product</span> together
         </h1>
-        <button
+
+        <ScrollToTopLink
+          to="/contact"
           className={`${isLight} theme-transition flex h-[60px] w-full max-w-[60px] items-center justify-center justify-self-start rounded-full md:ml-8 md:h-[100px] md:max-w-[100px]`}
         >
           <img src={upArrow} className="h-6 md:h-8" alt="arrow icon" />
-        </button>
+        </ScrollToTopLink>
       </div>
       <div className="mt-20 grid grid-cols-1 gap-y-8 pb-10 sm:grid-cols-[3fr_1fr_1fr] lg:grid-cols-[3fr_1fr_1fr_1fr]">
         <div>

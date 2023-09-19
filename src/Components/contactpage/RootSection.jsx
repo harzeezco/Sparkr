@@ -1,6 +1,6 @@
-import EmailSection from "./EmailSection";
 import FormSection from "./FormSection";
 import HeroSection from "./HeroSection";
+import JobOpeningSection from "./JobOpeningSection";
 
 const RootSection = () => {
   return (
@@ -13,8 +13,8 @@ const RootSection = () => {
         <FormSection />
       </section>
 
-      <section id="email">
-        <EmailSection />
+      <section id="job-opening">
+        <JobOpeningSection />
       </section>
     </main>
   );

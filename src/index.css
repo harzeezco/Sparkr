@@ -10,6 +10,10 @@
   .btn-primary {
     @apply rounded-[2px] bg-orangePrimary px-8 py-4  text-[16px] font-medium capitalize text-white w-full sm:w-auto
   }
+  
+  .btn-secondary {
+    @apply theme-transition rounded-[2px] border border-solid border-orangePrimary px-8 py-4 text-[16px] font-medium capitalize text-orangePrimary hover:bg-orangePrimary hover:text-white
+  }
 
   .heading-primary {
     @apply  font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]
@@ -17,33 +21,9 @@
 
 }
 
-:root {
-  --form-control-color: rebeccapurple;
-  --form-control-disabled: #959495;
-}
 
 body {
   overflow-x: hidden;
-}
-
-.form-control {
-  font-family: system-ui, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.1;
-  display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em;
-  
-}
-
-.form-control + .form-control {
-  margin-top: 1em;
-}
-
-.form-control--disabled {
-  color: var(--form-control-disabled);
-  cursor: not-allowed;
 }
 
 input[type="checkbox"] {
@@ -87,18 +67,12 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
-/* input[type="checkbox"]:focus {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
-} */
-
 input[type="checkbox"]:disabled {
   --form-control-color: var(--form-control-disabled);
 
   color: var(--form-control-disabled);
   cursor: not-allowed;
 }
-
 
 .slick-prev,
 .slick-next {
@@ -141,3 +115,34 @@ input[type="checkbox"]:disabled {
   background-color: #EAEAEA;
 }
 
+.cursor {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  /* border: 2px solid #333; */
+
+  border-radius: 50%;
+  pointer-events: none; /* Prevent the cursor from blocking interactions */
+  mix-blend-mode: difference; /* Create a mask effect */
+  transform: translate(-50%, -50%);
+  background-color: #FF463A;
+}
+
+
+
+  .mask{
+    width: 50%;
+    height: 50%;
+    cursor: default;
+   
+ 
+  }
+  
+  .mask{
+    mask-image: url('../src/assets/Svg/mask.svg');
+    mask-repeat: no-repeat;
+    mask-size: 20px;
+    background: #ec4e39;
+    position: absolute;
+    color: black;
+  }
