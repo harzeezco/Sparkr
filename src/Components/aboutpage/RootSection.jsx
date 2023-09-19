@@ -1,7 +1,7 @@
 import CommunitySection from "./CommunitySection";
 import HeroSection from "./HeroSection";
 import IdeaSection from "./IdeaSection";
-import TeamSection from "./Teamsection";
+import TeamSection from "./TeamSection";
 import ValueSection from "./ValueSection";
 
 const RootSection = () => {
