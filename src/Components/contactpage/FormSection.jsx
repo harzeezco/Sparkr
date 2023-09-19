@@ -1,5 +1,6 @@
 import useTheme from "../../Hooks/useTheme";
 import Checkbox from "../general/Checkbox";
+import Input from "../general/Input";
 import Container from "../layouts/Container";
 
 const FormSection = () => {
@@ -14,67 +15,57 @@ const FormSection = () => {
   return (
     <Container id="form">
       <form className="m-auto max-w-full sm:max-w-[60%]">
-        <div className="pb-4">
-          <label htmlFor="firstName" className={label}>
-            First name
-          </label>
-          <input
-            type="text"
-            name="firstName"
-            autoComplete="firstName"
-            required
-            id="firstName"
-            placeholder="First Name"
-            className={input}
-          />
-        </div>
+        <Input
+          type="text"
+          label="firstName"
+          name="firstName"
+          autoComplete="on"
+          required
+          placeholder="First Name"
+          className={input}
+          labelClass={label}
+          labelText="First Name"
+        />
 
-        <div className="pb-4">
-          <label htmlFor="lastName" className={label}>
-            Last name
-          </label>
-          <input
-            placeholder="Last Name"
-            type="text"
-            id="last-name"
-            className={input}
-            name="lastName"
-            autoComplete="lastName"
-            required
-          />
-        </div>
+        <Input
+          placeholder="Last Name"
+          label="lastName"
+          type="text"
+          className={input}
+          name="lastName"
+          autoComplete="on"
+          required
+          labelClass={label}
+          labelText="Last Name"
+        />
 
-        <div className="pb-4">
-          <label htmlFor="email" className={label}>
-            Email
-          </label>
-          <input
-            name="email"
-            autoComplete="email"
-            required
-            type="email"
-            id="email"
-            placeholder="Email address"
-            className={input}
-          />
-        </div>
+        <Input
+          name="email"
+          autoComplete="email"
+          required
+          type="email"
+          placeholder="Email address"
+          className={input}
+          labelClass={label}
+          labelText="Email address"
+          label="email"
+        />
 
-        <div className="pb-4">
-          <label htmlFor="phoneNumber" className={label}>
-            phone (optional)
-          </label>
-          <input
-            autoComplete="phoneNumber"
-            type="number"
-            placeholder="Phone Number"
-            name="phoneNumber"
-            id="phoneNumber"
-            className={input}
-          />
-        </div>
+        <Input
+          autoComplete="tel"
+          type="tel"
+          placeholder="Phone Number"
+          name="phone"
+          className={input}
+          labelClass={label}
+          labelText="Phone Number (Optional)"
+          label="phone"
+        />
 
         <div className="">
-          <h3 className="sm:text-3xl text-xl font-bold leading-10">
+          <h3
+            className={`text-xl font-bold leading-10 sm:text-3xl text-${theme} theme-transition`}
+          >
             I need the service of
           </h3>
           <div className="mt-2 flex flex-col gap-6 md:flex-row md:items-center ">
@@ -99,7 +90,6 @@ const FormSection = () => {
             placeholder="Describe your idea"
             className={`${input} resize-none`}
             rows={5}
-            cols={20}
           />
         </div>
 
