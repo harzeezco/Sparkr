@@ -7,9 +7,9 @@ import Home from "./page.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <ThemeProvider>
+    <ThemeProvider>
       <App />
-    </ThemeProvider> */}
-    <Home />
+    </ThemeProvider>
+    {/* <Home /> */}
   </React.StrictMode>,
 );
