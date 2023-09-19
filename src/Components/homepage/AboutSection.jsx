@@ -1,11 +1,18 @@
+import useTheme from "../../Hooks/useTheme";
 import Meeting from "../../assets/Images/meeting.png";
 import ColumnGrid2 from "../layouts/2ColumnGrid";
 import Container from "../layouts/Container";
 
 const AboutSection = () => {
+  const { theme } = useTheme()
+  
+  const isLightMode = theme === "light" ? "text-light-primary" : "text-dark"
+
   return (
-    <Container id="about" pb="[6rem]" pt="20">
-      <h1 className="font-weight-lg font-primary text-[30px] font-bold capitalize leading-10 text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]">
+    <Container id="about"  pt="20">
+      <h1
+        className={`font-weight-lg font-primary theme-transition text-[30px] font-bold capitalize leading-10 ${isLightMode} sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
+      >
         our <span className="text-orangePrimary">approach </span> is to <br />
         solve problem
       </h1>

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-const Container = ({ id, children, pb, pt, py, pr }) => {
+const Container = ({ id, children, pt, py}) => {
   return (
     <div
       id={id}
-      className={`pb-${pb} py-${py} pr-${pr} py-[3rem] m-auto w-full px-4  pt-${pt} md:pt-16 lg:max-w-[85vw]`}
+      className={`m-auto w-full px-4 mb-[6rem] md:pt-${pt} lg:max-w-[85vw] py-${py}`}
     >
       {children}
     </div>
@@ -17,6 +17,6 @@ Container.propTypes = {
   pt: PropTypes.string,
   pb: PropTypes.string,
   pr: PropTypes.string,
-  py: PropTypes.string
+  py: PropTypes.string,
 };
 export default Container;

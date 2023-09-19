@@ -1,19 +1,27 @@
 import PropTypes from "prop-types";
 
-import Open from "../../assets/Icons/upArrow.svg";
+import OpenDark from "../../assets/Icons/upArrowDark.svg";
+import OpenLight from "../../assets/Icons/upArrowLight.svg";
 import Close from "../../assets/Icons/delete.svg";
 import WorkImage from "../../assets/Images/Video.png";
+import useTheme from "../../Hooks/useTheme";
+import ImageWrapper from "./ImageWrapper";
 
 const ServiceDetails = ({ service, onToggleService }) => {
   const { id, work, job, isOpen, borderb } = service;
 
+  const { theme } = useTheme();
+
   return (
     <div className="mt-8">
       <div className="flex items-center justify-between  pb-6 ">
-        <h3 className="heading-secondary text-white ">{job}</h3>
+        <h3 className={`heading-secondary text-${theme} theme-transition`}>
+          {job}
+        </h3>
         <button onMouseOver={() => onToggleService(id, true)}>
-          <img
-            src={Open}
+          <ImageWrapper
+            src={OpenLight}
+            srcForDarkMode={OpenDark}
             className="h-[18px]"
             alt="The Icon to open the sevice image"
           />
@@ -21,7 +29,7 @@ const ServiceDetails = ({ service, onToggleService }) => {
       </div>
 
       {borderb && (
-        <hr className="mb-6 border-b-[1px] text-white opacity-[30%]" />
+        <hr className={`mb-6 border-b-[1px] text-${theme} opacity-[40%]`} />
       )}
 
       {isOpen && (
