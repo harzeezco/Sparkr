@@ -1,7 +1,5 @@
-import Container from "../layouts/Container";
 
 import VideoToggle from "../../assets/Images/VideoToggle.png";
-import Video from "../../assets/Images/Video.png";
 import useTheme from "../../Hooks/useTheme";
 
 const HeroSection = () => {
@@ -10,8 +8,8 @@ const HeroSection = () => {
   const isLightMode = theme === "light" ? "text-light-primary" : "text-dark";
 
   return (
-    <Container id="hero">
-      <div className="grid pt-12 ">
+    <div className="m-auto w-full lg:max-w-[85vw] " id="hero">
+      <div className="grid pt-12">
         <h1
           className={`whitespace-nowrap font-primary text-4xl font-bold capitalize ${isLightMode} theme-transition md:hidden lg:text-[5.2rem]`}
         >
@@ -23,7 +21,7 @@ const HeroSection = () => {
           >
             We Are
           </h1>
-          
+
           <p className="order-first text-base leading-[30px] md:order-last md:text-lg">
             We are helping people to grow their business. We are providing the
             best designs and development service for your next dream project.
@@ -37,11 +35,7 @@ const HeroSection = () => {
           brands
         </h1>
       </div>
-
-      <figure className="pt-10">
-        <img className="w-full" src={Video} alt="working in progress" />
-      </figure>
-    </Container>
+    </div>
   );
 };
 

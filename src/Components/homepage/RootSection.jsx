@@ -8,29 +8,38 @@ import ServiceSliderSection from "./ServiceSliderSection";
 import SpeechSection from "./SpeechSection";
 import TestimonialSection from "./TestimonialSection";
 
+import Video from "../../assets/Images/Video.png";
+
+
 const RootSection = () => {
   const {theme} = useTheme()
   return (
     <main>
-      <section aria-labelledby="hero" className="">
+      <section aria-labelledby="hero" className="mb-[6rem]">
         <HeroSection />
+        <figure className="pt-8">
+          <img className="w-full " src={Video} alt="working in progress" />
+        </figure>
       </section>
       <section aria-labelledby="speech" className="relative bg-orangePrimary">
         <SpeechSection />
       </section>
-      <section aria-labelledby="about" className="">
+      <section aria-labelledby="about">
         <AboutSection />
       </section>
-      <section aria-labelledby="service" className="">
+      <section aria-labelledby="service">
         <ServiceSection />
       </section>
-      <section aria-labelledby="project" className="">
+      <section aria-labelledby="project">
         <ProjectSection />
       </section>
-      <section aria-labelledby="process" className="">
+      <section aria-labelledby="process">
         <ProcessSection />
       </section>
-      <section aria-labelledby="service-slider" className={`bg-${theme}-secondary`}>
+      <section
+        aria-labelledby="service-slider"
+        className={`bg-${theme}-secondary`}
+      >
         <ServiceSliderSection />
       </section>
       <section aria-labelledby="testimonial" className="bg-orangePrimary">

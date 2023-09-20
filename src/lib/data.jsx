@@ -1,6 +1,6 @@
 import CounterRef from "../Components/general/CounterRef";
 import Card1Image from "../assets/Images/Projects/Card1.png";
-import Card2Image from "../assets/Images/projects/Card2.png";
+import Card2Image from "../assets/Images/Projects/Card2.png";
 import Card3Image from "../assets/Images/Projects/Card3.png";
 import Card4Image from "../assets/Images/Projects/Card4.png";
 import Card5Image from "../assets/Images/Projects/Card5.png";
