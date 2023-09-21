@@ -1,3 +1,5 @@
+import useTheme from "../../Hooks/useTheme";
+import ServiceSlider from "../general/SrvicesSlider";
 import CommunitySection from "./CommunitySection";
 import HeroSection from "./HeroSection";
 import IdeaSection from "./IdeaSection";
@@ -5,10 +7,18 @@ import TeamSection from "./TeamSection";
 import ValueSection from "./ValueSection";
 
 const RootSection = () => {
+  const { theme } = useTheme();
+
   return (
-    <main>
+    <main className="relative">
       <section aria-labelledby="hero">
         <HeroSection />
+      </section>
+      <section
+        aria-labelledby="service-slider"
+        className={`bg-${theme}-secondary mb-20`}
+      >
+        <ServiceSlider />
       </section>
       <section aria-labelledby="idea">
         <IdeaSection />

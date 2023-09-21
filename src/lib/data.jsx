@@ -28,6 +28,20 @@ import Co_founder from "../assets/Images/Teams/Co-founder.png";
 import Designer from "../assets/Images/Teams/Designer.png";
 import Marketer from "../assets/Images/Teams/Marketer.png";
 import Developer from "../assets/Images/Teams/Developer.png";
+import BlogNews1 from "../assets/Images/Blog/blog-img-1.png";
+import BlogNews2 from "../assets/Images/Blog/blog-img-2.png";
+import BlogNews3 from "../assets/Images/Blog/blog-img-3.jpg";
+import BlogInsight1 from "../assets/Images/Blog/insight-img-1.jpg";
+import BlogInsight2 from "../assets/Images/Blog/insight-img-2.png";
+import BlogInsight3 from "../assets/Images/Blog/insight-img-3.png";
+import BlogInsight4 from "../assets/Images/Blog/insight-img-4.png";
+import BlogTutorial1 from "../assets/Images/Blog/tutorial-img-1.png";
+import BlogTutorial2 from "../assets/Images/Blog/tutorial-img-2.png";
+import BlogTutorial3 from "../assets/Images/Blog/tutorial-img-3.png";
+import BlogTutorial4 from "../assets/Images/Blog/tutorial-img-4.png";
+import BlogTutorial5 from "../assets/Images/Blog/tutorial-img-5.png";
+import BlogTutorial6 from "../assets/Images/Blog/tutorial-img-6.png";
+import Star from "../assets/Images/Star.png"
 
 export const NAV_LINKS = [
   {
@@ -537,3 +551,171 @@ export const TEAMS_DETAILS = [
     position: "Marketer",
   },
 ];
+
+export const Blog_NEWS_DETAILS = [
+  {
+    id: 1,
+    img: BlogNews1,
+    date: "Jan 24",
+    year: 2023,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 2,
+    img: BlogNews2,
+    date: "Dec 24",
+    year: 2022,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 3,
+    img: BlogNews3,
+    date: "Aug 24",
+    year: 2020,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+];
+
+export const Blog_INSIGHT_DETAILS = [
+  {
+    id: 1,
+    img: BlogInsight1,
+    date: "Mar 24",
+    year: 2023,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 2,
+    img: BlogInsight2,
+    date: "Feb 24",
+    year: 2022,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 3,
+    img: BlogInsight3,
+    date: "May 24",
+    year: 2021,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 4,
+    img: BlogInsight4,
+    date: "Jun 20",
+    year: 2023,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+];
+
+export const Blog_TUTORIAL_DETAILS = [
+  {
+    id: 1,
+    img: BlogTutorial1,
+    date: "Sep 24",
+    year: 2023,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 2,
+    img: BlogTutorial2,
+    date: "Feb 24",
+    year: 2022,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 3,
+    img: BlogTutorial3,
+    date: "May 24",
+    year: 2021,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 4,
+    img: BlogTutorial4,
+    date: "Feb 20",
+    year: 2023,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 5,
+    img: BlogTutorial5,
+    date: "May 24",
+    year: 2021,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+  {
+    id: 6,
+    img: BlogTutorial6,
+    date: "Mar 20",
+    year: 2023,
+    title:
+      "10 tips for UI/UX designers who are kicking off their careers in 2023",
+  },
+];
+
+export const SERVICE_SLIDER_DATA = [
+  {
+    id: 1,
+    name: "UI/UX",
+    icon: Star,
+  },
+  {
+    id: 2,
+    name: "Web Design",
+    icon: Star,
+  },
+  {
+    id: 1,
+    name: "Landing Page",
+    icon: Star,
+  },
+  {
+    id: 1,
+    name: "Product Design",
+    icon: Star,
+  },
+  {
+    id: 1,
+    name: "Mobile Design",
+    icon: Star,
+  },
+]; 
+export const SERVICE_SLIDER2_DATA = [
+  {
+    id: 1,
+    name: "Web Development",
+    icon: Star,
+  },
+  {
+    id: 2,
+    name: "Digital Marketing",
+    icon: Star,
+  },
+  {
+    id: 1,
+    name: "Copy Writing",
+    icon: Star,
+  },
+  {
+    id: 1,
+    name: "Animation",
+    icon: Star,
+  },
+  {
+    id: 1,
+    name: "Illustration",
+    icon: Star,
+  },
+]; 

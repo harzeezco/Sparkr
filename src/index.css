@@ -21,7 +21,6 @@
 
 }
 
-
 body {
   overflow-x: hidden;
 }
@@ -33,7 +32,6 @@ input[type="checkbox"] {
   appearance: none;
   /* For iOS < 15 */
   background-color: var(--form-background);
-
   font: inherit;
   color: currentColor;
   width: 1.15em;
@@ -119,30 +117,75 @@ input[type="checkbox"]:disabled {
   position: absolute;
   width: 15px;
   height: 15px;
-  /* border: 2px solid #333; */
-
   border-radius: 50%;
-  pointer-events: none; /* Prevent the cursor from blocking interactions */
-  mix-blend-mode: difference; /* Create a mask effect */
+  pointer-events: none; 
+  mix-blend-mode: difference; 
   transform: translate(-50%, -50%);
   background-color: #FF463A;
 }
 
-
-
-  .mask{
-    width: 50%;
-    height: 50%;
-    cursor: default;
-   
- 
-  }
+.mask{
+  width: 50%;
+  height: 50%;
+  cursor: default;
+}
   
-  .mask{
-    mask-image: url('../src/assets/Svg/mask.svg');
-    mask-repeat: no-repeat;
-    mask-size: 20px;
-    background: #ec4e39;
-    position: absolute;
-    color: black;
-  }
+.mask{
+  mask-image: url('../src/assets/Svg/mask.svg');
+  mask-repeat: no-repeat;
+  mask-size: 20px;
+  background: #ec4e39;
+  position: absolute;
+  color: black;
+}
+
+ .circle {
+          position: relative;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          clip-path: circle(50% at 50% 50%);
+        }
+
+        .text {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         animation: anim 15s linear infinite ;
+         /* z-index: 100; */
+        }
+
+  @keyframes anim {
+    0% {
+       transform: rotate(0deg);
+    }
+    100% {
+       transform: rotate(360deg);
+   }
+}
+
+     .text span {
+       position: absolute;
+       left: 50%;
+       right: 34%;
+       top: 5%;
+       font-size: .5em;
+       transform-origin: 0 70px;
+       text-transform: uppercase;
+    }
+
+        
+
+.centered-image {
+  clip-path: circle(50% at 50% 50%);
+  width: 102px;
+  height: 102px; 
+}
+
+.lineChildren {
+  transform: translate(0, 500px);
+}
+

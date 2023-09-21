@@ -1,9 +1,28 @@
 
+import { useEffect } from "react";
 import VideoToggle from "../../assets/Images/VideoToggle.png";
 import useTheme from "../../Hooks/useTheme";
+// import SplitText from "../../Utils/Split3.min.js";
+// import gsap from "gsap";
 
 const HeroSection = () => {
   const { theme } = useTheme();
+ 
+  useEffect(() => {
+    // const split = new SplitText("#header-text", {
+    //   type: "lines",
+    //   linesClass: "lineChildren"
+
+    // })
+
+    // gsap.to(split.line, {
+    //   duration: 1,
+    //   y: 0,
+    //   opacity: 1,
+    //   stagger: 0.1,
+    //   ease: "power2"
+    // })
+  }, [])
 
   const isLightMode = theme === "light" ? "text-light-primary" : "text-dark";
 
@@ -29,7 +48,7 @@ const HeroSection = () => {
           <img className="mt-8 md:mt-0" src={VideoToggle} alt="Video play" />
         </div>
 
-        <h1 className="font-primary text-[40px] font-bold capitalize leading-[50px] tracking-[-1px] text-orangePrimary sm:text-[7vw] md:whitespace-nowrap md:leading-snug lg:text-[6.5vw]">
+        <h1 id="header-text" className="font-primary text-[40px] font-bold capitalize leading-[50px] tracking-[-1px] text-orangePrimary sm:text-[7vw] md:whitespace-nowrap md:leading-snug lg:text-[6.5vw]">
           building{" "}
           <span className={`${isLightMode} theme-transition`}>digital</span>{" "}
           brands

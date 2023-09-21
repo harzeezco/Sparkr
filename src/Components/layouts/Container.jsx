@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 
-const Container = ({ id, children, pt, py}) => {
+const Container = ({ id, children, pt, py, ...otherProps }) => {
   return (
     <div
       id={id}
-      className={`m-auto w-full px-4 mb-[6rem] md:pt-${pt} lg:max-w-[85vw] py-${py}`}
+      className={`m-auto mb-[6rem] w-full px-4 md:pt-${pt} lg:max-w-[85vw] py-${py}`}
+      {...otherProps}
     >
       {children}
     </div>

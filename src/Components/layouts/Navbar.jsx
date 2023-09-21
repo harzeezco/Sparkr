@@ -1,7 +1,7 @@
-import LogoDarkMode from "../../assets/Icons/LogoDarkMode.svg";
+import LogoDarkMode from "../../assets/Svg/LogoDarkMode.svg";
+import LogoLightMode from "../../assets/Svg/LogoLightMode.svg";
 import MessageDarkMode from "../../assets/Icons/MessageLightMode.svg";
 import MessageLightMode from "../../assets/Icons/MessageDarkMode.svg";
-import LogoLightMode from "../../assets/Icons/LogoLightMode.svg";
 
 import RegularList from "../general/RegularList";
 import { NAV_LINKS } from "../../lib/data";
@@ -15,7 +15,10 @@ const Navbar = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="theme-transition m-auto flex w-full items-center justify-between px-4 py-7 pb-6 lg:max-w-[85vw]">
+    <div
+      className="theme-transition m-auto flex w-full items-center justify-between px-4 py-7 pb-6 lg:max-w-[85vw]"
+      data-scroll-section
+    >
       <Link to={"/"}>
         <ImageWrapper
           srcForDarkMode={LogoDarkMode}
