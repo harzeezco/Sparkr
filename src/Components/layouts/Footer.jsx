@@ -34,7 +34,7 @@ const Footer = () => {
           to="/contact"
           className={`${isLight} theme-transition flex h-[60px] w-full max-w-[60px] items-center justify-center justify-self-start rounded-full md:ml-8 md:h-[100px] md:max-w-[100px]`}
         >
-          <img src={upArrow} className="h-6 md:h-8" alt="arrow icon" />
+          <img src={upArrow} className="h-6 md:h-8" alt="arrow icon for moving to the contact page" loading="lazy"/>
         </ScrollToTopLink>
       </div>
       <div className="mt-20 grid grid-cols-1 gap-y-8 pb-10 sm:grid-cols-[3fr_1fr_1fr] lg:grid-cols-[3fr_1fr_1fr_1fr]">

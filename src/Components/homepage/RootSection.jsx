@@ -6,20 +6,29 @@ import ProjectSection from "./ProjectSection";
 import ServiceSection from "./ServiceSection";
 import SpeechSection from "./SpeechSection";
 import TestimonialSection from "./TestimonialSection";
-
+import { motion } from "framer-motion";
 import Video from "../../assets/Images/Video.png";
 import ServiceSlider from "../general/SrvicesSlider";
 
-
 const RootSection = () => {
-  const {theme} = useTheme()
+  const { theme } = useTheme();
   return (
     <main>
       <section aria-labelledby="hero" className="" data-scroll-section>
         <HeroSection />
-        <figure className="pt-8" data-scroll-section>
-          <img className="w-full " src={Video} alt="working in progress" />
-        </figure>
+        <motion.figure
+          initial={{ opacity: 0, y: 110 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: 3,
+          }}
+          className="pt-8"
+          data-scroll-section
+        >
+          <img className="w-full " src={Video} alt="working in progress" loading="lazy"/>
+        </motion.figure>
       </section>
       <section
         aria-labelledby="speech"

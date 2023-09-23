@@ -19,6 +19,7 @@ const ColumnGrid2 = ({
         className="w-full max-w-[450px]"
         src={img}
         alt="The image showing our meeting curriculum"
+        loading="lazy"
       />
 
       <article

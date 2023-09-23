@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Projects from "../Components/projectspage/Projects";
 import ProjectDetails from "../Components/projectDetailsPage/ProjectDetails";
+import ProjectsPageSchema from "../Components/SEO/schemas/ProjectsPageSchema";
 
 const ProjectPage = () => {
   return (
@@ -10,6 +11,7 @@ const ProjectPage = () => {
         <Route index element={<Projects />} />
         <Route path="/:id" element={<ProjectDetails />} />
       </Routes>
+      <ProjectsPageSchema />
     </main>
   );
 };

@@ -12,6 +12,7 @@ const BlogDetails = ({ items }) => {
         src={img}
         alt="a book with a phone place on a platform"
         className="w-full"
+        loading="lazy"
       />
       <p className="mb-2 mt-5 font-secondary">
         {" "}

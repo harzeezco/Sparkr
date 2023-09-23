@@ -10,7 +10,7 @@ const Projects = () => {
 
   return (
     <Container id="project">
-      <section className="pt-12">
+      <section className="pt-12" id="projects-list">
         <h1
           className={`whitespace-nowrap font-primary text-3xl font-bold capitalize text-${theme} theme-transition sm:text-[3.2rem] lg:text-[6.5vw]`}
         >

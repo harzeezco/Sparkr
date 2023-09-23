@@ -19,6 +19,9 @@
     @apply  font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]
   }
 
+
+
+
 }
 
 body {
@@ -79,6 +82,10 @@ input[type="checkbox"]:disabled {
 
 .theme-transition {
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.transition-el {
+  transition: all 5s ease-in-out;
 }
 
 .bg-light-primary {
@@ -189,3 +196,11 @@ input[type="checkbox"]:disabled {
   transform: translate(0, 500px);
 }
 
+
+  .visibility-hidden {
+    visibility: hidden;
+  }
+
+  .visibility {
+    visibility: visible;
+  }

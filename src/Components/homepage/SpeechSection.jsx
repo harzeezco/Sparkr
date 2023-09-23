@@ -10,7 +10,7 @@ const SpeechSection = () => {
           bit.
         </h1>
         <div className="absolute right-0 top-[50%] max-w-[15vw] lg:max-w-[25vw]">
-          <img className="w-[100%] max-w-[12vw]" src={SwipeImage} alt="" />
+          <img className="w-[100%] max-w-[12vw]" src={SwipeImage} alt="swipe image for beautify" loading="lazy"/>
         </div>
       </article>
     </Container>

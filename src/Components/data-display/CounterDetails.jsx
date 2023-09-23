@@ -9,12 +9,12 @@ const CounterDetails = ({ item }) => {
 
   return (
     <div className="pb-4 pt-4">
-      <h1 className={`${num}`}>
+      <p className={`${num}`}>
         <span data-value={data_value} ref={counter}>
           {data_value}
         </span>
         <span className="text-orangePrimary">{percent_symb}</span>
-      </h1>
+      </p>
       <h2
         className={`text-xl font-bold capitalize leading-[30px] text-${theme} pt-2`}
       >

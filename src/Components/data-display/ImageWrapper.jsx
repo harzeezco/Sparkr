@@ -16,7 +16,7 @@ const ImageWrapper = ({ srcForDarkMode, src, alt, ...props }) => {
 
   const finalSrc = theme === "dark" ? srcForDarkMode || src : src;
 
-  return <img src={finalSrc} alt={alt} {...props} />;
+  return <img src={finalSrc} alt={alt} {...props} loading="lazy"/>;
 };
 
 ImageWrapper.propTypes = {

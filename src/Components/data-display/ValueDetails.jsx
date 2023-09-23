@@ -7,7 +7,7 @@ const ValueDetails = ({ items }) => {
 
   return (
     <div className="flex gap-x-4">
-      <img className="h-6" src={icon} alt={`${alt} image`} />
+      <img className="h-6" src={icon} alt={`${alt} image`} loading="lazy"/>
       <div className="">
         <h3
           className={`text-xl font-bold capitalize leading-[30px] text-${theme} theme-transition`}

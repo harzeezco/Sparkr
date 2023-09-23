@@ -10,7 +10,7 @@ const RootSection = () => {
   const { theme } = useTheme();
 
   return (
-    <main className="relative">
+    <main className="relative" id="about-content">
       <section aria-labelledby="hero">
         <HeroSection />
       </section>

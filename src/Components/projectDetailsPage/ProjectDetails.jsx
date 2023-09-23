@@ -39,7 +39,7 @@ const ProjectDetails = () => {
         >
           {job_title}
         </h1>
-        <img src={poster} alt="Poster" />
+        <img src={poster} alt="Poster" loading="lazy"/>
 
         <article className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-[300px_1fr]">
           <div className="order-last md:order-first">
@@ -65,19 +65,19 @@ const ProjectDetails = () => {
           <div>
             <div className="mb-7">
               <h3 className={`${major_heading}`}>About</h3>
-              <p className="text-[18px] capitalize leading-[35px]">{about}</p>
+              <p className="text-[18px]  leading-[35px]">{about}</p>
             </div>
             <div className="mb-7">
               <h3 className={`${major_heading}`}>The Problem</h3>
-              <p className="text-[18px] capitalize leading-[35px]">{problem}</p>
+              <p className="text-[18px] leading-[35px]">{problem}</p>
             </div>
             <div className="mb-7">
               <h3 className={`${major_heading}`}>Process</h3>
-              <p className="text-[18px] capitalize leading-[35px]">{process}</p>
+              <p className="text-[18px] leading-[35px]">{process}</p>
             </div>
             <div className="mb-7">
               <h3 className={`${major_heading}`}>Solution</h3>
-              <p className="text-[18px] capitalize leading-[35px]">
+              <p className="text-[18px] leading-[35px]">
                 {solution}
               </p>
             </div>
@@ -85,8 +85,8 @@ const ProjectDetails = () => {
         </article>
 
         <div className="mt-5 grid grid-cols-1 gap-7 md:grid-cols-2">
-          <img src={firstFooterImg} alt="first project done image" />
-          <img src={secondFooterImg} alt="second project done image" />
+          <img src={firstFooterImg} alt="first project done image" loading="lazy"/>
+          <img src={secondFooterImg} alt="second project done image" loading="lazy"/>
         </div>
       </section>
     </Container>

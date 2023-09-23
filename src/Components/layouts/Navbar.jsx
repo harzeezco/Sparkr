@@ -53,6 +53,7 @@ const Navbar = () => {
         </div>
         <div className="inline-block pl-4" role="button">
           <ThemeSwitcher />
+          
         </div>
       </div>
 
