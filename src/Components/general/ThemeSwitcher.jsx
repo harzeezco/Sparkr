@@ -16,9 +16,18 @@ function ThemeSwitcher() {
       className={`
         flex h-10 w-10 items-center justify-center overflow-hidden bg-inherit transition  focus:hover:border-white`}
     >
-      <button className={`${isDark && "translate-x-0"} transition-all`}>
+      <button
+        className={`${isDark && "translate-x-0"} transition-all`}
+        role="button"
+        aria-controls="toggle"
+        aria-label="light and dark mode"
+      >
         {isDark ? (
-          <span onClick={toggleSwitch} className={`text-${theme}`}>
+          <span
+            onClick={toggleSwitch}
+            className={`text-${theme}`}
+            aria-label="Button for Mode Toggle"
+          >
             <Moon />
           </span>
         ) : (

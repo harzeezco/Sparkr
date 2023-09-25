@@ -8,27 +8,6 @@ const CircleContact = () => {
   const { theme } = useTheme();
   const textRef = useCreateCircleText();
 
-  // const isLight = theme === "light" ? "#fff" : "#121418";
-
-  // useEffect(() => {
-  //   document.body.style.backgroundColor = `${isLight}`;
-  //   const textElement = textRef.current;
-  //   const text = textElement.innerText;
-
-  //   textElement.innerHTML = text
-  //     .split("")
-  //     .map((char, i) => {
-  //       const span = document.createElement("span");
-  //       span.textContent = char;
-  //       span.style.transform = `rotate(${i * 5.5}deg)`;
-  //       return span.outerHTML;
-  //     })
-  //     .join("");
-  //   return () => {
-  //     document.body.style.backgroundColor = "";
-  //   };
-  // }, [isLight]);
-
   return (
     <div className="fixed bottom-5 right-[40px] z-50">
       <Link to="/contact" className="circle">
@@ -37,8 +16,14 @@ const CircleContact = () => {
         </div>
 
         <div className="centered-image">
-          <video loop autoPlay muted className="">
+          <video loop autoPlay muted>
             <source src={gif} type="video/mp4" />
+            <track
+              label="English Captions"
+              kind="captions"
+              srcLang="en"
+              default
+            ></track>
           </video>
         </div>
       </Link>

@@ -8,9 +8,9 @@ const ServiceSliderDetails = ({ items }) => {
   return (
     <div className="slide">
       <div className="flex items-center gap-x-8 px-4">
-        <h3 className={`font-primary text-[38px] font-bold text-${theme}`}>
+        <h1 className={`font-primary text-[38px] font-bold text-${theme}`}>
           {name}
-        </h3>
+        </h1>
         <img src={icon} alt="Star" loading="lazy"/>
       </div>
     </div>

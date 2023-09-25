@@ -1,6 +1,6 @@
 import useTheme from "../../Hooks/useTheme";
 
-import AboutImg from "../../assets/Images/About.png";
+import AboutImg from "../../assets/Images/About.webp";
 
 const HeroSection = () => {
   const { theme } = useTheme();

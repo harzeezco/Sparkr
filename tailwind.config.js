@@ -28,7 +28,7 @@ export default {
         colorDark: "#121418",
         colorDarkLight: "#181818",
         colorLight: "#474A4F",
-
+        btnColor: "#B30B00",
         "colorwhite-100": "#aeaeb0",
         toggle: "#f4f4f5",
         bg_Light: "#f9f9f9"

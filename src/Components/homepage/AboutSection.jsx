@@ -1,5 +1,5 @@
 import useTheme from "../../Hooks/useTheme";
-import Meeting from "../../assets/Images/meeting.png";
+import Meeting from "../../assets/Images/meeting.webp";
 import ColumnGrid2 from "../layouts/2ColumnGrid";
 import Container from "../layouts/Container";
 

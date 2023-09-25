@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import OpenDark from "../../assets/Icons/upArrowDark.svg";
 import OpenLight from "../../assets/Icons/upArrowLight.svg";
 import Close from "../../assets/Icons/delete.svg";
-import WorkImage from "../../assets/Images/Video.png";
+import WorkImage from "../../assets/Images/Hero.webp";
 import useTheme from "../../Hooks/useTheme";
 import ImageWrapper from "./ImageWrapper";
 
@@ -22,9 +22,9 @@ const ServiceDetails = ({ service, onToggleService }) => {
         className="transition-el flex items-center  justify-between pb-6"
         onMouseOver={() => onToggleService(id, true)}
       >
-        <h3 className={`heading-secondary text-${theme} theme-transition`}>
+        <h1 className={`heading-secondary text-${theme} theme-transition`}>
           {job}
-        </h3>
+        </h1>
         <div onMouseOver={handleButtonMouseOver} className="w-[10rem] flex justify-end">
           <ImageWrapper
             src={OpenLight}
@@ -45,9 +45,9 @@ const ServiceDetails = ({ service, onToggleService }) => {
         )}
 
         <div className="mb-6 flex items-center justify-between">
-          <h3 className="heading-secondary uppercase text-orangePrimary">
+          <h2 className="heading-secondary uppercase text-orangePrimary">
             {work} <span className="capitalize ">Design</span>
-          </h3>
+          </h2>
           <button onMouseEnter={() => onToggleService(id, false)}>
             <img
               className="h-[18px]"

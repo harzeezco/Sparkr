@@ -6,61 +6,44 @@ import ProjectSection from "./ProjectSection";
 import ServiceSection from "./ServiceSection";
 import SpeechSection from "./SpeechSection";
 import TestimonialSection from "./TestimonialSection";
-import { motion } from "framer-motion";
-import Video from "../../assets/Images/Video.png";
+import Video from "../../assets/Images/Hero.webp";
 import ServiceSlider from "../general/SrvicesSlider";
 
 const RootSection = () => {
   const { theme } = useTheme();
   return (
     <main>
-      <section aria-labelledby="hero" className="" data-scroll-section>
+      <section aria-labelledby="hero">
         <HeroSection />
-        <motion.figure
-          initial={{ opacity: 0, y: 110 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 3,
-          }}
-          className="pt-8"
-          data-scroll-section
-        >
-          <img className="w-full " src={Video} alt="working in progress" loading="lazy"/>
-        </motion.figure>
+        <figure className="pt-8">
+          <img className="w-full h-full" src={Video} alt="working in progress" loading="lazy"/>
+        </figure>
       </section>
       <section
         aria-labelledby="speech"
         className="relative mt-[-20px] bg-orangePrimary"
-        data-scroll-section
       >
         <SpeechSection />
       </section>
-      <section aria-labelledby="about" data-scroll-section>
+      <section aria-labelledby="about">
         <AboutSection />
       </section>
-      <section aria-labelledby="service" data-scroll-section>
+      <section aria-labelledby="service">
         <ServiceSection />
       </section>
-      <section aria-labelledby="project" data-scroll-section>
+      <section aria-labelledby="project">
         <ProjectSection />
       </section>
-      <section aria-labelledby="process" data-scroll-section>
+      <section aria-labelledby="process">
         <ProcessSection />
       </section>
       <section
         aria-labelledby="service-slider"
         className={`bg-${theme}-secondary`}
-        data-scroll-section
       >
         <ServiceSlider />
       </section>
-      <section
-        aria-labelledby="testimonial"
-        className="bg-orangePrimary"
-        data-scroll-section
-      >
+      <section aria-labelledby="testimonial" className="bg-orangePrimary">
         <TestimonialSection />
       </section>
     </main>

@@ -1,6 +1,7 @@
 // PageHelmet.js
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet-async";
+import favIcon from "../../../assets/Images/mark.png";
 
 const PageHelmet = ({
   title,
@@ -30,7 +31,7 @@ const PageHelmet = ({
       <meta name="robots" content="index, follow" />
 
       {/* Include a favicon */}
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href={favIcon} />
 
       {/* Open Graph meta tags for social sharing */}
       <meta property="og:title" content={title} />

@@ -17,17 +17,17 @@ const Navbar = () => {
   return (
     <div
       className="theme-transition m-auto flex w-full items-center justify-between px-4 py-7 pb-6 lg:max-w-[85vw]"
-      data-scroll-section
     >
       <Link to={"/"}>
         <ImageWrapper
           srcForDarkMode={LogoDarkMode}
           src={LogoLightMode}
           alt="Logo Image of Route Agency"
+          className="h-[34px]"
         />
       </Link>
 
-      <nav className="hidden md:inline-flex" id="nav-menu">
+      <nav className="hidden md:inline-flex" id="nav-menu" role="navigation">
         <ul
           role="list"
           className="flex items-center justify-between gap-6 text-lg font-normal capitalize"
@@ -52,11 +52,9 @@ const Navbar = () => {
           <span className="underline">Hello@agency.com</span>
         </div>
         <div className="inline-block pl-4" role="button">
-          <ThemeSwitcher />
-          
+          <ThemeSwitcher /> 
         </div>
       </div>
-
       <button
         aria-label="Toggle Navigation Menu"
         role="button"

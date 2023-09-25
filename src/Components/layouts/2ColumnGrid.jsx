@@ -51,6 +51,10 @@ ColumnGrid2.propTypes = {
   first_prgh: PropTypes.string,
   second_prgh: PropTypes.string,
   button: PropTypes.bool,
+  header: PropTypes.bool,
+  header_highlight: PropTypes.string,
+  img_first: PropTypes.bool,
+  text_first: PropTypes.bool,
 };
 
 export default ColumnGrid2;

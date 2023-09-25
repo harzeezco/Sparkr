@@ -34,8 +34,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               ease: "easeInOut",
-              duration: 1,
-              delay: 0.4,
+              duration: 0,
+              delay: 0,
             }}
             className={`hidden whitespace-nowrap font-primary text-4xl font-bold capitalize ${isLightMode} theme-transition sm:text-[50px] md:block lg:text-[5rem]`}
           >
@@ -46,8 +46,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               ease: "easeInOut",
-              duration: 1.2,
-              delay: 2,
+              duration: 0,
+              delay: 0,
             }}
             className="order-first text-base leading-[30px] md:order-last  md:text-lg"
           >
@@ -60,8 +60,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               ease: "easeInOut",
-              duration: 1.2,
-              delay: 1.5,
+              duration: 0,
+              delay: 0,
             }}
           >
             <video
@@ -71,6 +71,12 @@ const HeroSection = () => {
               className="h-[100px] w-full rounded-[50px]"
             >
               <source src={gif} type="video/mp4" />
+              <track
+                label="English Captions"
+                kind="captions"
+                srcLang="en"
+                default
+              ></track>
             </video>
           </motion.div>
         </div>
@@ -79,8 +85,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             ease: "easeInOut",
-            duration: 1.3,
-            delay: 2.5,
+            duration: 0,
+            delay: 0,
           }}
           id="header-text"
           className="font-primary text-[40px] font-bold capitalize leading-[50px] tracking-[-1px] text-orangePrimary sm:text-[7vw] md:whitespace-nowrap md:leading-snug lg:text-[6.5vw]"

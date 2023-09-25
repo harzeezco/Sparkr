@@ -3,8 +3,8 @@ import RegularList from "../general/RegularList";
 import SocialLink from "../navigation/SocialLink";
 
 import upArrow from "../../assets/Icons/upArrow2.svg";
-import LogoLightMode from "../../assets/Icons/LogoLightMode.svg";
-import LogoDarkMode from "../../assets/Icons/LogoDarkMode.svg";
+import LogoLightMode from "../../assets/Svg/LogoLightMode.svg";
+import LogoDarkMode from "../../assets/Svg/LogoDarkMode.svg";
 import Line from "../../assets/Images/Line.png";
 import LineLight from "../../assets/Icons/LineLight.svg";
 import {
@@ -60,11 +60,11 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h4
+            <h2
               className={`text-[20px] font-bold leading-[20px] text-${theme} theme-transition md:leading-[30px]`}
             >
               Follow us
-            </h4>
+            </h2>
             <ul className="flex items-center justify-start gap-x-4 pt-5">
               <RegularList
                 items={SOCIAL_LINKS}

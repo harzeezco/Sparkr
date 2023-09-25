@@ -21,15 +21,18 @@ const ProjectDetails = ({ card }) => {
   return (
     <article className="mb-6">
       <div className="group relative">
-        <img src={img} alt="Your Image" className="w-full" loading="lazy"/>
+        <img src={img} alt="Your Image" className="w-full" loading="lazy" />
         <div className="duration-9000 absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center text-white">
           <button
             onClick={handleNavigateToProjectDetails}
             className="z-100 relative flex h-10 w-10 items-center justify-center rounded-full bg-orangePrimary  opacity-0 transition-opacity duration-1000 group-hover:opacity-100"
+            aria-label="Open project details"
+            role="button"
+            aria-controls="open project"
           >
             <ImageWrapper
-              className="h-[15px]"
+              className="h-[15px] "
               srcForDarkMode={upArrowDark}
               src={upArrowLight}
               alt="arrow"
@@ -49,11 +52,11 @@ const ProjectDetails = ({ card }) => {
           development
         </button>
       </div>
-      <h3
+      <h1
         className={`theme-transition whitespace-nowrap text-[1.3rem] font-bold text-${theme} md:text-[2.4vw]`}
       >
         {job_title}
-      </h3>
+      </h1>
     </article>
   );
 };

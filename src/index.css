@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 @layer components {
   .heading-secondary {
@@ -8,11 +13,11 @@
   }
 
   .btn-primary {
-    @apply rounded-[2px] bg-orangePrimary px-8 py-4  text-[16px] font-medium capitalize text-white w-full sm:w-auto
+    @apply rounded-[2px] bg-btnColor px-8 py-4  text-[18px] font-medium capitalize text-white w-full sm:w-auto
   }
   
   .btn-secondary {
-    @apply theme-transition rounded-[2px] border border-solid border-orangePrimary px-8 py-4 text-[16px] font-medium capitalize text-orangePrimary hover:bg-orangePrimary hover:text-white
+    @apply theme-transition rounded-[2px] border border-solid border-btnColor px-8 py-4 text-[16px] font-medium capitalize text-orangePrimary hover:bg-orangePrimary hover:text-white
   }
 
   .heading-primary {
@@ -26,6 +31,7 @@
 
 body {
   overflow-x: hidden;
+  font-weight: 400;
 }
 
 input[type="checkbox"] {
