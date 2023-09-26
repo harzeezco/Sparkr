@@ -53,19 +53,21 @@ const ServiceDetails = ({ service, onToggleService }) => {
           </h2>
           <button onMouseEnter={() => onToggleService(id, false)}>
             <img
-              className="h-[18px]"
+              className="h-[18px] w-[18px]"
               src={Close}
               alt="Icon to close the service image"
               loading="lazy"
             />
           </button>
         </div>
-        <img
-          src={WorkImage}
-          className="w-full"
-          alt="The image showing a UI/UX Work"
-          loading="lazy"
-        />
+        <div className="mx-auto w-full max-w-[100vw]">  
+          <img
+            src={WorkImage}
+            className="470px w-full"
+            alt="The image showing a UI/UX Work"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   );

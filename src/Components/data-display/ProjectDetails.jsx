@@ -21,7 +21,14 @@ const ProjectDetails = ({ card }) => {
   return (
     <article className="mb-6">
       <div className="group relative">
-        <img src={img} alt="Your Image" className="w-full" loading="lazy" />
+        <div className="mx-auto w-full max-w-[100vw]">
+          <img
+            src={img}
+            alt="Your Image"
+            className="h-[420px] w-full"
+            loading="lazy"
+          />
+        </div>
         <div className="duration-9000 absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center text-white">
           <button

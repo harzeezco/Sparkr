@@ -6,7 +6,7 @@ import Container from "../layouts/Container";
 
 const TestimonialSection = () => {
   return (
-    <Container id="testimonial" py="[5rem]">
+    <Container id="testimonial">
       <blockquote className="py-[3rem]">
         <TestimonialsCarousel testimonials={TESTIMONIALS_DETAILS} />
       </blockquote>

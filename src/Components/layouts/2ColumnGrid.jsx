@@ -14,13 +14,15 @@ const ColumnGrid2 = ({
   const { theme } = useTheme();
 
   return (
-    <div className="flex flex-col items-center justify-between gap-x-20 gap-y-10 pt-12 md:flex-row">
-      <img
-        className="w-full max-w-[450px]"
-        src={img}
-        alt="The image showing our meeting curriculum"
-        loading="lazy"
-      />
+    <div className="grid md:grid-cols-2 items-center justify-between gap-x-20 gap-y-10 pt-12 md:flex-row">
+      <div className="mx-auto w-full max-w-[100vw]">
+        <img
+          className="h-[470px] w-full"
+          src={img}
+          alt="The image showing our meeting curriculum"
+          loading="lazy"
+        />
+      </div>
 
       <article
         className={`${img_first && "order-first md:order-last"}

@@ -12,14 +12,15 @@ const TestimonialsCarousel = ({ testimonials }) => {
   return (
     <article className="relative w-full">
       <Slider {...settings} ref={sliderRef} aria-live="polite">
-        {testimonials.map((testimonial, index) => (
+        {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="p-4">
             <div className="grid justify-start p-4 md:grid-cols-[120px_1fr]">
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-colorDark p-2">
                 <img
-                  className="h-6"
+                  className="h-6 w-6"
                   src={BlockQuote}
                   alt="Image of the testimonial quote icon"
+                  loading="lazy"
                 />
               </div>
 
@@ -40,7 +41,7 @@ const TestimonialsCarousel = ({ testimonials }) => {
           </div>
         ))}
       </Slider>
-      <div className="right-0 flex pl-5 sm:absolute sm:bottom-[40px] sm:justify-center md:pl-0 ">
+      <div className="right-0 flex items-center gap-x-4 pl-5 sm:absolute sm:bottom-[40px] sm:justify-center md:pl-0">
         {testimonials.map((_, index) => (
           <button
             aria-label={`${index} carousel button`}
@@ -49,8 +50,10 @@ const TestimonialsCarousel = ({ testimonials }) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`${
-              activeSlide === index ? "bg-white" : "py-2 opacity-[50%]"
-            } mx-2 rounded-full bg-white px-2 hover:bg-white`}
+              activeSlide === index
+                ? "h-7 bg-white"
+                : "h-5 bg-white px-2 opacity-[50%] hover:bg-white hover:opacity-[100%]"
+            } rounded-full px-2 py-2 theme-transition`}
           ></button>
         ))}
       </div>

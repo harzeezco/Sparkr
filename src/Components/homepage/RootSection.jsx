@@ -7,7 +7,7 @@ import ServiceSection from "./ServiceSection";
 import SpeechSection from "./SpeechSection";
 import TestimonialSection from "./TestimonialSection";
 import Video from "../../assets/Images/Hero.webp";
-import ServiceSlider from "../general/SrvicesSlider";
+import ServiceSlider from "../general/ServicesSlider";
 
 const RootSection = () => {
   const { theme } = useTheme();
@@ -15,9 +15,14 @@ const RootSection = () => {
     <main>
       <section aria-labelledby="hero">
         <HeroSection />
-        <figure className="pt-8">
-          <img className="w-[100vw]" src={Video} alt="working in progress" loading="lazy"/>
-        </figure>
+        <div className="mx-auto w-full max-w-screen-xl pt-8">
+          <img
+            src={Video}
+            alt="working in progress"
+            loading="lazy"
+            className="h-[624px] w-full"
+          />
+        </div>
       </section>
       <section
         aria-labelledby="speech"

@@ -18,7 +18,6 @@ import ScrollToTopLink from "../general/ScrollToTopLink";
 
 const Footer = () => {
   const { theme } = useTheme();
-  const isLight = theme === "light" ? "bg-light-secondary" : "bg-light-primary";
 
   return (
     <div className="m-auto px-4 pb-10 lg:max-w-[85vw]" id="footer">
@@ -30,11 +29,17 @@ const Footer = () => {
           <span className="text-orangePrimary">product</span> together
         </h1>
 
-        <ScrollToTopLink
-          to="/contact"
-          className={`${isLight} theme-transition flex h-[60px] w-full max-w-[60px] items-center justify-center justify-self-start rounded-full md:ml-8 md:h-[100px] md:max-w-[100px]`}
-        >
-          <img src={upArrow} className="h-6 md:h-8" alt="arrow icon for moving to the contact page" loading="lazy"/>
+        <ScrollToTopLink to="/contact">
+          <div
+            className={`bg-${theme}-secondary theme-transition flex h-[60px] w-full max-w-[60px] items-center justify-center justify-self-start rounded-full md:ml-8 md:h-[100px] md:max-w-[100px]`}
+          >
+            <img
+              src={upArrow}
+              className="h-6 md:h-8"
+              alt="arrow icon for moving to the contact page"
+              loading="lazy"
+            />
+          </div>
         </ScrollToTopLink>
       </div>
       <div className="mt-20 grid grid-cols-1 gap-y-8 pb-10 sm:grid-cols-[3fr_1fr_1fr] lg:grid-cols-[3fr_1fr_1fr_1fr]">
@@ -98,9 +103,7 @@ const Footer = () => {
 
       <hr className="my-8 w-full border-b-[1px]" />
 
-      <p className="text-center text-sm">
-        Copyright 2023 all rights Flowgiri reserved
-      </p>
+      <p className="text-center text-sm">Copyright 2023 all rights reserved</p>
     </div>
   );
 };
