@@ -1,29 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer components {
   .heading-secondary {
-    @apply font-primary capitalize text-[1.12rem] md:text-4xl  font-bold
+    @apply font-primary text-[1.12rem] font-bold capitalize  md:text-4xl;
   }
-
   .btn-primary {
-    @apply rounded-[2px] bg-btnColor px-8 py-4  text-[18px] font-medium capitalize text-white w-full sm:w-auto
+    @apply w-full rounded-[2px] bg-btnColor px-8  py-4 text-[18px] font-medium capitalize text-white sm:w-auto;
   }
-  
   .btn-secondary {
-    @apply theme-transition rounded-[2px] border border-solid border-btnColor px-8 py-4 text-[16px] font-medium capitalize text-orangePrimary hover:bg-orangePrimary hover:text-white
+    @apply theme-transition rounded-[2px] border border-solid border-btnColor px-8 py-4 text-[16px] font-medium capitalize text-orangePrimary hover:bg-orangePrimary hover:text-white;
   }
-
   .heading-primary {
-    @apply  font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px]
+    @apply font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px];
   }
-
 }
 
 body {
@@ -36,7 +29,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-  accent-color: #FF463A;
+  accent-color: #ff463a;
 }
 
 .slick-prev,
@@ -45,7 +38,9 @@ input[type="checkbox"]:checked {
 }
 
 .theme-transition {
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
 }
 
 .transition-el {
@@ -53,7 +48,7 @@ input[type="checkbox"]:checked {
 }
 
 .bg-light-primary {
-  background-color: #FFFEFE;
+  background-color: #fffefe;
 }
 
 .text-light-primary {
@@ -65,23 +60,23 @@ input[type="checkbox"]:checked {
 }
 
 .bg-dark-secondary {
-  background-color: #1F2021;
+  background-color: #1f2021;
 }
 
-.bg-dark{
+.bg-dark {
   background-color: #121418;
 }
 
 .text-dark {
-  color: #FFF;
+  color: #fff;
 }
 
 .text-dark-primary {
-  color: #B3B3B3;
+  color: #b3b3b3;
 }
 
 .bg-light-secondary {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 
 .cursor {
@@ -89,20 +84,20 @@ input[type="checkbox"]:checked {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  pointer-events: none; 
-  mix-blend-mode: difference; 
+  pointer-events: none;
+  mix-blend-mode: difference;
   transform: translate(-50%, -50%);
-  background-color: #FF463A;
+  background-color: #ff463a;
 }
 
-.mask{
+.mask {
   width: 50%;
   height: 50%;
   cursor: default;
 }
-  
-.mask{
-  mask-image: url('../src/assets/Svg/mask.svg');
+
+.mask {
+  mask-image: url("../src/assets/Svg/mask.svg");
   mask-repeat: no-repeat;
   mask-size: 20px;
   background: #ec4e39;
@@ -110,56 +105,53 @@ input[type="checkbox"]:checked {
   color: black;
 }
 
- .circle {
-          position: relative;
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          clip-path: circle(50% at 50% 50%);
-        }
-
-        .text {
-         width: 100%;
-         height: 100%;
-         position: absolute;
-         animation: anim 15s linear infinite ;
-         /* z-index: 100; */
-        }
-
-  @keyframes anim {
-    0% {
-       transform: rotate(0deg);
-    }
-    100% {
-       transform: rotate(360deg);
-   }
+.circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(50% at 50% 50%);
 }
 
-     .text span {
-       position: absolute;
-       left: 50%;
-       right: 34%;
-       top: 5%;
-       font-size: .5em;
-       transform-origin: 0 70px;
-       text-transform: uppercase;
-    }
+.text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: anim 15s linear infinite;
+}
 
-        
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  right: 34%;
+  top: 5%;
+  font-size: 0.5em;
+  transform-origin: 0 70px;
+  text-transform: uppercase;
+}
 
 .centered-image {
   clip-path: circle(50% at 50% 50%);
-  width: 102px;
-  height: 102px; 
+  width: 94px;
+  height: 94px;
 }
 
-  .visibility-hidden {
-    visibility: hidden;
-  }
+.visibility-hidden {
+  visibility: hidden;
+}
 
-  .visibility {
-    visibility: visible;
-  }
+.visibility {
+  visibility: visible;
+}

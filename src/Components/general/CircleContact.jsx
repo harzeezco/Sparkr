@@ -12,7 +12,7 @@ const CircleContact = () => {
     <div className="fixed bottom-5 right-[40px] z-50">
       <Link to="/contact" className="circle">
         <div className={`text text-${theme}`}>
-          <p ref={textRef}>Contact - Contact - Contact - Contact - Contact -</p>
+          <p ref={textRef}>Contact - Contact - Contact - Contact - </p>
         </div>
 
         <div className="centered-image">
