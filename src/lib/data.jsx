@@ -41,7 +41,7 @@ import BlogTutorial3 from "../assets/Images/Blog/tutorial-img-3.png";
 import BlogTutorial4 from "../assets/Images/Blog/tutorial-img-4.png";
 import BlogTutorial5 from "../assets/Images/Blog/tutorial-img-5.png";
 import BlogTutorial6 from "../assets/Images/Blog/tutorial-img-6.png";
-import Star from "../assets/Images/Star.png"
+import Star from "../assets/Images/Star.png";
 
 export const NAV_LINKS = [
   {
@@ -118,7 +118,7 @@ export const COUNT_DETAILS = [
   {
     id: 1,
     data_value: "05",
-    header: "years of exprerience",
+    header: "years of experience",
     prgh_text: "We have over 5+ years of experience in this design industry.",
     percent_symb: "+",
     counter: counter1,
@@ -552,7 +552,7 @@ export const TEAMS_DETAILS = [
   },
 ];
 
-export const Blog_NEWS_DETAILS = [
+export const BlOG_NEWS_DETAILS = [
   {
     id: 1,
     img: BlogNews1,
@@ -579,7 +579,7 @@ export const Blog_NEWS_DETAILS = [
   },
 ];
 
-export const Blog_INSIGHT_DETAILS = [
+export const BlOG_INSIGHT_DETAILS = [
   {
     id: 1,
     img: BlogInsight1,
@@ -614,7 +614,7 @@ export const Blog_INSIGHT_DETAILS = [
   },
 ];
 
-export const Blog_TUTORIAL_DETAILS = [
+export const BlOG_TUTORIAL_DETAILS = [
   {
     id: 1,
     img: BlogTutorial1,
@@ -691,7 +691,7 @@ export const SERVICE_SLIDER_DATA = [
     name: "Mobile Design",
     icon: Star,
   },
-]; 
+];
 export const SERVICE_SLIDER2_DATA = [
   {
     id: 1,
@@ -718,4 +718,4 @@ export const SERVICE_SLIDER2_DATA = [
     name: "Illustration",
     icon: Star,
   },
-]; 
+];

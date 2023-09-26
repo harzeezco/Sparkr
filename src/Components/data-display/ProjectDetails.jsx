@@ -32,7 +32,7 @@ const ProjectDetails = ({ card }) => {
             aria-controls="open project"
           >
             <ImageWrapper
-              className="h-[15px] "
+              className="h-[15px]"
               srcForDarkMode={upArrowDark}
               src={upArrowLight}
               alt="arrow"

@@ -17,7 +17,7 @@ const ServiceDetails = ({ service, onToggleService }) => {
   }
 
   return (
-    <div className="mt-8 cursor-pointer">
+    <div className="mt-2 cursor-pointer">
       <div
         className="transition-el flex items-center  justify-between pb-6"
         onMouseOver={() => onToggleService(id, true)}
@@ -25,25 +25,28 @@ const ServiceDetails = ({ service, onToggleService }) => {
         <h1 className={`heading-secondary text-${theme} theme-transition`}>
           {job}
         </h1>
-        <div onMouseOver={handleButtonMouseOver} className="w-[10rem] flex justify-end">
+        <div
+          onMouseOver={handleButtonMouseOver}
+          className="flex w-[10rem] justify-end"
+        >
           <ImageWrapper
             src={OpenLight}
             srcForDarkMode={OpenDark}
-            className="h-[18px]"
-            alt="The Icon to open the sevice image"
+            className="h-[18px] w-[18px]"
+            alt="The Icon to open the service image"
           />
         </div>
       </div>
 
+      {borderb || isOpen ? (
+        <hr className={`mb-6 border-b-[1px] text-${theme} opacity-[40%]`} />
+      ) : null}
+
       <div
         className={`${
           isOpen ? "visible h-[100%] opacity-100" : "invisible h-0  opacity-0"
-        } cursor-pointer transition-opacity duration-[2s] ease-in-out group-hover:visible group-hover:opacity-100`}
+        } cursor-pointer transition-opacity duration-[1s] ease-in-out group-hover:visible group-hover:opacity-100`}
       >
-        {borderb && (
-          <hr className={`mb-6 border-b-[1px] text-${theme} opacity-[40%]`} />
-        )}
-
         <div className="mb-6 flex items-center justify-between">
           <h2 className="heading-secondary uppercase text-orangePrimary">
             {work} <span className="capitalize ">Design</span>
@@ -52,7 +55,7 @@ const ServiceDetails = ({ service, onToggleService }) => {
             <img
               className="h-[18px]"
               src={Close}
-              alt="Icon to close the sevice image"
+              alt="Icon to close the service image"
               loading="lazy"
             />
           </button>

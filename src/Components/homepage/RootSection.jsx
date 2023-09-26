@@ -16,7 +16,7 @@ const RootSection = () => {
       <section aria-labelledby="hero">
         <HeroSection />
         <figure className="pt-8">
-          <img className="w-full h-full" src={Video} alt="working in progress" loading="lazy"/>
+          <img className="w-[70vw]" src={Video} alt="working in progress" loading="lazy"/>
         </figure>
       </section>
       <section

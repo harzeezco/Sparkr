@@ -14,7 +14,7 @@ const Services = ({ header }) => {
     setServices((prev) =>
       prev.map((current) => {
         return current.id === id
-          ? { ...current, isOpen: condition, borderb: true }
+          ? { ...current, isOpen: condition }
           : { ...current };
       }),
     );
@@ -25,7 +25,7 @@ const Services = ({ header }) => {
       {header && (
         <>
           <h1
-            className={`font-primary text-[30px] font-bold capitalize text-${theme} sm:text-[45px] md:leading-[74px] lg:text-[60px] theme-transition`}
+            className={`font-primary text-[30px] font-bold capitalize text-${theme} theme-transition sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
           >
             <span className="text-orangePrimary">services </span> we provide
           </h1>
