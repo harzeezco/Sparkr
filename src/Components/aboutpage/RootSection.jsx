@@ -1,5 +1,5 @@
 import useTheme from "../../Hooks/useTheme";
-import ServiceSlider from "../general/SrvicesSlider";
+import ServiceSlider from "../general/ServicesSlider";
 import CommunitySection from "./CommunitySection";
 import HeroSection from "./HeroSection";
 import IdeaSection from "./IdeaSection";
