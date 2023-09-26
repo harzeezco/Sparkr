@@ -1,5 +1,5 @@
 import useTheme from "../../Hooks/useTheme";
-import { Blog_TUTORIAL_DETAILS } from "../../lib/data";
+import { BLOG_TUTORIAL_DETAILS } from "../../lib/data";
 import BlogDetails from "../data-display/BlogDetails";
 import RegularList from "../general/RegularList";
 
@@ -15,7 +15,7 @@ const BlogTutorial = () => {
       </h3>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
         <RegularList
-          items={Blog_TUTORIAL_DETAILS}
+          items={BLOG_TUTORIAL_DETAILS}
           resourceName="items"
           itemComponent={BlogDetails}
         />

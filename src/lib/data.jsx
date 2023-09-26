@@ -552,7 +552,7 @@ export const TEAMS_DETAILS = [
   },
 ];
 
-export const BlOG_NEWS_DETAILS = [
+export const BLOG_NEWS_DETAILS = [
   {
     id: 1,
     img: BlogNews1,
@@ -579,7 +579,7 @@ export const BlOG_NEWS_DETAILS = [
   },
 ];
 
-export const BlOG_INSIGHT_DETAILS = [
+export const BLOG_INSIGHT_DETAILS = [
   {
     id: 1,
     img: BlogInsight1,
@@ -614,7 +614,7 @@ export const BlOG_INSIGHT_DETAILS = [
   },
 ];
 
-export const BlOG_TUTORIAL_DETAILS = [
+export const BLOG_TUTORIAL_DETAILS = [
   {
     id: 1,
     img: BlogTutorial1,
