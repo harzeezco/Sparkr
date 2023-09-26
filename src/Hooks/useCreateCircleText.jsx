@@ -12,7 +12,7 @@ const useCreateCircleText = () => {
       .map((char, i) => {
         const span = document.createElement("span");
         span.textContent = char;
-        span.style.transform = `rotate(${i * 6}deg)`;
+        span.style.transform = `rotate(${i * 10.8}deg)`;
         return span.outerHTML;
       })
       .join("");

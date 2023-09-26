@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import useTheme from "./Hooks/useTheme";
 import { Suspense } from "react";
 import CircleContact from "./Components/general/CircleContact";
+import Loader from "./Components/general/Loader";
 
 function App() {
   const { theme } = useTheme();
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Loader />}>
         {/* <Cursor /> */}
         <CircleContact />
         <AnimateRoute />
