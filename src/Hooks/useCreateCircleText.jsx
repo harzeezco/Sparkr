@@ -9,12 +9,10 @@ const useCreateCircleText = () => {
 
     textElement.innerHTML = text
       .split("")
-      .map((char, i) => {
-        const span = document.createElement("span");
-        span.textContent = char;
-        span.style.transform = `rotate(${i * 10.8}deg)`;
-        return span.outerHTML;
-      })
+      .map(
+        (char, i) =>
+          `<span style="transform: rotate(${i * 8.8}deg); position: absolute;">${char}</span>`,
+      )
       .join("");
   }, []);
   return textRef;

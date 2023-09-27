@@ -15,12 +15,13 @@ const RootSection = () => {
     <main>
       <section aria-labelledby="hero">
         <HeroSection />
-        <div className="mx-auto w-full max-w-screen-xl pt-8">
+        <div className="mx-auto w-full max-w-[100vw] pt-8">
           <img
             src={Video}
             alt="working in progress"
             loading="lazy"
-            className="h-[624px] w-full"
+            height="624"
+            width="100%"
           />
         </div>
       </section>

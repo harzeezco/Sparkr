@@ -25,8 +25,9 @@ const ProjectDetails = ({ card }) => {
           <img
             src={img}
             alt="Your Image"
-            className="h-[420px] w-full"
             loading="lazy"
+            height="420"
+            width="100%"
           />
         </div>
         <div className="duration-9000 absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-50"></div>
@@ -39,7 +40,7 @@ const ProjectDetails = ({ card }) => {
             aria-controls="open project"
           >
             <ImageWrapper
-              className="h-[15px]"
+              className="W-[15px] h-[15px]"
               srcForDarkMode={upArrowDark}
               src={upArrowLight}
               alt="arrow"

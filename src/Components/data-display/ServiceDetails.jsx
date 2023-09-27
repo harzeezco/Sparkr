@@ -60,12 +60,13 @@ const ServiceDetails = ({ service, onToggleService }) => {
             />
           </button>
         </div>
-        <div className="mx-auto w-full max-w-[100vw]">  
+        <div className="mx-auto w-full max-w-[100vw]">
           <img
             src={WorkImage}
-            className="470px w-full"
             alt="The image showing a UI/UX Work"
             loading="lazy"
+            height="624"
+            width="100%"
           />
         </div>
       </div>

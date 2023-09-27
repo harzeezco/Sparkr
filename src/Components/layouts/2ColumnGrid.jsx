@@ -14,13 +14,14 @@ const ColumnGrid2 = ({
   const { theme } = useTheme();
 
   return (
-    <div className="grid md:grid-cols-2 items-center justify-between gap-x-20 gap-y-10 pt-12 md:flex-row">
+    <div className="grid items-center justify-between gap-x-20 gap-y-10 pt-12 md:grid-cols-2 md:flex-row">
       <div className="mx-auto w-full max-w-[100vw]">
         <img
-          className="h-[470px] w-full"
           src={img}
           alt="The image showing our meeting curriculum"
           loading="lazy"
+          height="470"
+          width="100%"
         />
       </div>
 

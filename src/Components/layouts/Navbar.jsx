@@ -22,8 +22,8 @@ const Navbar = () => {
         <ImageWrapper
           srcForDarkMode={LogoDarkMode}
           src={LogoLightMode}
-          alt="Logo Image of Route Agency"
-          className="h-[34px]"
+          alt="Logo"
+          className="h-[34px] w-[150px]"
         />
       </Link>
 

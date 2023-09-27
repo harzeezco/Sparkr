@@ -35,7 +35,7 @@ const Footer = () => {
           >
             <img
               src={upArrow}
-              className="h-6 md:h-8"
+              className="h-6 md:h-8 w-8"
               alt="arrow icon for moving to the contact page"
               loading="lazy"
             />
@@ -49,6 +49,7 @@ const Footer = () => {
               srcForDarkMode={LogoDarkMode}
               src={LogoLightMode}
               alt="Logo"
+              className="h-[34px] w-[150px]"
             />
             <div className="flex items-center gap-x-3">
               <span className="theme-transition inline-flex">

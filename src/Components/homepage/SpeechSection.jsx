@@ -9,8 +9,13 @@ const SpeechSection = () => {
           we look at yesterday&apos;s world and change the rule of the game a
           bit.
         </h1>
-        <div className="absolute right-0 top-[50%] max-w-[15vw] lg:max-w-[25vw]">
-          <img className="w-[100%] max-w-[12vw]" src={SwipeImage} alt="swipe image for beautify" loading="lazy"/>
+        <div className="absolute right-0 top-[50%] max-w-[135px] w-full">
+          <img
+            className="h-[90px] w-full"
+            src={SwipeImage}
+            alt="swipe image for beautify"
+            loading="lazy"
+          />
         </div>
       </article>
     </Container>

@@ -133,7 +133,7 @@ input[type="checkbox"]:checked {
 }
 
 .text span {
-  position: absolute;
+
   left: 50%;
   right: 34%;
   top: 5%;
