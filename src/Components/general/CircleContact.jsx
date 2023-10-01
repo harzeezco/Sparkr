@@ -9,7 +9,7 @@ const CircleContact = () => {
   const textRef = useCreateCircleText();
 
   return (
-    <div className="fixed bottom-5 right-[40px] z-50">
+    <div className="fixed bottom-5 right-[40px] z-50 hidden lg:block">
       <Link to="/contact" className="circle">
         <div className={`text text-${theme}`}>
           <p ref={textRef}>

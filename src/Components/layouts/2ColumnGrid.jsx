@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 import useTheme from "../../Hooks/useTheme";
+import Image from "../general/Image";
+import ScrollToTopLink from "../../Animation/ScrollToTopLink";
 
 const ColumnGrid2 = ({
-  img,
+  defaultSrc,
+  alternateSrc,
   first_prgh,
   second_prgh,
   button,
@@ -14,10 +17,11 @@ const ColumnGrid2 = ({
   const { theme } = useTheme();
 
   return (
-    <div className="grid items-center justify-between gap-x-20 gap-y-10 pt-12 md:grid-cols-2 md:flex-row">
+    <div className="grid items-center justify-between gap-x-20 gap-y-10 pt-2 md:grid-cols-2 md:flex-row lg:pt-12">
       <div className="mx-auto w-full max-w-[100vw]">
-        <img
-          src={img}
+        <Image
+          defaultSrc={defaultSrc}
+          alternateSrc={alternateSrc}
           alt="The image showing our meeting curriculum"
           loading="lazy"
           height="470"
@@ -43,18 +47,21 @@ const ColumnGrid2 = ({
           {second_prgh}
         </p>
 
-        {button && <button className="btn-primary">learn more</button>}
+        <ScrollToTopLink to="/about">
+          {button && <button className="btn-primary mt-6">learn more</button>}
+        </ScrollToTopLink>
       </article>
     </div>
   );
 };
 
 ColumnGrid2.propTypes = {
-  img: PropTypes.node,
+  defaultSrc: PropTypes.string,
+  alternateSrc: PropTypes.string,
   first_prgh: PropTypes.string,
   second_prgh: PropTypes.string,
   button: PropTypes.bool,
-  header: PropTypes.bool,
+  header: PropTypes.string,
   header_highlight: PropTypes.string,
   img_first: PropTypes.bool,
   text_first: PropTypes.bool,

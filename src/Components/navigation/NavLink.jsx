@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import ScrollToTopLink from "../general/ScrollToTopLink";
+import ScrollToTopLink from "../../Animation/ScrollToTopLink";
 
 const NavLink = ({ navlink }) => {
   const { link, path } = navlink;

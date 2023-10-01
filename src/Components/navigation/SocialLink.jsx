@@ -18,12 +18,14 @@ const SocialLink = ({ items }) => {
         target="_blank"
         href={`${url}`}
         rel="noopener noreferrer"
+        className="w-[14px]"
       >
         <ImageWrapper
-          className="h-4"
           src={iconLight}
           srcForDarkMode={icon}
           alt={`{${name} Logo}`}
+          height="24"
+          width="100%"
         />
       </a>
     </li>

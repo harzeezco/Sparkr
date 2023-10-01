@@ -1,15 +1,26 @@
 import CounterRef from "../Components/general/CounterRef";
-import Card1Image from "../assets/Images/Projects/Card1.webp";
-import Card2Image from "../assets/Images/Projects/Card2.webp";
-import Card3Image from "../assets/Images/Projects/Card3.webp";
-import Card4Image from "../assets/Images/Projects/Card4.png";
-import Card5Image from "../assets/Images/Projects/Card5.png";
-import Card6Image from "../assets/Images/Projects/Card6.png";
-import Card7Image from "../assets/Images/Projects/Card7.png";
-import Card8Image from "../assets/Images/Projects/Card8.webp";
-import Card9Image from "../assets/Images/Project-Details/Card9.png";
-import Card10Image from "../assets/Images/Project-Details/Card10.png";
-import Card11Image from "../assets/Images/Project-Details/Card11.png";
+import HeroWallet_webp from "../assets/Images/Projects/HeroWallet.webp";
+import HeroWallet_png from "../assets/Images/Projects/HeroWallet.png";
+import Card2_webp from "../assets/Images/Projects/Card2.webp";
+import Card2_png from "../assets/Images/Projects/Card2.png";
+import Card3_webp from "../assets/Images/Projects/Card3.webp";
+import Card3_png from "../assets/Images/Projects/Card3.png";
+import Card4_webp from "../assets/Images/Projects/Card4.webp";
+import Card4_png from "../assets/Images/Projects/Card4.png";
+import Card5_webp from "../assets/Images/Projects/Card5.webp";
+import Card5_png from "../assets/Images/Projects/Card5.png";
+import Card6_webp from "../assets/Images/Projects/Card6.webp";
+import Card6_png from "../assets/Images/Projects/Card6.png";
+import Card7_webp from "../assets/Images/Projects/Card7.webp";
+import Card7_png from "../assets/Images/Projects/Card7.png";
+import Card8_webp from "../assets/Images/Projects/Card8.webp";
+import Card8_png from "../assets/Images/Projects/Card8.png";
+import Card9_webp from "../assets/Images/Project-Details/Card9.webp";
+import Card9_png from "../assets/Images/Project-Details/Card9.png";
+import Card10_webp from "../assets/Images/Project-Details/Card10.webp";
+import Card10_jpg from "../assets/Images/Project-Details/Card10.jpg";
+import Card11_webp from "../assets/Images/Project-Details/Card11.webp";
+import Card11_png from "../assets/Images/Project-Details/Card11.png";
 import Facebook from "../assets/Icons/Facebook.svg";
 import Linkedin from "../assets/Icons/LinkedinDark.svg";
 import Twitter from "../assets/Icons/TwitterDark.svg";
@@ -144,42 +155,50 @@ export const COUNT_DETAILS = [
 export const PROJECT_CARD_DETAILS = [
   {
     id: 1,
-    img: Card1Image,
+    defaultSrc: HeroWallet_webp,
+    alternateSrc: HeroWallet_png,
     job_title: "Email Marketing Landing Page",
   },
   {
     id: 2,
-    img: Card2Image,
+    defaultSrc: Card2_webp,
+    alternateSrc: Card2_png,
     job_title: "Marketer Portfolio Landing Page",
   },
   {
     id: 3,
-    img: Card3Image,
+    defaultSrc: Card3_webp,
+    alternateSrc: Card3_png,
     job_title: "Agency Landing Page Design",
   },
   {
     id: 4,
-    img: Card8Image,
+    defaultSrc: Card8_webp,
+    alternateSrc: Card8_png,
     job_title: "Marketer Portfolio Landing Page",
   },
   {
     id: 5,
-    img: Card4Image,
+    defaultSrc: Card4_webp,
+    alternateSrc: Card4_png,
     job_title: "Agency Landing Page Design",
   },
   {
     id: 6,
-    img: Card5Image,
+    defaultSrc: Card5_webp,
+    alternateSrc: Card5_png,
     job_title: "Marketer Portfolio Landing Page",
   },
   {
     id: 7,
-    img: Card6Image,
+    defaultSrc: Card6_webp,
+    alternateSrc: Card6_png,
     job_title: "Agency Landing Page Design",
   },
   {
     id: 8,
-    img: Card7Image,
+    defaultSrc: Card7_webp,
+    alternateSrc: Card7_png,
     job_title: "Marketer Portfolio Landing Page",
   },
 ];
@@ -188,7 +207,8 @@ export const PROJECT_DETAILS = [
   {
     id: 1,
     job_title: "Marketer Portfolio Landing Page",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -196,13 +216,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card9Image,
-    secondFooterImg: Card11Image,
+    firstDefaultImg: HeroWallet_webp,
+    firstAlternateImg: HeroWallet_png,
+    secondDefaultImg: Card11_webp,
+    secondAlternateImg: Card11_png,
   },
   {
     id: 2,
     job_title: "Agency Landing Page Design",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -210,13 +233,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card2Image,
-    secondFooterImg: Card5Image,
+    firstDefaultImg: Card2_webp,
+    firstAlternateImg: Card2_png,
+    secondDefaultImg: Card5_webp,
+    secondAlternateImg: Card5_png,
   },
   {
     id: 3,
     job_title: "Marketer Portfolio Landing Page",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -224,13 +250,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card3Image,
-    secondFooterImg: Card10Image,
+    firstDefaultImg: Card3_webp,
+    firstAlternateImg: Card3_png,
+    secondDefaultImg: Card4_webp,
+    secondAlternateImg: Card4_png,
   },
   {
     id: 4,
     job_title: "Agency Landing Page Design",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -238,13 +267,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card11Image,
-    secondFooterImg: Card1Image,
+    firstDefaultImg: Card2_webp,
+    firstAlternateImg: Card2_png,
+    secondDefaultImg: Card11_webp,
+    secondAlternateImg: Card11_png,
   },
   {
     id: 5,
     job_title: "Marketer Portfolio Landing Page",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -252,13 +284,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card5Image,
-    secondFooterImg: Card10Image,
+    firstDefaultImg: Card5_webp,
+    firstAlternateImg: Card5_png,
+    secondDefaultImg: Card11_webp,
+    secondAlternateImg: Card11_png,
   },
   {
     id: 6,
     job_title: "Agency Landing Page Design",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -266,13 +301,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card1Image,
-    secondFooterImg: Card6Image,
+    firstDefaultImg: Card2_webp,
+    firstAlternateImg: Card2_png,
+    secondDefaultImg: Card6_webp,
+    secondAlternateImg: Card6_png,
   },
   {
     id: 7,
     job_title: "Marketer Portfolio Landing Page",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -280,13 +318,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card7Image,
-    secondFooterImg: Card4Image,
+    firstDefaultImg: Card7_webp,
+    firstAlternateImg: Card7_png,
+    secondDefaultImg: Card4_webp,
+    secondAlternateImg: Card4_png,
   },
   {
     id: 8,
     job_title: "Agency Landing Page Design",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -294,13 +335,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card3Image,
-    secondFooterImg: Card2Image,
+    firstDefaultImg: Card9_webp,
+    firstAlternateImg: Card9_png,
+    secondDefaultImg: Card4_webp,
+    secondAlternateImg: Card4_png,
   },
   {
     id: 9,
     job_title: "Marketer Portfolio Landing Page",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -308,13 +352,16 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card5Image,
-    secondFooterImg: Card6Image,
+    firstDefaultImg: Card5_webp,
+    firstAlternateImg: Card5_png,
+    secondDefaultImg: Card6_webp,
+    secondAlternateImg: Card6_png,
   },
   {
     id: 10,
     job_title: "Agency Landing Page Design",
-    poster: Card10Image,
+    defaultPoster: Card10_webp,
+    alternatePoster: Card10_jpg,
     clients: "Dropmail",
     services: "UI/UX Designer, Web Designer",
     year: 2022,
@@ -322,8 +369,10 @@ export const PROJECT_DETAILS = [
     problem: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     process: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
     solution: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.`,
-    firstFooterImg: Card8Image,
-    secondFooterImg: Card7Image,
+    firstDefaultImg: Card8_webp,
+    firstAlternateImg: Card8_png,
+    secondDefaultImg: Card7_webp,
+    secondAlternateImg: Card7_png,
   },
 ];
 
@@ -433,6 +482,7 @@ export const TESTIMONIALS_DETAILS = [
             quality with endless iterations. Good Job!`,
     name: "Elizabeth",
     address: "Los Angeles, CA",
+    alt: "first",
   },
   {
     id: 1,
@@ -441,6 +491,7 @@ export const TESTIMONIALS_DETAILS = [
           expedita `,
     name: "Ismail",
     address: "USA, CA",
+    alt: "second",
   },
   {
     id: 2,
@@ -449,6 +500,7 @@ export const TESTIMONIALS_DETAILS = [
           expedita excepturi quidem `,
     name: "Azeez",
     address: "Lagos, CA",
+    alt: "third",
   },
   {
     id: 3,
@@ -457,6 +509,7 @@ export const TESTIMONIALS_DETAILS = [
           iure illo cupiditate quibusdam, saepe`,
     name: "Wakil",
     address: "Nigeria, CA",
+    alt: "fourth",
   },
   {
     id: 4,
@@ -465,6 +518,7 @@ export const TESTIMONIALS_DETAILS = [
           voluptatem `,
     name: "Adam",
     address: "Norway, CA",
+    alt: "fifth",
   },
 ];
 
@@ -545,7 +599,7 @@ export const TEAMS_DETAILS = [
     position: "Developer",
   },
   {
-    id: 1,
+    id: 6,
     img: Marketer,
     name: "Rishabh Pant",
     position: "Marketer",

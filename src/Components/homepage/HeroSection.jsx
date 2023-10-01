@@ -28,7 +28,7 @@ const HeroSection = () => {
         >
           We Are
         </h1>
-        <div className="order-last block  items-center justify-between gap-x-6 md:order-first md:inline-flex">
+        <div className="order-last block items-center justify-between gap-x-6 md:order-first md:inline-flex">
           <motion.h1
             initial={{ opacity: 0, y: 90 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const HeroSection = () => {
             best designs and development service for your next dream project.
           </motion.p>
           <motion.div
-            className="h-[90px] w-[364px] rounded-[40px]"
+            className="rounded-[40px] max-w-[200px] mt-4 md:mt-0"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -68,7 +68,9 @@ const HeroSection = () => {
               loop
               autoPlay
               muted
-              className="h-[100px] w-full rounded-[50px]"
+              className="rounded-[50px]"
+              width="100%"
+              height="100"
             >
               <source src={gif} type="video/mp4" />
               <track

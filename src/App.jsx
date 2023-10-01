@@ -1,15 +1,29 @@
 import { BrowserRouter } from "react-router-dom";
-import AnimateRoute from "./Components/general/AnimateRoute";
 import { useEffect } from "react";
 import useTheme from "./Hooks/useTheme";
 import { Suspense } from "react";
 import CircleContact from "./Components/general/CircleContact";
 import Loader from "./Components/general/Loader";
+import AnimateRoute from "./Animation/AnimateRoute";
 
 function App() {
   const { theme } = useTheme();
 
   const isLight = theme === "light" ? "#fff" : "#121418";
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("../service-worker")
+      .then((registration) => {
+        console.log(
+          // "Service Worker registered with scope:",
+          // registration.scope,
+        );
+      })
+      .catch((error) => {
+        console.error("Service Worker registration failed:", error);
+      });
+  }
 
   useEffect(() => {
     document.body.style.backgroundColor = `${isLight}`;
@@ -22,7 +36,6 @@ function App() {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loader />}>
-        {/* <Cursor /> */}
         <CircleContact />
         <AnimateRoute />
       </Suspense>

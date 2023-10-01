@@ -1,10 +1,86 @@
+import { useForm, Controller } from "react-hook-form";
 import useTheme from "../../Hooks/useTheme";
 import Checkbox from "../general/Checkbox";
 import Input from "../general/Input";
 import Container from "../layouts/Container";
+import FormError from "../general/FormError";
+import { useEffect } from "react";
 
 const FormSection = () => {
   const { theme } = useTheme();
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors, isSubmitSuccessful },
+    reset,
+  } = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      work: {
+        "UI/UX": "",
+        Branding: "",
+        development: "",
+      },
+    },
+  });
+
+  // const [libphonenumber, setLibphonenumber] = useState(null);
+
+  // // Function to load the library when needed
+  // const loadLibphonenumber = async () => {
+  //   if (!libphonenumber) {
+  //     const lib = await import("google-libphonenumber-js");
+  //     setLibphonenumber(lib);
+  //   }
+  // };
+
+  // const handlePhoneNumberValidation = async (phoneNumber) => {
+  //   await loadLibphonenumber(); // Ensure the library is loaded
+
+  //   if (libphonenumber) {
+  //     const PhoneNumberUtil = libphonenumber.PhoneNumberUtil.getInstance();
+  //     try {
+  //       const parsedNumber = PhoneNumberUtil.parse(phoneNumber, "US"); // Replace 'US' with your desired default region
+  //       const isValid = PhoneNumberUtil.isValidNumber(parsedNumber);
+  //       console.log("Is valid phone number:", isValid);
+  //     } catch (error) {
+  //       console.error("Phone number validation error:", error);
+  //     }
+  //   }
+  // };
+
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful, reset]);
+
+  const isNameValid = (name) => {
+    // Check if the name consists of only alphabetic characters
+    if (!/^[A-Za-z\s'-À-ÖØ-öø-ÿ]+$/.test(name)) {
+      return false;
+    }
+
+    // Check if the name doesn't consist of only spaces or hyphens
+    if (/^[\s'-]+$/.test(name)) {
+      return false;
+    }
+
+    return true;
+  };
+
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
+
+  const onError = (data) => {
+    console.log(data);
+  };
 
   const isLight =
     theme === "light" ? "border-colorDarkLight" : "border-colorLight";
@@ -14,52 +90,117 @@ const FormSection = () => {
 
   return (
     <Container id="form">
-      <form className="m-auto max-w-full sm:max-w-[60%]">
-        <Input
-          type="text"
-          label="firstName"
-          name="firstName"
-          autoComplete="on"
-          required
-          placeholder="First Name"
-          className={input}
-          labelClass={label}
-          labelText="First Name"
-        />
+      <form
+        className="m-auto max-w-full sm:max-w-[60%]"
+        onSubmit={handleSubmit(onSubmit, onError)}
+      >
+        <>
+          <Controller
+            name="firstName"
+            control={control}
+            rules={{
+              required: "First Name is required",
+              validate: (value) => isNameValid(value) || "Invalid First Name",
+            }}
+            render={({ field }) => (
+              <Input
+                {...field}
+                type="text"
+                label="firstName"
+                name="firstName"
+                autoComplete="on"
+                placeholder="First Name"
+                className={input}
+                labelClass={label}
+                labelText="First Name"
+              />
+            )}
+          />
+          <FormError error={errors.firstName?.message} />
+        </>
 
-        <Input
-          placeholder="Last Name"
-          label="lastName"
-          type="text"
-          className={input}
-          name="lastName"
-          autoComplete="on"
-          required
-          labelClass={label}
-          labelText="Last Name"
-        />
+        <>
+          <Controller
+            name="lastName"
+            control={control}
+            rules={{
+              required: "Last Name is required",
+              validate: (value) => isNameValid(value) || "Invalid Last Name",
+            }}
+            render={({ field }) => (
+              <Input
+                placeholder="Last Name"
+                label="lastName"
+                type="text"
+                className={input}
+                name="lastName"
+                autoComplete="on"
+                labelClass={label}
+                labelText="Last Name"
+                {...field}
+              />
+            )}
+          />
+          <FormError error={errors.lastName?.message} />
+        </>
 
-        <Input
+        <Controller
           name="email"
-          autoComplete="email"
-          required
-          type="email"
-          placeholder="Email address"
-          className={input}
-          labelClass={label}
-          labelText="Email address"
-          label="email"
+          control={control}
+          rules={{
+            required: "Email address is required",
+            pattern: {
+              value:
+                /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              message: "Invalid email format",
+            },
+          }}
+          render={({ field }) => (
+            <>
+              <Input
+                {...field}
+                name="email"
+                autoComplete="email"
+                type="email"
+                placeholder="Email address"
+                className={input}
+                labelClass={label}
+                labelText="Email address"
+                label="email"
+              />
+              <FormError error={errors.email?.message} />
+            </>
+          )}
         />
-
-        <Input
-          autoComplete="tel"
-          type="tel"
-          placeholder="Phone Number"
-          name="phone"
-          className={input}
-          labelClass={label}
-          labelText="Phone Number (Optional)"
-          label="phone"
+        <Controller
+          name="phoneNumber"
+          control={control}
+          defaultValue=""
+          rules={{
+            pattern: {
+              value:
+                /^(?:\(\d{3}\)|\d{3})(?:-|\s)?\d{3}(?:-|\s)?\d{4}$|^\d{11}$/,
+              message: "Invalid phone number format",
+            },
+          }}
+          render={({ field }) => (
+            <>
+              <Input
+                {...field}
+                autoComplete="tel"
+                type="tel"
+                placeholder="Phone Number"
+                name="phone"
+                className={input}
+                labelClass={label}
+                labelText="Phone Number (Optional)"
+                label="phone"
+              />
+              {errors.phoneNumber && (
+                <FormError error={errors.phoneNumber?.message} />
+              )}
+            </>
+          )}
         />
 
         <div className="">
@@ -69,12 +210,23 @@ const FormSection = () => {
             I need the service of
           </h3>
           <div className="mt-2 flex flex-col gap-6 md:flex-row md:items-center ">
-            <Checkbox type="checkbox" labelFor="UI/UX" name="UI/UX" />
-            <Checkbox type="checkbox" labelFor="Branding" name="Branding" />
             <Checkbox
               type="checkbox"
-              labelFor="Development"
-              name="Development"
+              labelFor="UI/UX"
+              name="UI/UX"
+              {...register("work.UI/UX")}
+            />
+            <Checkbox
+              type="checkbox"
+              labelFor="Branding"
+              name="Branding"
+              {...register("work.Branding")}
+            />
+            <Checkbox
+              type="checkbox"
+              labelFor="development"
+              name="development"
+              {...register("work.development")}
             />
           </div>
         </div>
@@ -90,6 +242,7 @@ const FormSection = () => {
             placeholder="Describe your idea"
             className={`${input} resize-none`}
             rows={5}
+            {...register("textArea")}
           />
         </div>
 

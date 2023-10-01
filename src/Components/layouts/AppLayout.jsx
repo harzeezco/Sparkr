@@ -3,6 +3,10 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import useTheme from "../../Hooks/useTheme";
 import { motion } from "framer-motion";
+import Sidebar from "../navigation/Sidebar";
+import Cursor from "../../Animation/Cursor";
+import { useRef } from "react";
+import StickyCursorProvider from "../../Contexts/StickyCursorContext";
 // import useLocoScroll from "../../Hooks/useLocoScroll";
 
 const AppLayout = () => {
@@ -21,10 +25,14 @@ const AppLayout = () => {
       <div
         className={`bg-${theme} text-${theme}-primary theme-transition relative z-10`}
       >
-        <header className="">
-          <Navbar />
-        </header>
-        <main>
+        <StickyCursorProvider>
+          <Cursor />
+          <header className="">
+            <Navbar />
+            <Sidebar />
+          </header>
+        </StickyCursorProvider>
+        <main className="relative z-10">
           <Outlet />
         </main>
         <footer className="" aria-labelledby="footer">

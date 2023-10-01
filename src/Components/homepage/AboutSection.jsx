@@ -1,12 +1,13 @@
 import useTheme from "../../Hooks/useTheme";
-import Meeting from "../../assets/Images/meeting.webp";
+import Meeting_webp from "../../assets/Images/meeting.webp";
+import Meeting_png from "../../assets/Images/meeting.png";
 import ColumnGrid2 from "../layouts/2ColumnGrid";
 import Container from "../layouts/Container";
 
 const AboutSection = () => {
-  const { theme } = useTheme()
-  
-  const isLightMode = theme === "light" ? "text-light-primary" : "text-dark"
+  const { theme } = useTheme();
+
+  const isLightMode = theme === "light" ? "text-light-primary" : "text-dark";
 
   return (
     <Container id="about" pt="20">
@@ -19,7 +20,8 @@ const AboutSection = () => {
 
       <ColumnGrid2
         img_first={true}
-        img={Meeting}
+        defaultSrc={Meeting_webp}
+        alternateSrc={Meeting_png}
         button={true}
         first_prgh=" Located in Lagos, we are a professional creative design agency that
             has done many projects with various clients across the world."

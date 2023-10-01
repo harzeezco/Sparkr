@@ -17,7 +17,7 @@ const ProjectSection = () => {
       >
         our latest <span className="text-orangePrimary">project</span>
       </h1>
-      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
         <RegularList
           items={display_4_projects}
           itemComponent={ProjectDetails}

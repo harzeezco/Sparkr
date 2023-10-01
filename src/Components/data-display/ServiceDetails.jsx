@@ -3,9 +3,12 @@ import PropTypes from "prop-types";
 import OpenDark from "../../assets/Icons/upArrowDark.svg";
 import OpenLight from "../../assets/Icons/upArrowLight.svg";
 import Close from "../../assets/Icons/delete.svg";
-import WorkImage from "../../assets/Images/Hero.webp";
+import Work_webp from "../../assets/Images/Hero.webp";
+import Work_png from "../../assets/Images/Hero.png";
+
 import useTheme from "../../Hooks/useTheme";
 import ImageWrapper from "./ImageWrapper";
+import Image from "../general/Image";
 
 const ServiceDetails = ({ service, onToggleService }) => {
   const { id, work, job, isOpen, borderb } = service;
@@ -61,8 +64,9 @@ const ServiceDetails = ({ service, onToggleService }) => {
           </button>
         </div>
         <div className="mx-auto w-full max-w-[100vw]">
-          <img
-            src={WorkImage}
+          <Image
+            defaultSrc={Work_webp}
+            alternateSrc={Work_png}
             alt="The image showing a UI/UX Work"
             loading="lazy"
             height="624"

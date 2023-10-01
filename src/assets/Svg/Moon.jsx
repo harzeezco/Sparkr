@@ -2,7 +2,8 @@ const Moon = () => {
   return (
     <>
       <svg
-        className="w-full max-w-[35px]"
+        width="35"
+        height="35"
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

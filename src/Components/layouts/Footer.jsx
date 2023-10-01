@@ -14,7 +14,7 @@ import {
 } from "../../lib/data";
 import ImageWrapper from "../data-display/ImageWrapper";
 import useTheme from "../../Hooks/useTheme";
-import ScrollToTopLink from "../general/ScrollToTopLink";
+import ScrollToTopLink from "../../Animation/ScrollToTopLink";
 
 const Footer = () => {
   const { theme } = useTheme();
@@ -35,9 +35,10 @@ const Footer = () => {
           >
             <img
               src={upArrow}
-              className="h-6 md:h-8 w-8"
               alt="arrow icon for moving to the contact page"
               loading="lazy"
+              height="24"
+              width="24"
             />
           </div>
         </ScrollToTopLink>
@@ -49,15 +50,17 @@ const Footer = () => {
               srcForDarkMode={LogoDarkMode}
               src={LogoLightMode}
               alt="Logo"
-              className="h-[34px] w-[150px]"
+              width="150"
+              height="34"
             />
             <div className="flex items-center gap-x-3">
               <span className="theme-transition inline-flex">
                 <ImageWrapper
-                  className="h-full"
                   src={LineLight}
                   srcForDarkMode={Line}
                   alt="line"
+                  height="100%"
+                  width="100%"
                 />
               </span>
               <p className={`inline-block text-[18px] text-${theme}`}>

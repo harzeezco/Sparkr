@@ -11,7 +11,7 @@ const ServiceSliderDetails = ({ items }) => {
         <h1 className={`font-primary text-[38px] font-bold text-${theme}`}>
           {name}
         </h1>
-        <img src={icon} alt="Star" loading="lazy" className="h-[38px] w-[38px]" />
+        <img src={icon} alt="Star" loading="lazy" height="38" width="38" />
       </div>
     </div>
   );

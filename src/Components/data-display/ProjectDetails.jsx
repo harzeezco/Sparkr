@@ -5,12 +5,13 @@ import upArrowDark from "../../assets/Icons/upArrowDark.svg";
 import upArrowLight from "../../assets/Icons/upArrowLight.svg";
 import ImageWrapper from "./ImageWrapper";
 import useTheme from "../../Hooks/useTheme";
+import Image from "../general/Image";
 
 const ProjectDetails = ({ card }) => {
   const navigate = useNavigate();
   const { theme } = useTheme();
 
-  const { img, job_title, id } = card;
+  const { defaultSrc, alternateSrc, job_title, id } = card;
 
   const handleNavigateToProjectDetails = () => {
     navigate(`/project/${id}`);
@@ -22,8 +23,9 @@ const ProjectDetails = ({ card }) => {
     <article className="mb-6">
       <div className="group relative">
         <div className="mx-auto w-full max-w-[100vw]">
-          <img
-            src={img}
+          <Image
+            defaultSrc={defaultSrc}
+            alternateSrc={alternateSrc}
             alt="Your Image"
             loading="lazy"
             height="420"
@@ -40,16 +42,17 @@ const ProjectDetails = ({ card }) => {
             aria-controls="open project"
           >
             <ImageWrapper
-              className="W-[15px] h-[15px]"
               srcForDarkMode={upArrowDark}
               src={upArrowLight}
               alt="arrow"
+              height="15"
+              width="15"
             />
           </button>
         </div>
       </div>
 
-      <div className="my-6 flex gap-x-4">
+      <div className="my-3 flex gap-x-4">
         <button className={`${project_btn} theme-transition cursor-auto`}>
           website
         </button>

@@ -1,23 +1,19 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { lazy } from "react";
 
-const AppLayout = lazy(() => import("../layouts/AppLayout"));
-const HomePage = lazy(() => import("../../Pages/HomePage"));
-const AboutPage = lazy(() => import("../../Pages/AboutPage"));
-const ServicesPage = lazy(() => import("../../Pages/ServicesPage"));
-const ProjectPage = lazy(() => import("../../Pages/ProjectPage"));
-const BlogPage = lazy(() => import("../../Pages/BlogPage"));
-const ContactPage = lazy(() => import("../../Pages/ContactPage"));
-const PageNotFound = lazy(() => import("../../Pages/PageNotFound"));
+const AppLayout = lazy(() => import("../Components/layouts/AppLayout"));
+const HomePage = lazy(() => import("../Pages/HomePage"));
+const AboutPage = lazy(() => import("../Pages/AboutPage"));
+const ServicesPage = lazy(() => import("../Pages/ServicesPage"));
+const ProjectPage = lazy(() => import("../Pages/ProjectPage"));
+const BlogPage = lazy(() => import("../Pages/BlogPage"));
+const ContactPage = lazy(() => import("../Pages/ContactPage"));
+const PageNotFound = lazy(() => import("../Pages/PageNotFound"));
 
 import { AnimatePresence } from "framer-motion";
 
-// import { useState } from "react";
-
 const AnimateRoute = () => {
   const location = useLocation();
-
-  // const [isHovered, setIsHovered] = useState(false);
 
   return (
     <AnimatePresence>

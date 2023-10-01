@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import LogoDarkMode from "../../assets/Svg/LogoDarkMode.svg";
 import LogoLightMode from "../../assets/Svg/LogoLightMode.svg";
 import MessageDarkMode from "../../assets/Icons/MessageLightMode.svg";
@@ -10,20 +12,20 @@ import { Link } from "react-router-dom";
 import ThemeSwitcher from "../general/ThemeSwitcher";
 import ImageWrapper from "../data-display/ImageWrapper";
 import useTheme from "../../Hooks/useTheme";
+import NavToggle from "../general/NavToggleIcon";
 
 const Navbar = () => {
   const { theme } = useTheme();
 
   return (
-    <div
-      className="theme-transition m-auto flex w-full items-center justify-between px-4 py-7 pb-6 lg:max-w-[85vw]"
-    >
+    <div className="theme-transition m-auto flex w-full items-center justify-between px-4 py-7 pb-6 lg:max-w-[85vw]">
       <Link to={"/"}>
         <ImageWrapper
           srcForDarkMode={LogoDarkMode}
           src={LogoLightMode}
           alt="Logo"
-          className="h-[34px] w-[150px]"
+          height="34"
+          width="150"
         />
       </Link>
 
@@ -48,21 +50,23 @@ const Navbar = () => {
             srcForDarkMode={MessageDarkMode}
             src={MessageLightMode}
             alt="email icon"
+            height="25"
+            width="25"
           />
           <span className="underline">Hello@agency.com</span>
         </div>
         <div className="inline-block pl-4" role="button">
-          <ThemeSwitcher /> 
+          <ThemeSwitcher />
         </div>
       </div>
-      <button
+      <div
         aria-label="Toggle Navigation Menu"
         role="button"
         aria-controls="nav-menu"
-        className="md-hidden text-3xl text-white md:hidden"
+        className="md-hidden bg-white text-3xl md:hidden"
       >
-        <ion-icon name="menu-sharp"></ion-icon>
-      </button>
+        <NavToggle />
+      </div>
     </div>
   );
 };
