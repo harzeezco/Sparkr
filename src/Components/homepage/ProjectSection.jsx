@@ -3,8 +3,8 @@ import RegularList from "../general/RegularList";
 
 import { PROJECT_CARD_DETAILS } from "../../lib/data";
 import ProjectDetails from "../data-display/ProjectDetails";
-import { Link } from "react-router-dom";
 import useTheme from "../../Hooks/useTheme";
+import ScrollToTopLink from "../../Animation/ScrollToTopLink";
 
 const ProjectSection = () => {
   const display_4_projects = PROJECT_CARD_DETAILS.slice(0, 4);
@@ -26,9 +26,9 @@ const ProjectSection = () => {
       </div>
 
       <div className="mt-8 text-center">
-        <Link to="/project" className="btn-primary">
-          view all project
-        </Link>
+        <button className="btn-primary">
+          <ScrollToTopLink to="/project">view all project</ScrollToTopLink>
+        </button>
       </div>
     </Container>
   );

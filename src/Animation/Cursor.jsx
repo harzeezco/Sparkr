@@ -11,9 +11,10 @@ import useTheme from "../Hooks/useTheme";
 import { StickyCursorContext } from "../Contexts/StickyCursorContext";
 
 export default function Cursor() {
-  const stickyElement = useContext(StickyCursorContext);
+  const { stickyElement, isHovered, setIsHovered } =
+    useContext(StickyCursorContext);
   const { theme } = useTheme();
-  const [isHovered, setIsHovered] = useState(false);
+
   const cursor = useRef(null);
   const cursorSize = isHovered ? 60 : 10;
 
@@ -82,7 +83,7 @@ export default function Cursor() {
 
   const manageMouseOver = useCallback(() => {
     setIsHovered(true);
-  }, []);
+  }, [setIsHovered]);
 
   const manageMouseLeave = useCallback(() => {
     setIsHovered(false);
@@ -92,7 +93,7 @@ export default function Cursor() {
       { duration: 0.1 },
       { type: "spring" },
     );
-  }, []);
+  }, [setIsHovered]);
 
   useEffect(() => {
     const element = stickyElement.current;
@@ -116,6 +117,7 @@ export default function Cursor() {
   };
 
   const isLight = theme === "light" ? "bg-dark" : "bg-light-primary";
+  const zIndexValue = isHovered ? -1 : 1000;
 
   return (
     <div>
@@ -126,6 +128,7 @@ export default function Cursor() {
           top: smoothMouse.y,
           scaleX: scale.x,
           scaleY: scale.y,
+          zIndex: zIndexValue,
         }}
         animate={{
           width: cursorSize,

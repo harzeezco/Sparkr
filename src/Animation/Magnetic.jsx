@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Magnetic({ children }) {
+export default function Magnetic({ children, ...otherProps }) {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -26,6 +26,7 @@ export default function Magnetic({ children }) {
       onMouseLeave={reset}
       animate={{ x, y }}
       transition={{ type: "spring", stiffness: 350, damping: 5, mass: 0.5 }}
+      {...otherProps}
     >
       {children}
     </motion.div>

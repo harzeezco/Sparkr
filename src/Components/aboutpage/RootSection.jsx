@@ -29,7 +29,7 @@ const RootSection = () => {
       <section aria-labelledby="value">
         <CommunitySection />
       </section>
-      <section aria-labelledby="value">
+      <section aria-labelledby="team" className="bg-orangePrimary relative">
         <TeamSection />
       </section>
     </main>

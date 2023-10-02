@@ -28,31 +28,6 @@ const FormSection = () => {
     },
   });
 
-  // const [libphonenumber, setLibphonenumber] = useState(null);
-
-  // // Function to load the library when needed
-  // const loadLibphonenumber = async () => {
-  //   if (!libphonenumber) {
-  //     const lib = await import("google-libphonenumber-js");
-  //     setLibphonenumber(lib);
-  //   }
-  // };
-
-  // const handlePhoneNumberValidation = async (phoneNumber) => {
-  //   await loadLibphonenumber(); // Ensure the library is loaded
-
-  //   if (libphonenumber) {
-  //     const PhoneNumberUtil = libphonenumber.PhoneNumberUtil.getInstance();
-  //     try {
-  //       const parsedNumber = PhoneNumberUtil.parse(phoneNumber, "US"); // Replace 'US' with your desired default region
-  //       const isValid = PhoneNumberUtil.isValidNumber(parsedNumber);
-  //       console.log("Is valid phone number:", isValid);
-  //     } catch (error) {
-  //       console.error("Phone number validation error:", error);
-  //     }
-  //   }
-  // };
-
   useEffect(() => {
     if (isSubmitSuccessful) {
       reset();

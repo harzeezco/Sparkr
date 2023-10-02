@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
 import useTheme from "../../Hooks/useTheme";
 
-const CounterDetails = ({ item }) => {
-  const { counter, header, prgh_text, percent_symb, data_value } = item;
+const CounterDetails = ({
+  counter,
+  header,
+  prgh_text,
+  percent_symb,
+  data_value,
+}) => {
   const { theme } = useTheme();
 
   const num = `font-primary font-bold text-[40px] leading-[65px] text-${theme} sm:text-[35px] lg:text-[54px] theme-transition`;

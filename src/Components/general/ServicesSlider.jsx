@@ -7,7 +7,7 @@ import { SERVICE_SLIDER2_DATA, SERVICE_SLIDER_DATA } from "../../lib/data";
 import ServiceSliderDetails from "../data-display/ServiceSliderDetails";
 import Loader from "./Loader";
 
-const ServiceSlider= () => {
+const ServiceSlider = () => {
   const settings = SliderSettings(true, false);
   const settings2 = SliderSettings(false, true);
 
@@ -16,7 +16,7 @@ const ServiceSlider= () => {
    const slider = inView ? lazy(() => import("react-slick")) : null;
 
   return (
-    <div className="slider-container py-8" ref={observe}>
+    <div className="slider-container py-8" ref={observe} id="service-slider">
       <Suspense fallback={<Loader />}>
         {slider && (
           <>

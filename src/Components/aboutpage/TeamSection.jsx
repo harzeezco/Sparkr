@@ -1,32 +1,24 @@
-import useTheme from "../../Hooks/useTheme";
-import { TEAMS_DETAILS } from "../../lib/data";
-import TeamDetails from "../data-display/TeamDetails";
-import RegularList from "../general/RegularList";
+import SwipeImage from "../../assets/Images/swipe.png"
 import Container from "../layouts/Container";
 
 const TeamSection = () => {
-  const { theme } = useTheme();
 
   return (
     <Container id="team">
-      <h1
-        className={`m-auto text-center font-primary text-3xl font-bold capitalize leading-10  text-${theme} theme-transition sm:leading-[50px] lg:text-[54px] lg:leading-[64px]`}
-      >
-        Meet the team
-      </h1>
-      <p className="m-auto pt-3 text-center text-base leading-[30px] md:w-[65%] md:text-xl">
-        A team of creative thinkers and doers who believe in the power of
-        creativity to inspire change. Working seamlessly across brand and
-        digital, we build modern brands with heart and spirit.
-      </p>
-
-      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-        <RegularList
-          items={TEAMS_DETAILS}
-          resourceName="items"
-          itemComponent={TeamDetails}
-        />
-      </div>
+      <article className="py-[3rem]">
+        <h1 className="text-primary text-left font-primary text-[30px] font-normal capitalize text-white sm:text-[45px] lg:pr-20 lg:text-[60px] lg:leading-[84px]">
+          EACH OF OUR DESIGNERS WAS THE BEST AMONG SEVERAL OTHERS IN HIS NICHE
+        </h1>
+        <div className="absolute right-0 top-[50%] w-full max-w-[135px]">
+          <img
+            src={SwipeImage}
+            alt="swipe image for beautify"
+            loading="lazy"
+            height="90"
+            width="100%"
+          />
+        </div>
+      </article>
     </Container>
   );
 };

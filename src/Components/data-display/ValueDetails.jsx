@@ -7,13 +7,21 @@ const ValueDetails = ({ items }) => {
 
   return (
     <div className="flex gap-x-4">
-      <img className="h-6" src={icon} alt={`${alt} image`} loading="lazy"/>
+      <div className="pt-1"> 
+        <img
+          height="30"
+          width="35"
+          src={icon}
+          alt={`${alt} image`}
+          loading="lazy"
+        />
+      </div>
       <div className="">
-        <h3
+        <h1
           className={`text-xl font-bold capitalize leading-[30px] text-${theme} theme-transition`}
         >
           {header}
-        </h3>
+        </h1>
         <p className="pt-2 leading-[30px]">{prgh_text}</p>
       </div>
     </div>

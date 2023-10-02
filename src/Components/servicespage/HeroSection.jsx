@@ -12,9 +12,9 @@ const HeroSection = () => {
       <section className="pt-12">
         <motion.h1
           className={`whitespace-nowrap font-primary text-3xl font-bold capitalize leading-10 text-${theme} theme-transition theme-transition sm:text-[3.2rem] sm:leading-[60px] lg:text-[6.5vw] lg:leading-[95px]`}
-          initial={{ y: "10vw" }}
+          initial={{ y: 0 }}
           animate={{ y: 0 }}
-          transition={{ duration: 1.5, delay: 0, ease: "easeInOut" }}
+          transition={{ duration: 0, delay: 0, ease: "easeInOut" }}
         >
           <span className="text-orangePrimary">guiding </span>companies <br />{" "}
           through moments of <br />

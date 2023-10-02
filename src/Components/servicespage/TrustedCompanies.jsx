@@ -32,22 +32,82 @@ const TrustedCompanies = () => {
       id="trusted-companies"
       className="m-auto max-w-[80%] px-5 py-14 text-center"
     >
-      <h3 className={`text-${theme} theme-transition pb-5 text-lg font-bold`}>
+      <h1 className={`text-${theme} theme-transition pb-5 text-lg font-bold`}>
         Trusted by the best companies
-      </h3>
+      </h1>
       <div className="flex items-center justify-around gap-x-2">
-        <ImageWrapper src={ProlineLight} srcForDarkMode={Pro} alt="" />
-        <ImageWrapper src={CloudLight} srcForDarkMode={Cloud} alt="" />
-        <ImageWrapper src={CactusLight} srcForDarkMode={Snow} alt="" />
-        <ImageWrapper src={HuesLight} srcForDarkMode={Hues} alt="" />
-        <ImageWrapper src={GreenishLight} srcForDarkMode={Greenish} alt="" />
+        <ImageWrapper
+          src={ProlineLight}
+          srcForDarkMode={Pro}
+          width="100%"
+          height="100%"
+          alt="proline logo"
+        />
+        <ImageWrapper
+          src={CloudLight}
+          srcForDarkMode={Cloud}
+          width="100%"
+          height="100%"
+          alt="cloud logo"
+        />
+        <ImageWrapper
+          src={CactusLight}
+          srcForDarkMode={Snow}
+          width="100%"
+          height="100%"
+          alt="cactus logo"
+        />
+        <ImageWrapper
+          src={HuesLight}
+          srcForDarkMode={Hues}
+          width="100%"
+          height="100%"
+          alt="Hues logo"
+        />
+        <ImageWrapper
+          src={GreenishLight}
+          srcForDarkMode={Greenish}
+          width="100%"
+          height="100%"
+          alt="greenish logo"
+        />
       </div>
       <div className="flex items-center justify-around gap-x-2 pt-5">
-        <ImageWrapper src={SnoflakeLight} srcForDarkMode={Snowflake} alt="" />
-        <ImageWrapper src={RechargeLight} srcForDarkMode={Recharge} alt="" />
-        <ImageWrapper src={VisionLight} srcForDarkMode={Vision} alt="" />
-        <ImageWrapper src={LeafeLight} srcForDarkMode={Leafe} alt="" />
-        <ImageWrapper src={PentaLight} srcForDarkMode={Penta} alt="" />
+        <ImageWrapper
+          src={SnoflakeLight}
+          srcForDarkMode={Snowflake}
+          width="100%"
+          height="100%"
+          alt="snowflake logo"
+        />
+        <ImageWrapper
+          src={RechargeLight}
+          srcForDarkMode={Recharge}
+          width="100%"
+          height="100%"
+          alt="recharge logo"
+        />
+        <ImageWrapper
+          src={VisionLight}
+          srcForDarkMode={Vision}
+          width="100%"
+          height="100%"
+          alt="vision logo"
+        />
+        <ImageWrapper
+          src={LeafeLight}
+          srcForDarkMode={Leafe}
+          width="100%"
+          height="100%"
+          alt="leafe logo"
+        />
+        <ImageWrapper
+          src={PentaLight}
+          srcForDarkMode={Penta}
+          width="100%"
+          height="100%"
+          alt="penta logo"
+        />
       </div>
     </div>
   );

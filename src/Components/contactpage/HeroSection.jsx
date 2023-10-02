@@ -5,7 +5,7 @@ const HeroSection = () => {
 
   return (
     <div
-      className="md:pt-${pt} m-auto mb-[3.5rem] w-full px-4 lg:max-w-[85vw]"
+      className="md:pt-${pt} m-auto mb-[3.5rem] w-full px-5 lg:max-w-[1100px]"
       id="hero"
     >
       <h1

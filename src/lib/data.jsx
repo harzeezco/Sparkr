@@ -1,4 +1,4 @@
-import CounterRef from "../Components/general/CounterRef";
+import CounterRef from "../Hooks/useCounterRef";
 import HeroWallet_webp from "../assets/Images/Projects/HeroWallet.webp";
 import HeroWallet_png from "../assets/Images/Projects/HeroWallet.png";
 import Card2_webp from "../assets/Images/Projects/Card2.webp";

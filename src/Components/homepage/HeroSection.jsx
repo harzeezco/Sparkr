@@ -18,7 +18,7 @@ const HeroSection = () => {
 
   return (
     <motion.div
-      className="m-auto w-full px-4 lg:max-w-[85vw]"
+      className="m-auto w-full px-5 lg:max-w-[1100px]"
       id="hero"
       variants={banner}
     >
@@ -55,7 +55,7 @@ const HeroSection = () => {
             best designs and development service for your next dream project.
           </motion.p>
           <motion.div
-            className="rounded-[40px] max-w-[200px] mt-4 md:mt-0"
+            className="mt-4 max-w-[200px] rounded-[40px] md:mt-0"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

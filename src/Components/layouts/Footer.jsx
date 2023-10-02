@@ -18,9 +18,10 @@ import ScrollToTopLink from "../../Animation/ScrollToTopLink";
 
 const Footer = () => {
   const { theme } = useTheme();
+  const currentDate = new Date().getFullYear();
 
   return (
-    <div className="m-auto px-4 pb-10 lg:max-w-[85vw]" id="footer">
+    <div className="m-auto px-5 pb-10 lg:max-w-[1100px]" id="footer">
       <div className="grid grid-cols-1 items-center gap-y-6 md:grid-cols-[1fr_40%]">
         <h1
           className={`font-weight-lg font-primary text-[30px] font-bold capitalize leading-10 text-${theme} theme-transition sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
@@ -70,7 +71,7 @@ const Footer = () => {
           </div>
           <div>
             <h2
-              className={`text-[20px] font-bold leading-[20px] text-${theme} theme-transition md:leading-[30px]`}
+              className={`theme-transition text-[20px] font-bold leading-[20px] text-orangePrimary md:leading-[30px]`}
             >
               Follow us
             </h2>
@@ -107,7 +108,9 @@ const Footer = () => {
 
       <hr className="my-8 w-full border-b-[1px]" />
 
-      <p className="text-center text-sm">Copyright 2023 all rights reserved</p>
+      <p className="text-center text-sm">
+        Copyright <span>{currentDate}</span> all rights reserved
+      </p>
     </div>
   );
 };
