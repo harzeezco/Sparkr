@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback, useContext } from "react";
+import { useEffect, useRef, useCallback, useContext } from "react";
 import PropTypes from "prop-types";
 import {
   motion,

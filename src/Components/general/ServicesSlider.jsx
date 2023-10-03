@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 
-import { useInView } from "react-cool-inview";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import SliderSettings from "../../Utils/SliderSettings";
 import { SERVICE_SLIDER2_DATA, SERVICE_SLIDER_DATA } from "../../lib/data";
 import ServiceSliderDetails from "../data-display/ServiceSliderDetails";
@@ -11,16 +10,27 @@ const ServiceSlider = () => {
   const settings = SliderSettings(true, false);
   const settings2 = SliderSettings(false, true);
 
-   const { inView, observe } = useInView();
+  
+  const [shouldLoadSlider, setShouldLoadSlider] = useState(false);
 
-   const slider = inView ? lazy(() => import("react-slick")) : null;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldLoadSlider(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const SliderComponent = shouldLoadSlider
+    ? lazy(() => import("react-slick"))
+    : null;
 
   return (
-    <div className="slider-container py-8" ref={observe} id="service-slider">
+    <div className="slider-container py-8"  id="service-slider">
       <Suspense fallback={<Loader />}>
-        {slider && (
+        {SliderComponent && (
           <>
-            {inView && (
+            {SliderComponent && (
               <>
                 <link
                   rel="stylesheet"

@@ -1,4 +1,4 @@
-import gif from "../../assets/gif/2.mp4";
+import gif from "../../assets/gif/Web.mp4";
 import useTheme from "../../Hooks/useTheme";
 import { motion } from "framer-motion";
 
@@ -18,7 +18,7 @@ const HeroSection = () => {
 
   return (
     <motion.div
-      className="m-auto w-full px-5 lg:max-w-[1100px]"
+      className="scrollbar-hide-chrome m-auto w-full px-5 lg:max-w-[1100px]"
       id="hero"
       variants={banner}
     >
@@ -55,7 +55,7 @@ const HeroSection = () => {
             best designs and development service for your next dream project.
           </motion.p>
           <motion.div
-            className="mt-4 max-w-[200px] rounded-[40px] md:mt-0"
+            className="mt-4 max-w-[170px] rounded-[40px] md:mt-0"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -70,7 +70,7 @@ const HeroSection = () => {
               muted
               className="rounded-[50px]"
               width="100%"
-              height="100"
+              height="80"
             >
               <source src={gif} type="video/mp4" />
               <track

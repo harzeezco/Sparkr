@@ -1,7 +1,7 @@
 import useTheme from "../../Hooks/useTheme";
 import { Link } from "react-router-dom";
 
-import gif from "../../assets/gif/ch.mp4";
+import gif from "../../assets/gif/Jonny.mp4";
 import useCreateCircleText from "../../Hooks/useCreateCircleText";
 
 const CircleContact = () => {

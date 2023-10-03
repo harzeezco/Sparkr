@@ -1,24 +1,33 @@
 import PropTypes from "prop-types";
 import useCarouselSlide from "../../Hooks/useCarouselSlide";
 import Slider from "react-slick";
-import { useInView } from "react-cool-inview";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import BlockQuote from "../../assets/Icons/Union.svg";
 import Loader from "../general/Loader";
 
 const TestimonialsCarouselDetails = ({ testimonials }) => {
   const { activeSlide, sliderRef, settings, goToSlide } = useCarouselSlide();
 
-  const { inView, observe } = useInView();
+  const [shouldLoadSlider, setShouldLoadSlider] = useState(false);
 
-  const slider = inView ? lazy(() => import("react-slick")) : null;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldLoadSlider(true);
+    }, 3000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const SliderComponent = shouldLoadSlider
+    ? lazy(() => import("react-slick"))
+    : null;
 
   return (
-    <article className="relative w-full" ref={observe}>
+    <article className="relative w-full">
       <Suspense fallback={<Loader />}>
-        {slider && (
+        {SliderComponent && (
           <>
-            {inView && (
+            {SliderComponent && (
               <>
                 <link
                   rel="stylesheet"
@@ -46,7 +55,7 @@ const TestimonialsCarouselDetails = ({ testimonials }) => {
                     </div>
 
                     <article className="mt-6 md:mt-0">
-                      <h1 className="text-[20px] leading-[30px] text-white sm:pb-5  sm:text-[30px] lg:text-[40px] lg:leading-[60px]">
+                      <h1 className="text-[20px] leading-[30px] text-white sm:pb-5 sm:text-[30px] lg:text-[40px] lg:leading-[60px]">
                         {testimonial.text}
                       </h1>
                       <div className="pt-6">

@@ -14,7 +14,7 @@ import Image from "../general/Image";
 const RootSection = () => {
   const { theme } = useTheme();
   return (
-    <main>
+    <main className="scrollbar-hide-firefox scrollbar-hide-chrome">
       <section aria-labelledby="hero">
         <HeroSection />
         <div className="mx-auto w-full max-w-[100vw] pt-8">
@@ -22,7 +22,6 @@ const RootSection = () => {
             defaultSrc={Hero_webp}
             alternateSrc={Hero_png}
             alt="working in progress"
-            loading="lazy"
             height="624"
             width="100%"
           />

@@ -17,11 +17,22 @@
   .heading-primary {
     @apply font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px];
   }
+ 
+}
+
+html {
+  scrollbar-width: none;
 }
 
 body {
   overflow-x: hidden;
   font-weight: 400;
+}
+
+/* hide scroll-bar for chrome, sefari, edge */
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 
 .overflow {
