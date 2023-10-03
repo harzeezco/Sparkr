@@ -1,7 +1,12 @@
+import RootSection from "../Components/aboutpage/RootSection";
+import AboutPageSchema from "../Components/SEO/schemas/AboutPageSchema";
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <>
+      <RootSection />
+      <AboutPageSchema />
+    </>
   );
 };
 

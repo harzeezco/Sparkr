@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 
-const useCounter = (value) => {
+const useCounter = (value, isActive) => {
   useEffect(() => {
+    if (!isActive) return;
+
     let initialValue = 0;
     const domValue = parseInt(value.current.dataset.value);
     const increment = Math.ceil(domValue / 1000);
@@ -14,11 +16,17 @@ const useCounter = (value) => {
         clearInterval(increaseCount);
         return;
       }
+
+      if (domValue < 10) {
+        el.textContent = `0${domValue}`;
+        clearInterval(increaseCount);
+        return;
+      }
       el.textContent = initialValue;
-    }, 100);
+    }, 50);
 
     return () => clearInterval(increaseCount);
-  }, [value]);
+  }, [value, isActive]);
 
   return value;
 };

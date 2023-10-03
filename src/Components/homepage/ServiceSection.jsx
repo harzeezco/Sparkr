@@ -1,71 +1,11 @@
-import { useState } from "react";
-import Service from "../Common/Service";
-
-const service_data = [
-  {
-    id: 1,
-    job: "Graphic design",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-  },
-  {
-    id: 2,
-    job: "illustrations",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-  },
-  {
-    id: 3,
-    job: "logo & branding",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-  },
-  {
-    id: 4,
-    job: "development",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: false,
-  },
-];
+import Services from "../general/Services";
+import Container from "../layouts/Container";
 
 const ServiceSection = () => {
-  const [services, setServices] = useState(service_data);
-
-  const handleService = (id, condition) => {
-    setServices((prev) =>
-      prev.map((current) => {
-        return current.id === id
-          ? { ...current, isOpen: condition, borderb: true  }
-          : { ...current };
-      }),
-    );
-  };
-
   return (
-    <div className="m-auto w-full px-6  pb-[6rem] lg:max-w-[85vw]" id="service">
-      <h1 className="heading-primary">
-        <span className="text-orangePrimary">services </span> we provide
-      </h1>
-      <p className="leading-[30px] text-white opacity-[70%] sm:text-[18px] lg:max-w-[60%]">
-        Design services We are providing. With best-in-class design and
-        engineering, our work maximizes value by putting your customers at the
-        center of everything we do.
-      </p>
-
-      <div className="mx-auto mt-10">
-        {services.map((service) => (
-          <Service
-            key={service.id}
-            service={service}
-            onToggleService={handleService}
-          />
-        ))}
-      </div>
-    </div>
+    <Container id="service" pt="20">
+      <Services header={true} />
+    </Container>
   );
 };
 

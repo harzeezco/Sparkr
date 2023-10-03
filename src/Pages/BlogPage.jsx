@@ -1,10 +1,12 @@
-import HeroSection from "../Components/blogpage/HeroSection";
+import RootSection from "../Components/blogpage/RootSection";
+import BlogPageSchema from "../Components/SEO/schemas/BlogPageSchema";
 
 const BlogPage = () => {
   return (
-    <div>
-      <HeroSection />
-    </div>
+    <>
+      <RootSection />
+      <BlogPageSchema />
+    </>
   );
 };
 

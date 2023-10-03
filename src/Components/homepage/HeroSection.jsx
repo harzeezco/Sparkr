@@ -1,70 +1,104 @@
-import VideoToggle from "../../assets/Images/VideoToggle.png";
-import Video from "../../assets/Images/Video.png";
-import { useRef } from "react";
-import useCounter from "../../Hooks/useCounter";
-import Counter from "../Common/Counter";
+import gif from "../../assets/gif/Web.mp4";
+import useTheme from "../../Hooks/useTheme";
+import { motion } from "framer-motion";
+
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const HeroSection = () => {
-  const domRef = useRef();
-  const domRef2 = useRef();
-  const domRef3 = useRef();
+  const { theme } = useTheme();
 
-  const counter = useCounter(domRef);
-  const counter2 = useCounter(domRef2);
-  const counter3 = useCounter(domRef3);
+  const isLightMode = theme === "light" ? "text-light-primary" : "text-dark";
 
   return (
-    <div
+    <motion.div
+      className="scrollbar-hide-chrome m-auto w-full px-5 lg:max-w-[1100px]"
       id="hero"
-      className="m-auto w-full px-6  pb-[6rem] pt-16 lg:max-w-[85vw]"
+      variants={banner}
     >
-      <div className="grid">
-        <h1 className="whitespace-nowrap font-primary text-4xl font-bold capitalize text-white md:hidden lg:text-[5.2rem]">
+      <div className="grid pt-12">
+        <h1
+          className={`whitespace-nowrap font-primary text-4xl font-bold capitalize ${isLightMode} theme-transition md:hidden lg:text-[5.2rem]`}
+        >
           We Are
         </h1>
-        <div className="order-last block  items-center justify-between gap-x-6 md:order-first md:inline-flex">
-          <h1 className="hidden whitespace-nowrap font-primary text-4xl font-bold capitalize text-white sm:text-[50px] md:block lg:text-[5rem]">
+        <div className="order-last block items-center justify-between gap-x-6 md:order-first md:inline-flex">
+          <motion.h1
+            initial={{ opacity: 0, y: 90 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 0,
+              delay: 0,
+            }}
+            className={`hidden whitespace-nowrap font-primary text-4xl font-bold capitalize ${isLightMode} theme-transition sm:text-[50px] md:block lg:text-[5rem]`}
+          >
             We Are
-          </h1>
-
-          <p className="order-first leading-[30px] text-colorwhite-100 md:order-last">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 0,
+              delay: 0,
+            }}
+            className="order-first text-base leading-[30px] md:order-last  md:text-lg"
+          >
             We are helping people to grow their business. We are providing the
             best designs and development service for your next dream project.
-          </p>
-          <img className="" src={VideoToggle} alt="" />
+          </motion.p>
+          <motion.div
+            className="mt-4 max-w-[170px] rounded-[40px] md:mt-0"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 0,
+              delay: 0,
+            }}
+          >
+            <video
+              loop
+              autoPlay
+              muted
+              className="rounded-[50px]"
+              width="100%"
+              height="80"
+            >
+              <source src={gif} type="video/mp4" />
+              <track
+                label="English Captions"
+                kind="captions"
+                srcLang="en"
+                default
+              ></track>
+            </video>
+          </motion.div>
         </div>
-
-        <h1 className="whitespace-nowrap font-primary text-4xl font-bold capitalize leading-snug tracking-[-1px] text-orangePrimary sm:text-[7vw] lg:text-[6.5vw]">
-          building <span className="text-white">digital</span> brands
-        </h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 110 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0,
+            delay: 0,
+          }}
+          id="header-text"
+          className="font-primary text-[40px] font-bold capitalize leading-[50px] tracking-[-1px] text-orangePrimary sm:text-[7vw] md:whitespace-nowrap md:leading-snug lg:text-[6.5vw]"
+        >
+          building{" "}
+          <span className={`${isLightMode} theme-transition`}>digital</span>{" "}
+          brands
+        </motion.h1>
       </div>
-
-      <div className="grid grid-cols-1 items-center pt-10  md:grid-cols-[300px_minmax(0,_1fr)]">
-        <div className="order-last md:order-first">
-          <Counter
-            data_value="5"
-            counter={counter}
-            pagh_text="years of exprerience"
-            percent_symb="+"
-          />
-          <Counter
-            data_value="60"
-            counter={counter2}
-            pagh_text="design awards"
-            percent_symb="+"
-          />
-          <Counter
-            data_value="97"
-            counter={counter3}
-            pagh_text="Clients satisfactions"
-            percent_symb="%"
-          />
-        </div>
-        <figure className="justify-self-end md:w-[97%]">
-          <img src={Video} alt="" />
-        </figure>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

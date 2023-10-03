@@ -1,6 +1,13 @@
+import ContactPageSchema from "../Components/SEO/schemas/ContactPageShema";
+import RootSection from "../Components/contactpage/RootSection";
 
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return (
+    <>
+      <RootSection />
+      <ContactPageSchema />
+    </>
+  );
 };
 
 export default ContactPage;
