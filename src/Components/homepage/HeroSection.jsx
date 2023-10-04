@@ -1,4 +1,4 @@
-import gif from "../../assets/gif/Web.mp4";
+import gif from "../../assets/gif/branding.mp4";
 import useTheme from "../../Hooks/useTheme";
 import { motion } from "framer-motion";
 

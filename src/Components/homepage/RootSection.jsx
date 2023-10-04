@@ -10,6 +10,7 @@ import Hero_webp from "../../assets/Images/Hero.webp";
 import Hero_png from "../../assets/Images/Hero.png";
 import ServiceSlider from "../general/ServicesSlider";
 import Image from "../general/Image";
+import Branding from "../../assets/gif/web.mp4";
 
 const RootSection = () => {
   const { theme } = useTheme();
@@ -18,13 +19,22 @@ const RootSection = () => {
       <section aria-labelledby="hero">
         <HeroSection />
         <div className="mx-auto w-full max-w-[100vw] pt-8">
-          <Image
-            defaultSrc={Hero_webp}
-            alternateSrc={Hero_png}
-            alt="working in progress"
-            height="624"
+          <video
+            loop
+            autoPlay
+            muted
+            className=""
             width="100%"
-          />
+            height="800"
+          >
+            <source src={Branding} type="video/mp4" />
+            <track
+              label="English Captions"
+              kind="captions"
+              srcLang="en"
+              default
+            ></track>
+          </video>
         </div>
       </section>
       <section
