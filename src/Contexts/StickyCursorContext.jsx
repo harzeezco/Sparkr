@@ -4,10 +4,19 @@ export const StickyCursorContext = createContext();
 
 const StickyCursorProvider = ({ children }) => {
   const stickyElement = useRef();
-  const [isHovered, setIsHovered] = useState(false);
+  const [isProjectHovered, setIsProjectHovered] = useState(false);
+  const [scaling, setScaling] = useState(false);
 
   return (
-    <StickyCursorContext.Provider value={{stickyElement, isHovered, setIsHovered}}>
+    <StickyCursorContext.Provider
+      value={{
+        stickyElement,
+        isProjectHovered,
+        setIsProjectHovered,
+        scaling,
+        setScaling,
+      }}
+    >
       {children}
     </StickyCursorContext.Provider>
   );

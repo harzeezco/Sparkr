@@ -1,43 +1,40 @@
+import { lazy, useContext } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import useTheme from "../../Hooks/useTheme";
-import { motion } from "framer-motion";
-import Sidebar from "../navigation/Sidebar";
-import Cursor from "../../Animation/Cursor";
-import StickyCursorProvider from "../../Contexts/StickyCursorContext";
-import SideNavContextProvider from "../../Contexts/SideNavContext";
+import { AnimatePresence } from "framer-motion";
+const Sidebar = lazy(() => import("../navigation/Sidebar"));
+import BannerAnimationContextProvider from "../../Contexts/BannerAnimationContext";
+import { SideNavContext } from "../../Contexts/SideNavContext";
+
+const Footer = lazy(() => import("./Footer"));
 
 const AppLayout = () => {
   const { theme } = useTheme();
+  const { isHide } = useContext(SideNavContext);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }} // Translate from the bottom
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }} // Translate to the bottom on exit
-      transition={{ duration: 0.6, delay: 0, ease: "easeInOut" }}
-    >
+    <AnimatePresence>
       <div
         className={`bg-${theme} text-${theme}-primary theme-transition relative z-10`}
+        id="scrollbar"
       >
-        <StickyCursorProvider>
-          <Cursor />
-          <header className="">
-            <SideNavContextProvider>
-              <Navbar />
-              <Sidebar />
-            </SideNavContextProvider>
-          </header>
-        </StickyCursorProvider>
+        <header>
+          <Navbar />
+          {isHide ? <Sidebar /> : null}
+        </header>
+
         <main className="relative z-[-3]">
-          <Outlet />
+          <BannerAnimationContextProvider>
+            <Outlet />
+          </BannerAnimationContextProvider>
         </main>
-        <footer className="" aria-labelledby="footer">
-          <Footer />
+
+        <footer aria-labelledby="footer">
+            <Footer />
         </footer>
       </div>
-    </motion.div>
+    </AnimatePresence>
   );
 };
 

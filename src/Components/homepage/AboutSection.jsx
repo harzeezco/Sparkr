@@ -1,35 +1,87 @@
 import useTheme from "../../Hooks/useTheme";
-import Meeting_webp from "../../assets/Images/meeting.webp";
-import Meeting_png from "../../assets/Images/meeting.png";
+
 import ColumnGrid2 from "../layouts/2ColumnGrid";
 import Container from "../layouts/Container";
+import RegularList from "../general/RegularList";
+import Header from "../general/Header";
+
+import { Puzzle_webp, Puzzle_png } from "../../lib/image-store";
 
 const AboutSection = () => {
   const { theme } = useTheme();
+  const headerText = `theme-transition font-primary text-[30px] font-bold sm:text-[45px] md:leading-[74px] lg:text-[60px]`;
 
-  const isLightMode = theme === "light" ? "text-light-primary" : "text-dark";
+  const ABOUTSECTIONHEADER = [
+    {
+      id: 1,
+      phrase: "Our",
+      className: `${headerText} text-orangePrimary`,
+    },
+    {
+      id: 2,
+      phrase: "Unique",
+      className: `${headerText} text-orangePrimary`,
+    },
+    {
+      id: 3,
+      phrase: "Approach",
+      className: `${headerText} text-${theme}`,
+    },
+    {
+      id: 4,
+      phrase: "helps",
+      className: `${headerText} text-${theme}`,
+    },
+    {
+      id: 5,
+      phrase: "us",
+      className: `${headerText} text-orangePrimary`,
+    },
+    {
+      id: 6,
+      phrase: "Spark",
+      className: `${headerText} text-orangePrimary`,
+    },
+    {
+      id: 7,
+      phrase: "your",
+      className: `${headerText} text-${theme}`,
+    },
+    {
+      id: 8,
+      phrase: "Brand",
+      className: `${headerText} text-${theme}`,
+    },
+  ];
+
+  const FIRST_LINE = ABOUTSECTIONHEADER.slice(0, 4);
+  const SECOND_LINE = ABOUTSECTIONHEADER.slice(4);
 
   return (
     <Container id="about" pt="20">
-      <h1
-        className={`font-weight-lg theme-transition font-primary text-[30px] font-bold capitalize leading-10 ${isLightMode} sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
-      >
-        our <span className="text-orangePrimary">approach </span> is to <br />
-        solve problem
-      </h1>
+      <div className="flex items-center gap-x-1">
+        <RegularList
+          resourceName="text"
+          itemComponent={Header}
+          items={FIRST_LINE}
+        />
+      </div>
+
+      <div className="mb-7 flex items-center gap-x-1">
+        <RegularList
+          resourceName="text"
+          itemComponent={Header}
+          items={SECOND_LINE}
+        />
+      </div>
 
       <ColumnGrid2
         img_first={true}
-        defaultSrc={Meeting_webp}
-        alternateSrc={Meeting_png}
+        defaultSrc={Puzzle_webp}
+        alternateSrc={Puzzle_png}
         button={true}
-        first_prgh=" Located in Lagos, we are a professional creative design agency that
-            has done many projects with various clients across the world."
-        second_prgh="We are a team of creative people who are committed to giving the
-            world a little touch of beauty with our designs. We love what we do
-            and we do it with passions. We believe in using business to drive
-            positive changes in the world & never setting for what worked in the
-            past."
+        first_prgh="At Sparkr, we understand that every business has its unique dreams and aspirations. Success, to us, means seeing you thrive online, reaching that audience you've always dreamt of, and achieving those milestones that define your brand's growth."
+        second_prgh="We're here to listen, truly understand your goals, and handcraft a solution tailored just for you. We start by understanding the root cause of the problem and then we work with you to develop innovative and effective solutions that spark your brand to 100x."
       />
     </Container>
   );

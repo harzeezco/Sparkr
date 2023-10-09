@@ -16,7 +16,7 @@ const ServiceSlider = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShouldLoadSlider(true);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

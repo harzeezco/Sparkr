@@ -9,6 +9,7 @@ const HomePage = () => {
         title="Sparkr Agency - Providing Innovative Solutions"
         description="We are a leading tech agency specializing in innovative solutions for businesses. Explore our services and expertise."
       /> */}
+      
       <RootSection />
       <HomepageSchema />
     </>

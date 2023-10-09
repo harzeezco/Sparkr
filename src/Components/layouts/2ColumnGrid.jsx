@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import useTheme from "../../Hooks/useTheme";
 import Image from "../general/Image";
-import ScrollToTopLink from "../../Animation/ScrollToTopLink";
+import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
+import MagneticButton from "../general/RoundedButton";
 
 const ColumnGrid2 = ({
   defaultSrc,
@@ -38,18 +39,42 @@ const ColumnGrid2 = ({
           <h2
             className={`pb-4 font-primary text-4xl leading-[48px] text-${theme} font-bold`}
           >
-            {header}{" "}
+            {header}
             <span className="text-orangePrimary">{header_highlight}</span>
           </h2>
         )}
-        <p className="leading-[30px] sm:text-[18px]">{first_prgh}</p>
-        <p className="leading-[30px] sm:text-[18px] md:mb-8 md:pt-8">
-          {second_prgh}
-        </p>
 
-        <ScrollToTopLink to="/about">
-          {button && <button className="btn-primary mt-6">learn more</button>}
-        </ScrollToTopLink>
+        <div className="mb-7">
+          <AnimatedTextLetters
+            openDuration={0.5}
+            closeDuration={0.5}
+            delay={0.3}
+            phrase={first_prgh}
+            className="leading-[30px] sm:text-[18px]"
+          />
+        </div>
+        {second_prgh ? (
+          <div className="mb-7">
+            <AnimatedTextLetters
+              openDuration={0.5}
+              closeDuration={0.5}
+              delay={0.5}
+              phrase={second_prgh}
+              className="leading-[30px] sm:text-[18px]"
+            />
+          </div>
+        ) : null}
+
+        <a href="/about">
+          {button && (
+            // <button className="btn-primary relative z-50 mt-6">
+            //   Let’s Spark Your Brand Today
+            // </button>
+            <MagneticButton>
+              <p className="p">Let’s Spark Your Brand Today</p>
+            </MagneticButton>
+          )}
+        </a>
       </article>
     </div>
   );

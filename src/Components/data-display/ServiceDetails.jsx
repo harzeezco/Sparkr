@@ -9,15 +9,12 @@ import Work_png from "../../assets/Images/Hero.png";
 import useTheme from "../../Hooks/useTheme";
 import ImageWrapper from "./ImageWrapper";
 import Image from "../general/Image";
+import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
 
 const ServiceDetails = ({ service, onToggleService }) => {
   const { id, work, job, isOpen, borderb } = service;
 
   const { theme } = useTheme();
-
-  function handleButtonMouseOver(event) {
-    event.stopPropagation(); // Prevent the event from propagating to the div
-  }
 
   return (
     <div className="mt-2 cursor-pointer">
@@ -25,13 +22,14 @@ const ServiceDetails = ({ service, onToggleService }) => {
         className="transition-el flex items-center  justify-between pb-6"
         onMouseOver={() => onToggleService(id, true)}
       >
-        <h1 className={`heading-secondary text-${theme} theme-transition`}>
-          {job}
-        </h1>
-        <div
-          onMouseOver={handleButtonMouseOver}
-          className="flex w-[10rem] justify-end"
-        >
+        <AnimatedTextLetters
+          phrase={job}
+          className={`heading-secondary text-${theme} theme-transition`}
+          openDuration={0.5}
+          closeDuration={0.5}
+          delay={0.1}
+        />
+        <div className="flex w-[10rem] justify-end">
           <ImageWrapper
             src={OpenLight}
             srcForDarkMode={OpenDark}
@@ -51,9 +49,13 @@ const ServiceDetails = ({ service, onToggleService }) => {
         } cursor-pointer transition-opacity duration-[1s] ease-in-out group-hover:visible group-hover:opacity-100`}
       >
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="heading-secondary uppercase text-orangePrimary">
-            {work} <span className="capitalize ">Design</span>
-          </h2>
+          <AnimatedTextLetters
+            phrase={`${work} Design`}
+            className={`heading-secondary theme-transition text-orangePrimary`}
+            openDuration={0.5}
+            closeDuration={0.5}
+            delay={0.1}
+          />
           <button onMouseEnter={() => onToggleService(id, false)}>
             <img
               className="h-[18px] w-[18px]"

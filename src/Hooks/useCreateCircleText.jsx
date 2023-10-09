@@ -11,7 +11,7 @@ const useCreateCircleText = () => {
       .split("")
       .map(
         (char, i) =>
-          `<span style="transform: rotate(${i * 8.8}deg); position: absolute;">${char}</span>`,
+          `<span style="transform: rotate(${i * 8.7}deg); position: absolute;">${char}</span>`,
       )
       .join("");
   }, []);

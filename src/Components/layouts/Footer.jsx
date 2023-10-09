@@ -15,20 +15,65 @@ import {
 import ImageWrapper from "../data-display/ImageWrapper";
 import useTheme from "../../Hooks/useTheme";
 import ScrollToTopLink from "../../Animation/ScrollToTopLink";
+import Header from "../general/Header";
 
 const Footer = () => {
   const { theme } = useTheme();
   const currentDate = new Date().getFullYear();
 
+  const headerText = `theme-transition font-primary text-[30px] font-bold sm:text-[45px] md:leading-[74px] lg:text-[60px]`;
+
+  const NAVBARHEADER = [
+    {
+      id: 1,
+      phrase: "let’s",
+      className: `${headerText} text-${theme}`,
+    },
+    {
+      id: 2,
+      phrase: "make",
+      className: `${headerText} text-${theme}`,
+    },
+    {
+      id: 3,
+      phrase: "your",
+      className: `${headerText} text-${theme}`,
+    },
+    {
+      id: 4,
+      phrase: "product",
+      className: `${headerText} text-orangePrimary`,
+    },
+    {
+      id: 5,
+      phrase: "together",
+      className: `${headerText} text-${theme}`,
+    },
+  ];
+
+  const FIRST_LINE = NAVBARHEADER.slice(0, 3);
+  const SECOND_LINE = NAVBARHEADER.slice(3);
+
   return (
     <div className="m-auto px-5 pb-10 lg:max-w-[1100px]" id="footer">
       <div className="grid grid-cols-1 items-center gap-y-6 md:grid-cols-[1fr_40%]">
-        <h1
-          className={`font-weight-lg font-primary text-[30px] font-bold capitalize leading-10 text-${theme} theme-transition sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
-        >
-          let’s make your <br />{" "}
-          <span className="text-orangePrimary">product</span> together
-        </h1>
+        <div>
+          <div className="flex items-center gap-x-1">
+            <RegularList
+              resourceName="text"
+              itemComponent={Header}
+              items={FIRST_LINE}
+            />
+          </div>
+
+          <div className="mb-7 flex items-center gap-x-1">
+            <RegularList
+              resourceName="text"
+              itemComponent={Header}
+              items={SECOND_LINE}
+            />
+          </div>
+        </div>
 
         <ScrollToTopLink to="/contact">
           <div

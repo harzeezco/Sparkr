@@ -1,41 +1,46 @@
 import PropTypes from "prop-types";
 import useCarouselSlide from "../../Hooks/useCarouselSlide";
 import Slider from "react-slick";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useContext, useEffect, useState } from "react";
 import BlockQuote from "../../assets/Icons/Union.svg";
 import Loader from "../general/Loader";
+import { StickyCursorContext } from "../../Contexts/StickyCursorContext";
+import { useInView } from "react-cool-inview";
 
 const TestimonialsCarouselDetails = ({ testimonials }) => {
   const { activeSlide, sliderRef, settings, goToSlide } = useCarouselSlide();
+  const { setScaling } = useContext(StickyCursorContext);
 
-  const [shouldLoadSlider, setShouldLoadSlider] = useState(false);
+    const [isElementVisible, setIsElementVisible] = useState(false);
+
+
+  const { observe, inView } = useInView({
+    // triggerDistance: "-40vh",
+    unobserveOnEnter: true,
+  });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShouldLoadSlider(true);
-    }, 3000); 
+    setIsElementVisible(inView);
+  }, [inView]);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  const SliderComponent = shouldLoadSlider
+  const SliderComponent = isElementVisible
     ? lazy(() => import("react-slick"))
     : null;
 
   return (
-    <article className="relative w-full">
+    <article className="relative w-full" ref={observe}>
       <Suspense fallback={<Loader />}>
         {SliderComponent && (
           <>
             {SliderComponent && (
               <>
                 <link
-                  rel="stylesheet"
+                  rel="preconnect"
                   type="text/css"
                   href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
                 />
                 <link
-                  rel="stylesheet"
+                  rel="preconnect"
                   type="text/css"
                   href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
                 />
@@ -43,7 +48,12 @@ const TestimonialsCarouselDetails = ({ testimonials }) => {
             )}
             <Slider {...settings} ref={sliderRef} aria-live="polite">
               {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="p-4">
+                <div
+                  key={testimonial.id}
+                  className="p-4 cursor-pointer"
+                  onMouseEnter={() => setScaling(true)}
+                  onMouseLeave={() => setScaling(false)}
+                >
                   <div className="grid justify-start p-4 md:grid-cols-[120px_1fr]">
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-colorDark p-2">
                       <img

@@ -1,40 +1,31 @@
 import useTheme from "../../Hooks/useTheme";
-import AboutSection from "./AboutSection";
+// import AboutSection from "./AboutSection";
 import HeroSection from "./HeroSection";
-import ProcessSection from "./ProcessSection";
-import ProjectSection from "./ProjectSection";
-import ServiceSection from "./ServiceSection";
-import SpeechSection from "./SpeechSection";
+// import ServiceSection from "./ServiceSection";
+// import SpeechSection from "./SpeechSection";
 import TestimonialSection from "./TestimonialSection";
-import Hero_webp from "../../assets/Images/Hero.webp";
-import Hero_png from "../../assets/Images/Hero.png";
 import ServiceSlider from "../general/ServicesSlider";
-import Image from "../general/Image";
-import Branding from "../../assets/gif/web.mp4";
+import Branding from "/videos/Web.mp4";
+import { lazy } from "react";
+import VideoPlaceholder from "../general/VideoPlaceholder";
+
+const ProcessSection = lazy(() => import("./ProcessSection"));
+const ProjectSection = lazy(() => import("./ProjectSection"));
+// const ServiceSlider = lazy(() => import("../general/ServicesSlider"));
+const ServiceSection = lazy(() => import("./ServiceSection"));
+// const TestimonialSection = lazy(() => import("./TestimonialSection"));
+const SpeechSection = lazy(() => import("./SpeechSection"));
+const AboutSection = lazy(() => import("./AboutSection"));
+import Hero from "../../assets/Images/Hero.webp";
 
 const RootSection = () => {
   const { theme } = useTheme();
   return (
-    <main className="scrollbar-hide-firefox scrollbar-hide-chrome">
+    <div className="scrollbar-hide-firefox scrollbar-hide-chrome">
       <section aria-labelledby="hero">
         <HeroSection />
-        <div className="mx-auto w-full max-w-[100vw] pt-8">
-          <video
-            loop
-            autoPlay
-            muted
-            className=""
-            width="100%"
-            height="800"
-          >
-            <source src={Branding} type="video/mp4" />
-            <track
-              label="English Captions"
-              kind="captions"
-              srcLang="en"
-              default
-            ></track>
-          </video>
+        <div className="mx-auto w-full max-w-[100vw] pt-20">
+          <VideoPlaceholder src={Branding} image={Hero} />
         </div>
       </section>
       <section
@@ -64,7 +55,7 @@ const RootSection = () => {
       <section aria-labelledby="testimonial" className="bg-orangePrimary">
         <TestimonialSection />
       </section>
-    </main>
+    </div>
   );
 };
 

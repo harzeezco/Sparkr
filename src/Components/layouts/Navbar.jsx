@@ -4,15 +4,29 @@ import LogoLightMode from "../../assets/Svg/LogoLightMode.svg";
 import RegularList from "../general/RegularList";
 import { NAV_LINKS } from "../../lib/data";
 import NavLink from "../navigation/NavLink";
-import { Link } from "react-router-dom";
 import ThemeSwitcher from "../general/ThemeSwitcher";
 import ImageWrapper from "../data-display/ImageWrapper";
 import NavToggle from "../general/NavToggleIcon";
+import { motion } from "framer-motion";
+import ScrollToTopLink from "../../Animation/ScrollToTopLink";
+import { useContext } from "react";
+import { SideNavContext } from "../../Contexts/SideNavContext";
 
 const Navbar = () => {
+  const { setIsHide } = useContext(SideNavContext);
+
   return (
-    <div className="theme-transition m-auto flex w-full items-center justify-between px-5 py-7 pb-6 lg:max-w-[1100px]">
-      <Link to={"/"}>
+    <motion.div
+      initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+        delay: 0.6,
+      }}
+      className="theme-transition m-auto flex w-full items-center justify-between px-5 py-7 pb-6 lg:max-w-[1100px]"
+    >
+      <ScrollToTopLink to="/">
         <ImageWrapper
           srcForDarkMode={LogoDarkMode}
           src={LogoLightMode}
@@ -21,7 +35,7 @@ const Navbar = () => {
           width="150"
           className="relative z-[-3]"
         />
-      </Link>
+      </ScrollToTopLink>
 
       <nav className="hidden md:inline-flex" id="nav-menu" role="navigation">
         <ul
@@ -42,19 +56,17 @@ const Navbar = () => {
         >
           Let&apos;s talk
         </button>
-        <div className="inline-block pl-4" role="button">
+        <div className="inline-block pl-4">
           <ThemeSwitcher />
         </div>
       </div>
       <div
-        aria-label="Toggle Navigation Menu"
-        role="button"
-        aria-controls="nav-menu"
         className="md-hidden fixed left-[85vw] z-50 grid h-[40px] w-[40px] items-center md:hidden"
+        onClick={() => setIsHide(true)}
       >
         <NavToggle />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,19 +1,30 @@
-import useTheme from "../../Hooks/useTheme";
+import { motion } from "framer-motion";
+import { BannerRowTop } from "../general/BannerRowTop";
 import Container from "../layouts/Container";
 import BlogInsight from "./BlogInsight";
 import BlogNews from "./BlogNews";
 import BlogTutorial from "./BlogTutorial";
 
 const RootSection = () => {
-  const { theme } = useTheme();
-
   return (
     <Container>
-      <h2
-        className={`font-weight-lg font-primary text-[30px] font-bold capitalize leading-10 text-${theme} w-3/6 sm:text-[45px] md:leading-[74px] lg:text-[60px] pt-12`}
+      <div className="flex h-[130px] items-center gap-x-4 overflow-hidden">
+        <BannerRowTop title="latest" color="text-mode" />
+        <BannerRowTop title="blog " color="text-default" />
+      </div>
+      <motion.div
+        initial={{ transform: 0, y: 80 }}
+        animate={{ transform: 1, y: 0 }}
+        transition={{
+          ease: "easeInOut",
+          duration: 1,
+          delay: 0.4,
+        }}
+        className="mb-12 mt-2 h-[50px] text-lg"
       >
-        latest <span className="text-orangePrimary"> blog </span>
-      </h2>
+        The latest in security, access control, IT compliance, and other news.
+      </motion.div>
+
       <BlogNews />
       <BlogInsight />
       <BlogTutorial />

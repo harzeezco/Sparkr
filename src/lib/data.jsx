@@ -1,4 +1,3 @@
-import CounterRef from "../Hooks/useCounterRef";
 import HeroWallet_webp from "../assets/Images/Projects/HeroWallet.webp";
 import HeroWallet_png from "../assets/Images/Projects/HeroWallet.png";
 import Card2_webp from "../assets/Images/Projects/Card2.webp";
@@ -33,12 +32,6 @@ import Step from "../assets/Images/Value/Step.png";
 import Phone from "../assets/Images/Value/Phone.png";
 import Message from "../assets/Images/Value/Message.png";
 import Profile from "../assets/Images/Value/Profile.png";
-import Founder from "../assets/Images/Teams/Founder.png";
-import CEO from "../assets/Images/Teams/CEO.png";
-import Co_founder from "../assets/Images/Teams/Co-founder.png";
-import Designer from "../assets/Images/Teams/Designer.png";
-import Marketer from "../assets/Images/Teams/Marketer.png";
-import Developer from "../assets/Images/Teams/Developer.png";
 import BlogNews1 from "../assets/Images/Blog/blog-img-1.png";
 import BlogNews2 from "../assets/Images/Blog/blog-img-2.png";
 import BlogNews3 from "../assets/Images/Blog/blog-img-3.jpg";
@@ -123,8 +116,6 @@ export const FOOTER_2_NAV_LINKS = [
   },
 ];
 
-const { counter1, counter2, counter3 } = CounterRef;
-
 export const COUNT_DETAILS = [
   {
     id: 1,
@@ -132,7 +123,6 @@ export const COUNT_DETAILS = [
     header: "years of experience",
     prgh_text: "We have over 5+ years of experience in this design industry.",
     percent_symb: "+",
-    counter: counter1,
   },
   {
     id: 2,
@@ -140,7 +130,6 @@ export const COUNT_DETAILS = [
     header: "design awards",
     prgh_text: "We have achieved over 60 design awards for our awesome work. ",
     percent_symb: "+",
-    counter: counter2,
   },
   {
     id: 3,
@@ -148,7 +137,6 @@ export const COUNT_DETAILS = [
     header: "Client Satisfaction",
     prgh_text: "Our client is 97% satisfied with our work and services",
     percent_symb: "%",
-    counter: counter3,
   },
 ];
 
@@ -379,7 +367,7 @@ export const PROJECT_DETAILS = [
 export const SERVICE_DATA = [
   {
     id: 1,
-    job: "Graphic design",
+    job: "Social Media Design",
     work: "UI/UX",
     isOpen: false,
     borderb: true,
@@ -412,33 +400,25 @@ export const PROCESS_DETAILS = [
     id: 1,
     num: "#1",
     heading: "discussion",
-    prgh: `We start by learn and research based on client brief and resource
-             to gain about the needs, goals, product and requirements. We are
-             providing the best.`,
+    prgh: `We start by learn and research based on client brief and resource to gain about the needs, goals, product and requirements. We are providing the best.`,
   },
   {
     id: 2,
     num: "#2",
     heading: "discovery",
-    prgh: `We start by learn and research based on client brief and resource
-             to gain about the needs, goals, product and requirements. We are
-             providing the best.`,
+    prgh: `We start by learn and research based on client brief and resource to gain about the needs, goals, product and requirements. We are providing the best.`,
   },
   {
     id: 3,
     num: "#3",
     heading: "strategy",
-    prgh: `We start by learn and research based on client brief and resource
-             to gain about the needs, goals, product and requirements. We are
-             providing the best.`,
+    prgh: `We start by learn and research based on client brief and resource to gain about the needs, goals, product and requirements. We are providing the best.`,
   },
   {
     id: 4,
     num: "#4",
     heading: "design & dev",
-    prgh: `We start by learn and research based on client brief and resource
-             to gain about the needs, goals, product and requirements. We are
-             providing the best.`,
+    prgh: `We start by learn and research based on client brief and resource to gain about the needs, goals, product and requirements. We are providing the best.`,
   },
 ];
 
@@ -477,47 +457,37 @@ export const SOCIAL_LINKS = [
 export const TESTIMONIALS_DETAILS = [
   {
     id: 0,
-    text: ` Route agency team are just amazing. We have had some personal
-            websites and dashboards. The team always delivered on time. The best
-            quality with endless iterations. Good Job!`,
-    name: "Elizabeth",
-    address: "Los Angeles, CA",
+    text: `Navigating the digital world with sparkr was a joyride! They didn’t just build our brand; they became the co-pilots of our online adventure!`,
+    name: "Luca Rossi",
+    address: "Chief Technology Officer, CyberSecure Global",
     alt: "first",
   },
   {
     id: 1,
-    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo
-          enim eaque voluptates ea vero corrupti molestiae natus explicabo illo, ipsam
-          expedita `,
-    name: "Ismail",
-    address: "USA, CA",
+    text: `sparkr meticulously revealed our brand essence, providing a reflection of our ethos and values in every detail. Our brand is not only acknowledged but also deeply resonant and esteemed.`,
+    name: "Amara Okafor,",
+    address: "Head of Digital Strategy, E-Comm Universe",
     alt: "second",
   },
   {
     id: 2,
-    text: `  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-          assumenda consectetur, vitae molestiae natus explicabo illo, ipsam
-          expedita excepturi quidem `,
-    name: "Azeez",
-    address: "Lagos, CA",
+    text: `Absolutely stunned by sparkr's app design for us! It's not just user-friendly; it's our user's personal digital concierge, foreseeing every need. Our engagement soared by 70%, and inquiries dipped by 40%!`,
+    name: "Mia Wong",
+    address: "Marketing Director, EcoHealth Worldwide",
     alt: "third",
   },
   {
     id: 3,
-    text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-          repellat distinctio id maxime in accusamus neque officiis officia enim
-          iure illo cupiditate quibusdam, saepe`,
-    name: "Wakil",
-    address: "Nigeria, CA",
+    text: `Trusting sparkr studio with our fintech startup's website transformed into a welcoming digital home, aesthetically enhancing user experience which resulted in a notable uplift in user engagement.`,
+    name: "Aarav Patel",
+    address: "Co-Founder, FinSolutions International",
     alt: "fourth",
   },
   {
     id: 4,
-    text: `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non labore
-          magni quibusdam eius odio aliquam voluptatum pariatur nam impedit odit
-          voluptatem `,
-    name: "Adam",
-    address: "Norway, CA",
+    text: `sparkr studio turned our site into a vibrant, unforgettable story, doubling our traffic! We're not just seen; we're remembered. Eager for our next project together.`,
+    name: "Liam Murphy",
+    address: "Product Manager, SmartHome International",
     alt: "fifth",
   },
 ];
@@ -564,45 +534,6 @@ export const VALUE_DETAILS = [
     icon: Love,
     header: "We Give Our Best",
     prgh_text: "We lead with empathy and take care of one another.",
-  },
-];
-
-export const TEAMS_DETAILS = [
-  {
-    id: 1,
-    img: Founder,
-    name: "Rohit Sharma",
-    position: "Co-Founder",
-  },
-  {
-    id: 2,
-    img: CEO,
-    name: "CEO",
-    position: "Shikhar Dhawan",
-  },
-  {
-    id: 3,
-    img: Co_founder,
-    name: "Virat Kohli",
-    position: "Founder",
-  },
-  {
-    id: 4,
-    img: Designer,
-    name: "KL Rahul",
-    position: "Designer",
-  },
-  {
-    id: 5,
-    img: Developer,
-    name: "SK Yadav",
-    position: "Developer",
-  },
-  {
-    id: 6,
-    img: Marketer,
-    name: "Rishabh Pant",
-    position: "Marketer",
   },
 ];
 

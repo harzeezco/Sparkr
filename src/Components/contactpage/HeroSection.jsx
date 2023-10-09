@@ -1,25 +1,38 @@
-import useTheme from "../../Hooks/useTheme";
+import { BannerRowBottom } from "../general/BannerRowBottom";
+import { BannerRowTop } from "../general/BannerRowTop";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const { theme } = useTheme();
-
   return (
     <div
       className="md:pt-${pt} m-auto mb-[3.5rem] w-full px-5 lg:max-w-[1100px]"
       id="hero"
     >
-      <h1
-        className={`whitespace-nowrap font-primary text-3xl font-bold capitalize leading-10 text-${theme} theme-transition pt-12 sm:text-[3.2rem] sm:leading-[60px] lg:text-[6.5vw] lg:leading-[80px]`}
-      >
-        Let’s start a <br />
-        <span className="text-orangePrimary"> project </span> together{" "}
-      </h1>
+      <div className="flex h-[130px] items-center gap-x-4 overflow-hidden">
+        <BannerRowTop title="Let’s" color="text-mode" />
+        <BannerRowTop title="start" color="text-mode" />
+        <BannerRowTop title="a" color="text-mode" />
+      </div>
 
-      <p className="pt-3 text-base leading-[30px] md:w-[65%] md:text-xl">
+      <div className="-mt-7 flex h-[130px] items-center gap-x-5 overflow-hidden">
+        <BannerRowBottom title="project" color="text-mode" />
+        <BannerRowBottom title="together" color="text-default" />
+      </div>
+
+      <motion.p
+        initial={{ opacity: 0, y: 70 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          stiffness: 300,
+          delay: 2,
+          type: "spring",
+        }}
+        className="text-base leading-[30px] md:w-[65%] md:text-xl"
+      >
         Perhaps there’s a way your business could benefit by partnering with
         Route Agency? Please share your thoughts in the form below, and we’ll
         respond within 48 hours of receiving the inquiry.
-      </p>
+      </motion.p>
     </div>
   );
 };
