@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { SideNavContext } from "../../Contexts/SideNavContext";
 import ScrollToTopLink from "../../Animation/ScrollToTopLink";
 
-const Sidebar = () => {
+const SmallScreenNav = () => {
   const { toggleMenu, theme, toggleTheme } = useContext(SideNavContext);
 
   const themeMode = theme === "light" ? "dark" : "light";
@@ -46,4 +46,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SmallScreenNav;

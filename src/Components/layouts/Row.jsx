@@ -2,9 +2,8 @@ import PropTypes from "prop-types";
 import useTheme from "../../Hooks/useTheme";
 import Image from "../general/Image";
 import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
-import MagneticButton from "../general/RoundedButton";
 
-const ColumnGrid2 = ({
+const Row = ({
   defaultSrc,
   alternateSrc,
   first_prgh,
@@ -36,12 +35,25 @@ const ColumnGrid2 = ({
         `}
       >
         {header && (
-          <h2
-            className={`pb-4 font-primary text-4xl leading-[48px] text-${theme} font-bold`}
+          <h1
+            className={`pb-4 font-primary text-4xl leading-[48px] text-${theme} flex items-center font-bold`}
           >
-            {header}
-            <span className="text-orangePrimary">{header_highlight}</span>
-          </h2>
+            <AnimatedTextLetters
+              phrase={header}
+              openDuration={0.5}
+              closeDuration={0.5}
+              delay={0.1}
+            />
+            <span>
+              <AnimatedTextLetters
+                phrase={header_highlight}
+                className={`text-orangePrimary`}
+                openDuration={0.5}
+                closeDuration={0.5}
+                delay={0.1}
+              />
+            </span>
+          </h1>
         )}
 
         <div className="mb-7">
@@ -50,7 +62,7 @@ const ColumnGrid2 = ({
             closeDuration={0.5}
             delay={0.3}
             phrase={first_prgh}
-            className="leading-[30px] sm:text-[18px]"
+            className="leading-[30px] sm:text-lg"
           />
         </div>
         {second_prgh ? (
@@ -60,27 +72,20 @@ const ColumnGrid2 = ({
               closeDuration={0.5}
               delay={0.5}
               phrase={second_prgh}
-              className="leading-[30px] sm:text-[18px]"
+              className="leading-[30px] sm:text-lg"
             />
           </div>
         ) : null}
 
         <a href="/about">
-          {button && (
-            // <button className="btn-primary relative z-50 mt-6">
-            //   Let’s Spark Your Brand Today
-            // </button>
-            <MagneticButton>
-              <p className="p">Let’s Spark Your Brand Today</p>
-            </MagneticButton>
-          )}
+          {button && <button>Let’s Spark Your Brand Today</button>}
         </a>
       </article>
     </div>
   );
 };
 
-ColumnGrid2.propTypes = {
+Row.propTypes = {
   defaultSrc: PropTypes.string,
   alternateSrc: PropTypes.string,
   first_prgh: PropTypes.string,
@@ -92,4 +97,4 @@ ColumnGrid2.propTypes = {
   text_first: PropTypes.bool,
 };
 
-export default ColumnGrid2;
+export default Row;

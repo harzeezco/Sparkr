@@ -1,11 +1,9 @@
 import Container from "../layouts/Container";
 import RegularList from "../general/RegularList";
-
-import { PROJECT_CARD_DETAILS } from "../../lib/data";
 import ProjectDetails from "../data-display/ProjectDetails";
 import useTheme from "../../Hooks/useTheme";
 import Header from "../general/Header";
-import MagneticButton from "../general/RoundedButton";
+import { PROJECT_CARD_DETAILS } from "../../lib/data";
 
 const ProjectSection = () => {
   const display_4_projects = PROJECT_CARD_DETAILS.slice(0, 4);
@@ -13,7 +11,7 @@ const ProjectSection = () => {
 
   const headerText = `theme-transition font-primary text-[30px] font-bold sm:text-[45px] md:leading-[74px] lg:text-[60px]`;
 
-  const PROJECTECTIONHEADER = [
+  const PROJECTSECTIONHEADER = [
     {
       id: 1,
       phrase: "our",
@@ -37,7 +35,7 @@ const ProjectSection = () => {
         <RegularList
           resourceName="text"
           itemComponent={Header}
-          items={PROJECTECTIONHEADER}
+          items={PROJECTSECTIONHEADER}
         />
       </div>
 
@@ -51,9 +49,7 @@ const ProjectSection = () => {
 
       <div className="mt-8 flex justify-center capitalize">
         <a href="/project">
-          <MagneticButton>
-            <p>view all project</p>
-          </MagneticButton>
+          <button>view all project</button>
         </a>
       </div>
     </Container>

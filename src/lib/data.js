@@ -497,43 +497,49 @@ export const VALUE_DETAILS = [
     id: 1,
     alt: "joy",
     icon: Profile,
-    header: "We Value Our People First",
-    prgh_text: "We lead with empathy and take care of one another.",
+    header: "Empowering Our People to Spark Greatness",
+    prgh_text:
+      "We create a culture where everyone feels valued and empowered to do their best work.",
   },
   {
     id: 2,
     alt: "message",
     icon: Message,
-    header: "We are Passionate",
-    prgh_text: "We lead with empathy and take care of one another.",
+    header: "Embracing Humility and Hunger for Growth",
+    prgh_text:
+      "We are never satisfied with the status quo, and we are always looking for ways to improve.",
   },
   {
     id: 3,
     alt: "love",
     icon: Love,
-    header: "We Stay Humble",
-    prgh_text: "We lead with empathy and take care of one another.",
+    header: "Relentlessly iterating and improving",
+    prgh_text:
+      "We are never afraid to make changes, and we are always looking for ways to do things better.",
   },
   {
     id: 4,
     alt: "Smile",
     icon: Phone,
-    header: "We Live Joyfully",
-    prgh_text: "We lead with empathy and take care of one another.",
+    header: "Passionate About Your Success",
+    prgh_text:
+      "Putting your brand in front is our top priority, and we're passionate about helping you achieve that, and more.",
   },
   {
     id: 5,
     alt: "Step",
     icon: Step,
-    header: "We Improve Daily",
-    prgh_text: "We lead with empathy and take care of one another.",
+    header: "Cultivating a Joyful Workplace",
+    prgh_text:
+      "We believe that joy is essential to a fulfilling life, and we create a positive work environment for our employees.",
   },
   {
     id: 6,
     alt: "love",
     icon: Love,
-    header: "We Give Our Best",
-    prgh_text: "We lead with empathy and take care of one another.",
+    header: "Delivering exceptional results",
+    prgh_text:
+      "We're committed to delivering the best possible results for our clients, every time.",
   },
 ];
 

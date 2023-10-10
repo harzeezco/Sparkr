@@ -15,16 +15,16 @@ const HeroSection = () => {
       variants={banner}
     >
       <div className="grid pt-10">
-        <div className="flex h-[130px] items-center gap-x-4 overflow-hidden md:hidden">
-          <BannerRowTop title="We" color="text-mode" />
-          <BannerRowTop title="spark" color="text-default" />
-          <BannerRowTop title="Digital" color="text-mode" />
+        <div className="flex h-[130px] items-center gap-x-5 overflow-hidden md:hidden">
+          <BannerRowTop title="We" color="text-mode" text_large />
+          <BannerRowTop title="spark" color="text-default" text_large />
+          <BannerRowTop title="Digital" color="text-mode" text_large />
         </div>
         <div>
           <div className="hidden md:block">
             <div className="flex h-[130px] items-center gap-x-4 overflow-hidden">
-              <BannerRowTop title="We" color="text-mode" />
-              <BannerRowTop title="spark" color="text-default" />
+              <BannerRowTop title="We" color="text-mode" text_large/>
+              <BannerRowTop title="spark" color="text-default" text_large/>
             </div>
           </div>
           <div className="flex h-[130px] items-center overflow-hidden">
@@ -56,14 +56,14 @@ const HeroSection = () => {
               </video>
             </motion.div>
 
-            <BannerRowTop title="Digital" color="text-mode" />
+            <BannerRowTop title="Digital" color="text-mode" text_large/>
           </div>
         </div>
 
         <div className="flex h-[130px] items-center gap-x-5 overflow-hidden">
-          <BannerRowBottom title="Brands" color="text-default" />
-          <BannerRowBottom title="that" color="text-mode" />
-          <BannerRowBottom title="Strive" color="text-default" />
+          <BannerRowBottom title="Brands" color="text-default" text_large/>
+          <BannerRowBottom title="that" color="text-mode" text_large/>
+          <BannerRowBottom title="Strive" color="text-default" text_large/>
         </div>
       </div>
     </motion.div>

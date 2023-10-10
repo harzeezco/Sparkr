@@ -1,13 +1,14 @@
 import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import gsap from "gsap";
-import Magnetic from "../Magnetic";
+import Magnetic from "./Magnetic";
 
-export default function MagneticButton({
+const MagneticButton = ({
   children,
   backgroundColor = "#ff463a",
-  max_width="316px",
+  max_width = "316px",
   ...attributes
-}) {
+}) => {
   const circle = useRef(null);
   let timeline = useRef(null);
   let timeoutId = null;
@@ -55,4 +56,12 @@ export default function MagneticButton({
       </div>
     </Magnetic>
   );
-}
+};
+
+MagneticButton.propTypes = {
+  children: PropTypes.node,
+  backgroundColor: PropTypes.string,
+  max_width: PropTypes.string,
+};
+
+export default MagneticButton;

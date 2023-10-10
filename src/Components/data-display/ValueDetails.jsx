@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import useTheme from "../../Hooks/useTheme";
+import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
 
 const ValueDetails = ({ items }) => {
   const { icon, header, prgh_text, alt } = items;
@@ -7,22 +8,29 @@ const ValueDetails = ({ items }) => {
 
   return (
     <div className="flex gap-x-4">
-      <div className="pt-1"> 
+      <div className="pt-1">
         <img
-          height="30"
-          width="35"
+          height="50"
+          width="55"
           src={icon}
           alt={`${alt} image`}
           loading="lazy"
         />
       </div>
-      <div className="">
-        <h1
-          className={`text-xl font-bold capitalize leading-[30px] text-${theme} theme-transition`}
-        >
-          {header}
-        </h1>
-        <p className="pt-2 leading-[30px]">{prgh_text}</p>
+      <div className="grid gap-y-2">
+        <AnimatedTextLetters
+          phrase={header}
+          className={`text-xl font-bold capitalize leading-[20px] text-${theme} theme-transition`}
+          openDuration={0.3}
+          closeDuration={0.3}
+        />
+        <AnimatedTextLetters
+          openDuration={0.5}
+          closeDuration={0.5}
+          delay={0.5}
+          phrase={prgh_text}
+          className="leading-[20px]"
+        />
       </div>
     </div>
   );

@@ -1,19 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useContext, Suspense } from "react";
 import useTheme from "./Hooks/useTheme";
-import { Suspense } from "react";
 import CircleContact from "./Components/general/CircleContact";
 import Loader from "./Components/general/Loader";
 import AnimateRoute from "./Animation/AnimateRoute";
 import Scroll from "./Animation/Scroll";
 import Cursor from "./Animation/Cursor";
-import { useContext } from "react";
-import { StickyCursorContext } from "./Contexts/StickyCursorContext";
-import SideNavContextProvider from "./Contexts/SideNavContext";
+import { ScaleCursorOnHoverContext } from "./Contexts/ScaleCursorOnHoverContext";
+import SmallScreenContextProvider from "./Contexts/SmallScreenContext";
 
 function App() {
   const { theme } = useTheme();
-  const { scaling, isProjectHovered } = useContext(StickyCursorContext);
+  const { scaling, isProjectHovered } = useContext(ScaleCursorOnHoverContext);
 
   const isLight = theme === "light" ? "#fff" : "#121418";
 
@@ -40,18 +38,16 @@ function App() {
   }, [isLight]);
 
   return (
-    <div>
-      <BrowserRouter>
-        <Suspense fallback={<Loader />}>
-          <CircleContact />
-          <Scroll />
-          <Cursor scaling={scaling} isProjectHovered={isProjectHovered} />
-          <SideNavContextProvider>
-            <AnimateRoute />
-          </SideNavContextProvider>
-        </Suspense>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<Loader />}>
+        <CircleContact />
+        <Scroll />
+        <Cursor scaling={scaling} isProjectHovered={isProjectHovered} />
+        <SmallScreenContextProvider>
+          <AnimateRoute />
+        </SmallScreenContextProvider>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

@@ -15,10 +15,12 @@ const letterAni = {
   },
 };
 
-const AnimatedLetters = ({ title, color }) => {
+const AnimatedLetters = ({ title, color, text_large }) => {
   const banner = useContext(BannerAnimationContext);
   const { theme } = useTheme();
   const textColor = color === "text-mode" ? `text-${theme}` : color;
+
+  const large_text = `lg:text-[95px] sm:text-[55px] text-4xl`;
 
   return (
     <motion.span
@@ -31,7 +33,9 @@ const AnimatedLetters = ({ title, color }) => {
         return (
           <motion.span
             key={idx}
-            className={`theme-transition relative inline-block whitespace-nowrap font-primary text-4xl font-bold  sm:text-[50px] lg:text-[94px] ${textColor}`}
+            className={`theme-transition relative inline-block whitespace-nowrap font-primary font-bold  sm:text-[45px] lg:text-[65px] ${textColor} ${
+              text_large ? large_text : null
+            }`}
             variants={letterAni}
           >
             {letter}
@@ -45,6 +49,7 @@ const AnimatedLetters = ({ title, color }) => {
 AnimatedLetters.propTypes = {
   title: PropTypes.string,
   color: PropTypes.string,
+  text_large: PropTypes.bool,
 };
 
 export default AnimatedLetters;

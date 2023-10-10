@@ -2,9 +2,9 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import useTheme from "../Hooks/useTheme";
 
-export const SideNavContext = createContext();
+export const SmallScreenContext = createContext();
 
-const SideNavContextProvider = ({ children }) => {
+const SmallScreenContextProvider = ({ children }) => {
   const { theme, toggleTheme } = useTheme();
   const [isShow, setIsShow] = useState(false);
   const [isHide, setIsHide] = useState(false);
@@ -25,16 +25,16 @@ const SideNavContextProvider = ({ children }) => {
   }, [isShow, isHide]);
 
   return (
-    <SideNavContext.Provider
+    <SmallScreenContext.Provider
       value={{ toggleMenu, isShow, theme, toggleTheme, isHide, setIsHide }}
     >
       {children}
-    </SideNavContext.Provider>
+    </SmallScreenContext.Provider>
   );
 };
 
-SideNavContextProvider.propTypes = {
+SmallScreenContextProvider.propTypes = {
   children: PropTypes.node,
 };
 
-export default SideNavContextProvider;
+export default SmallScreenContextProvider;

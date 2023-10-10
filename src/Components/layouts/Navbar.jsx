@@ -1,19 +1,20 @@
+import { useContext } from "react";
+import { motion } from "framer-motion";
+
+import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
+import ThemeSwitcher from "../general/ThemeSwitcher";
+import RegularList from "../general/RegularList";
+import NavToggle from "../general/NavToggleIcon";
+import { NAV_LINKS } from "../../lib/data";
+import NavLink from "../navigation/NavLink";
+import ImageWrapper from "../data-display/ImageWrapper";
+import ScrollToTopLink from "../../Animation/ScrollToTopLink";
+
 import LogoDarkMode from "../../assets/Svg/LogoDarkMode.svg";
 import LogoLightMode from "../../assets/Svg/LogoLightMode.svg";
 
-import RegularList from "../general/RegularList";
-import { NAV_LINKS } from "../../lib/data";
-import NavLink from "../navigation/NavLink";
-import ThemeSwitcher from "../general/ThemeSwitcher";
-import ImageWrapper from "../data-display/ImageWrapper";
-import NavToggle from "../general/NavToggleIcon";
-import { motion } from "framer-motion";
-import ScrollToTopLink from "../../Animation/ScrollToTopLink";
-import { useContext } from "react";
-import { SideNavContext } from "../../Contexts/SideNavContext";
-
 const Navbar = () => {
-  const { setIsHide } = useContext(SideNavContext);
+  const { setIsHide } = useContext(SmallScreenContext);
 
   return (
     <motion.div

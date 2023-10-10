@@ -3,15 +3,15 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import useTheme from "../../Hooks/useTheme";
 import { AnimatePresence } from "framer-motion";
-const Sidebar = lazy(() => import("../navigation/Sidebar"));
+const Sidebar = lazy(() => import("../navigation/SmallScrenNav"));
 import BannerAnimationContextProvider from "../../Contexts/BannerAnimationContext";
-import { SideNavContext } from "../../Contexts/SideNavContext";
+import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
 const Footer = lazy(() => import("./Footer"));
 
 const AppLayout = () => {
   const { theme } = useTheme();
-  const { isHide } = useContext(SideNavContext);
+  const { isHide } = useContext(SmallScreenContext);
 
   return (
     <AnimatePresence>
@@ -31,7 +31,7 @@ const AppLayout = () => {
         </main>
 
         <footer aria-labelledby="footer">
-            <Footer />
+          <Footer />
         </footer>
       </div>
     </AnimatePresence>

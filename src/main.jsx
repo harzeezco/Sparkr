@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import ThemeProvider from "./Contexts/ThemeContexts.jsx";
-import StickyCursorProvider from "./Contexts/StickyCursorContext.jsx";
+import ScaleCursorOnHoverProvider from "./Contexts/ScaleCursorOnHoverContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <StickyCursorProvider>
+      <ScaleCursorOnHoverProvider>
         <App />
-      </StickyCursorProvider>
+      </ScaleCursorOnHoverProvider>
     </ThemeProvider>
   </React.StrictMode>,
 );

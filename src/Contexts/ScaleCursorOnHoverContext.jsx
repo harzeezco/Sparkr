@@ -1,14 +1,14 @@
 import { createContext, useRef, useState } from "react";
 import PropTypes from "prop-types";
-export const StickyCursorContext = createContext();
+export const ScaleCursorOnHoverContext = createContext();
 
-const StickyCursorProvider = ({ children }) => {
+const ScaleCursorOnHoverProvider = ({ children }) => {
   const stickyElement = useRef();
   const [isProjectHovered, setIsProjectHovered] = useState(false);
   const [scaling, setScaling] = useState(false);
 
   return (
-    <StickyCursorContext.Provider
+    <ScaleCursorOnHoverContext.Provider
       value={{
         stickyElement,
         isProjectHovered,
@@ -18,12 +18,12 @@ const StickyCursorProvider = ({ children }) => {
       }}
     >
       {children}
-    </StickyCursorContext.Provider>
+    </ScaleCursorOnHoverContext.Provider>
   );
 };
 
-StickyCursorProvider.propTypes = {
+ScaleCursorOnHoverProvider.propTypes = {
   children: PropTypes.node,
 };
 
-export default StickyCursorProvider;
+export default ScaleCursorOnHoverProvider;

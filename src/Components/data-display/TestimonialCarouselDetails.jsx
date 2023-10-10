@@ -4,18 +4,17 @@ import Slider from "react-slick";
 import { lazy, Suspense, useContext, useEffect, useState } from "react";
 import BlockQuote from "../../assets/Icons/Union.svg";
 import Loader from "../general/Loader";
-import { StickyCursorContext } from "../../Contexts/StickyCursorContext";
 import { useInView } from "react-cool-inview";
+import { ScaleCursorOnHoverContext } from "../../Contexts/ScaleCursorOnHoverContext";
 
 const TestimonialsCarouselDetails = ({ testimonials }) => {
   const { activeSlide, sliderRef, settings, goToSlide } = useCarouselSlide();
-  const { setScaling } = useContext(StickyCursorContext);
+  const { setScaling } = useContext(ScaleCursorOnHoverContext);
 
     const [isElementVisible, setIsElementVisible] = useState(false);
 
 
   const { observe, inView } = useInView({
-    // triggerDistance: "-40vh",
     unobserveOnEnter: true,
   });
 

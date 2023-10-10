@@ -1,11 +1,11 @@
 import useTheme from "../../Hooks/useTheme";
 
-import ColumnGrid2 from "../layouts/2ColumnGrid";
 import Container from "../layouts/Container";
 import RegularList from "../general/RegularList";
 import Header from "../general/Header";
 
 import { Puzzle_webp, Puzzle_png } from "../../lib/image-store";
+import Row from "../layouts/Row";
 
 const AboutSection = () => {
   const { theme } = useTheme();
@@ -75,7 +75,7 @@ const AboutSection = () => {
         />
       </div>
 
-      <ColumnGrid2
+      <Row
         img_first={true}
         defaultSrc={Puzzle_webp}
         alternateSrc={Puzzle_png}

@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 export default function Magnetic({ children }) {
   const magnetic = useRef(null);
-  console.log(magnetic);
+
   useEffect(() => {
     const xTo = gsap.quickTo(magnetic.current, "x", {
       duration: 1,
@@ -23,7 +23,7 @@ export default function Magnetic({ children }) {
       xTo(x * 0.35);
       yTo(y * 0.35);
     });
-    magnetic.current.addEventListener("mouseleave", (e) => {
+    magnetic.current.addEventListener("mouseleave", () => {
       xTo(0);
       yTo(0);
     });

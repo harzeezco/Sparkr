@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 import useTheme from "../../Hooks/useTheme";
 import Image from "../general/Image";
 import { useContext } from "react";
-import { StickyCursorContext } from "../../Contexts/StickyCursorContext";
 import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
+import { ScaleCursorOnHoverContext } from "../../Contexts/ScaleCursorOnHoverContext";
 
 const ProjectDetails = ({ card }) => {
   const { theme } = useTheme();
-  const { setIsProjectHovered } = useContext(StickyCursorContext);
+  const { setIsProjectHovered } = useContext(ScaleCursorOnHoverContext);
 
   const { defaultSrc, alternateSrc, job_title, id } = card;
 

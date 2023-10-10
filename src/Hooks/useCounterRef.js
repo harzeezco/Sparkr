@@ -6,11 +6,9 @@ const useCounterRef = () => {
   const [isActive, setIsActive] = useState(false);
 
   const count1Ref = useRef();
-  const countRef2 = useRef();
   const countRef3 = useRef();
 
   const counter1 = useCounter(count1Ref, isActive);
-  const counter2 = useCounter(countRef2, isActive);
   const counter3 = useCounter(countRef3, isActive);
 
   const { observe } = useInView({
@@ -19,7 +17,7 @@ const useCounterRef = () => {
     onChange: ({ inView }) => setIsActive(inView),
   });
 
-  return { counter1, counter2, counter3, observe };
+  return { counter1,  counter3, observe };
 };
 
 export default useCounterRef;
