@@ -1,11 +1,11 @@
 import { NAV_LINKS } from "../../lib/data";
 import ThemeSwitcher from "../general/ThemeSwitcher";
 import { useContext } from "react";
-import { SideNavContext } from "../../Contexts/SideNavContext";
 import ScrollToTopLink from "../../Animation/ScrollToTopLink";
+import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
 const SmallScreenNav = () => {
-  const { toggleMenu, theme, toggleTheme } = useContext(SideNavContext);
+  const { toggleMenu, theme, toggleTheme } = useContext(SmallScreenContext);
 
   const themeMode = theme === "light" ? "dark" : "light";
 
