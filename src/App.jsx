@@ -8,6 +8,9 @@ import Scroll from "./Animation/Scroll";
 import Cursor from "./Animation/Cursor";
 import { ScaleCursorOnHoverContext } from "./Contexts/ScaleCursorOnHoverContext";
 import SmallScreenContextProvider from "./Contexts/SmallScreenContext";
+import GoogleTag from "./Components/general/GoogleAnalyticsTag";
+
+// const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
 
 function App() {
   const { theme } = useTheme();
@@ -40,6 +43,7 @@ function App() {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loader />}>
+        <GoogleTag />
         <CircleContact />
         <Scroll />
         <Cursor scaling={scaling} isProjectHovered={isProjectHovered} />

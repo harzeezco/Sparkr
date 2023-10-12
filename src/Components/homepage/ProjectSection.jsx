@@ -49,7 +49,7 @@ const ProjectSection = () => {
 
       <div className="mt-8 flex justify-center capitalize">
         <a href="/project">
-          <button>view all project</button>
+          <button className="btn">view all project</button>
         </a>
       </div>
     </Container>

@@ -78,7 +78,7 @@ const Row = ({
         ) : null}
 
         <a href="/about">
-          {button && <button>Let’s Spark Your Brand Today</button>}
+          {button && <button className="btn">Let’s Spark Your Brand Today</button>}
         </a>
       </article>
     </div>

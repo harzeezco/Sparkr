@@ -6,6 +6,7 @@ import RegularList from "../general/RegularList";
 import Container from "../layouts/Container";
 
 const Projects = () => {
+  
 
   return (
     <Container id="project">

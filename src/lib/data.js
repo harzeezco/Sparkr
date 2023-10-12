@@ -47,6 +47,11 @@ import BlogTutorial5 from "../assets/Images/Blog/tutorial-img-5.png";
 import BlogTutorial6 from "../assets/Images/Blog/tutorial-img-6.png";
 import Star from "../assets/Images/Star.png";
 
+import Branding from "/videos/Branding.mp4";
+import Web from "/videos/Web.mp4";
+import App from "/videos/apps.mp4";
+
+
 export const NAV_LINKS = [
   {
     id: 1,
@@ -371,6 +376,7 @@ export const SERVICE_DATA = [
     work: "UI/UX",
     isOpen: false,
     borderb: true,
+    video: Branding
   },
   {
     id: 2,
@@ -378,6 +384,7 @@ export const SERVICE_DATA = [
     work: "UI/UX",
     isOpen: false,
     borderb: true,
+    video: App
   },
   {
     id: 3,
@@ -385,6 +392,7 @@ export const SERVICE_DATA = [
     work: "UI/UX",
     isOpen: false,
     borderb: true,
+    video: Web
   },
   {
     id: 4,
@@ -392,6 +400,7 @@ export const SERVICE_DATA = [
     work: "UI/UX",
     isOpen: false,
     borderb: false,
+    video: Branding
   },
 ];
 

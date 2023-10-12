@@ -3,16 +3,13 @@ import PropTypes from "prop-types";
 import OpenDark from "../../assets/Icons/upArrowDark.svg";
 import OpenLight from "../../assets/Icons/upArrowLight.svg";
 import Close from "../../assets/Icons/delete.svg";
-import Work_webp from "../../assets/Images/Hero.webp";
-import Work_png from "../../assets/Images/Hero.png";
 
 import useTheme from "../../Hooks/useTheme";
 import ImageWrapper from "./ImageWrapper";
-import Image from "../general/Image";
 import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
 
 const ServiceDetails = ({ service, onToggleService }) => {
-  const { id, work, job, isOpen, borderb } = service;
+  const { id, work, job, isOpen, borderb, video } = service;
 
   const { theme } = useTheme();
 
@@ -66,14 +63,22 @@ const ServiceDetails = ({ service, onToggleService }) => {
           </button>
         </div>
         <div className="mx-auto w-full max-w-[100vw]">
-          <Image
-            defaultSrc={Work_webp}
-            alternateSrc={Work_png}
-            alt="The image showing a UI/UX Work"
-            loading="lazy"
-            height="624"
+          <video
+            loop
+            autoPlay
+            muted
+            className="rounded-[50px]"
             width="100%"
-          />
+            height="60"
+          >
+            <source src={video} type="video/mp4" />
+            <track
+              label="English Captions"
+              kind="captions"
+              srcLang="en"
+              default
+            ></track>
+          </video>
         </div>
       </div>
     </div>

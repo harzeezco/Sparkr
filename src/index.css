@@ -17,37 +17,42 @@
   .heading-primary {
     @apply font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px];
   }
-}
-.roundedButton {
-  border-radius: 4px;
-  border: 1px solid #ff463a;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 35px 15px 35px;
-  flex-direction: column;
+  /* .btn {
+    @apply  
+  } */
 }
 
-.roundedButton p {
+.btn {
   position: relative;
-  z-index: 1;
-  transition: color 0.4s linear;
-  color: #ff463a;
-}
-
-.roundedButton:hover p {
-  color: white;
+  background-color: #ff463a;
+  border-radius: 5px;
+  padding: 15px 25px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  color: #fff;
+  border: none;
   font-size: 18px;
+  text-transform: capitalize;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.circled {
-  width: 100%;
-  height: 150%;
+.btn::before {
+  content: "";
+  background-color: #cf2d21;
+  width: 0;
+  height: 100%;
   position: absolute;
-  border-radius: 50%;
-  top: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 700ms ease-in-out;
+  display: inline-block;
+}
+
+.btn:hover::before {
+  width: 100%;
 }
 
 html {
@@ -239,12 +244,11 @@ input[type="checkbox"]:checked {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: transparent;
   border-radius: 50%;
   text-transform: uppercase;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .loading-bar:before {
