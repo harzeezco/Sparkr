@@ -16,7 +16,7 @@ const Scroll = () => {
 
   const options = useMemo(() => {
     return {
-      damping: 0.04,
+      damping: 0.08,
       plugins: {
         overscroll: { ...overscrollOptions },
       },
@@ -29,8 +29,6 @@ const Scroll = () => {
       document.querySelector("#scrollbar"),
       options,
     );
-
-    Scrollbar.init(document.body, options);
 
     return () => {
       if (Scrollbar) Scrollbar.destroy(scroll);

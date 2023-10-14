@@ -10,7 +10,7 @@ const letterAni = {
     y: 0,
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 0.6,
+      duration: 0.7,
     },
   },
 };
@@ -21,7 +21,6 @@ const AnimatedLetters = ({ title, color, text_large }) => {
   const textColor = color === "text-mode" ? `text-${theme}` : color;
 
   const large_text = `lg:text-[95px] sm:text-[55px] text-4xl`;
-
   return (
     <motion.span
       className="row-title"
@@ -29,7 +28,7 @@ const AnimatedLetters = ({ title, color, text_large }) => {
       initial="initial"
       animate="animate"
     >
-      {[...title].map((letter, idx) => {
+      {title.split(" ").map((letter, idx) => {
         return (
           <motion.span
             key={idx}

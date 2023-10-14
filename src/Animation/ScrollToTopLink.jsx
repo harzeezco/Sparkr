@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
-const ScrollToTopLink = ({ to, children }) => {
+const ScrollToTopLink = ({ to, children, ...otherProps }) => {
   const controls = useAnimation();
 
   const handleClick = async () => {
@@ -13,7 +13,6 @@ const ScrollToTopLink = ({ to, children }) => {
     });
 
     window.scrollTo({ top: 0, behavior: "smooth" });
-
   };
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const ScrollToTopLink = ({ to, children }) => {
   });
 
   return (
-    <motion.div animate={controls}>
+    <motion.div animate={controls} {...otherProps}>
       <RouterLink to={to} onClick={handleClick}>
         {children}
       </RouterLink>

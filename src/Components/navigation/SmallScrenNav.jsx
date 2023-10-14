@@ -6,6 +6,7 @@ import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
 const SmallScreenNav = () => {
   const { toggleMenu, theme, toggleTheme } = useContext(SmallScreenContext);
+  
 
   const themeMode = theme === "light" ? "dark" : "light";
 

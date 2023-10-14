@@ -1,8 +1,5 @@
 import useTheme from "../../Hooks/useTheme";
-// import AboutSection from "./AboutSection";
 import HeroSection from "./HeroSection";
-// import ServiceSection from "./ServiceSection";
-// import SpeechSection from "./SpeechSection";
 import TestimonialSection from "./TestimonialSection";
 import ServiceSlider from "../general/ServicesSlider";
 import Branding from "/videos/Web.mp4";
@@ -11,12 +8,10 @@ import VideoPlaceholder from "../general/VideoPlaceholder";
 
 const ProcessSection = lazy(() => import("./ProcessSection"));
 const ProjectSection = lazy(() => import("./ProjectSection"));
-// const ServiceSlider = lazy(() => import("../general/ServicesSlider"));
-const ServiceSection = lazy(() => import("./ServiceSection"));
-// const TestimonialSection = lazy(() => import("./TestimonialSection"));
 const SpeechSection = lazy(() => import("./SpeechSection"));
 const AboutSection = lazy(() => import("./AboutSection"));
 import Hero from "../../assets/Images/Hero.webp";
+import ServiceSection from "./ServiceSection";
 
 const RootSection = () => {
   const { theme } = useTheme();

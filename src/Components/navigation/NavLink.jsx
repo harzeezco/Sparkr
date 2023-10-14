@@ -3,16 +3,16 @@ import ScrollToTopLink from "../../Animation/ScrollToTopLink";
 import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
 
 const NavLink = ({ navlink }) => {
-  const { link, path } = navlink;
+  const { title, path } = navlink;
 
   return (
     <li>
-      <ScrollToTopLink to={path} key={link}>
+      <ScrollToTopLink to={path} key={title}>
         <AnimatedTextLetters
           openDuration={0.5}
           closeDuration={0.5}
           delay={0.5}
-          phrase={link}
+          phrase={title}
           className="mt-2 leading-[20px] sm:text-[18px]"
         />
       </ScrollToTopLink>
@@ -22,8 +22,6 @@ const NavLink = ({ navlink }) => {
 
 NavLink.propTypes = {
   navlink: PropTypes.object,
-  link: PropTypes.string,
-  path: PropTypes.string,
 };
 
 export default NavLink;

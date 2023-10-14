@@ -4,11 +4,11 @@ import useTheme from "./Hooks/useTheme";
 import CircleContact from "./Components/general/CircleContact";
 import Loader from "./Components/general/Loader";
 import AnimateRoute from "./Animation/AnimateRoute";
-import Scroll from "./Animation/Scroll";
 import Cursor from "./Animation/Cursor";
 import { ScaleCursorOnHoverContext } from "./Contexts/ScaleCursorOnHoverContext";
 import SmallScreenContextProvider from "./Contexts/SmallScreenContext";
 import GoogleTag from "./Components/general/GoogleAnalyticsTag";
+import CurveSideNav from "./Components/navigation/CurveSideNav";
 
 // const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
 
@@ -44,10 +44,11 @@ function App() {
     <BrowserRouter>
       <Suspense fallback={<Loader />}>
         <GoogleTag />
-        <CircleContact />
-        <Scroll />
-        <Cursor scaling={scaling} isProjectHovered={isProjectHovered} />
         <SmallScreenContextProvider>
+          <CurveSideNav />
+          <CircleContact />
+          <Cursor scaling={scaling} isProjectHovered={isProjectHovered} />
+
           <AnimateRoute />
         </SmallScreenContextProvider>
       </Suspense>

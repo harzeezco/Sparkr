@@ -35,7 +35,7 @@ const Cursor = ({ scaling, isProjectHovered = true }) => {
           width: scaling || isProjectHovered ? "94px" : "16px",
           height: scaling || isProjectHovered ? "94px" : "16px",
         }}
-        className={`pointer-events-none fixed z-30 grid  place-items-center rounded-full text-lg transition-transform duration-100 ${isTextLight} ${isBgLight}`}
+        className={`pointer-events-none fixed z-30 grid  place-items-center rounded-full text-lg transition-transform duration-100 ${isTextLight} ${isBgLight} hidden md:block`}
       >
         {scaling ? "Swipe" : null}
         {isProjectHovered ? "Explore" : null}

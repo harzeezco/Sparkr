@@ -1,20 +1,19 @@
 import { useContext } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 import ThemeSwitcher from "../general/ThemeSwitcher";
 import RegularList from "../general/RegularList";
-import NavToggle from "../general/NavToggleIcon";
 import { NAV_LINKS } from "../../lib/data";
 import NavLink from "../navigation/NavLink";
 import ImageWrapper from "../data-display/ImageWrapper";
 import ScrollToTopLink from "../../Animation/ScrollToTopLink";
-
 import LogoDarkMode from "../../assets/Svg/LogoDarkMode.svg";
 import LogoLightMode from "../../assets/Svg/LogoLightMode.svg";
+import Nav from "../navigation/Nav";
+import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
 const Navbar = () => {
-  const { setIsHide } = useContext(SmallScreenContext);
+  const { isActive } = useContext(SmallScreenContext);
 
   return (
     <motion.div
@@ -34,7 +33,7 @@ const Navbar = () => {
           alt="Logo"
           height="34"
           width="150"
-          className="relative z-[-3]"
+          className="relative"
         />
       </ScrollToTopLink>
 
@@ -61,12 +60,8 @@ const Navbar = () => {
           <ThemeSwitcher />
         </div>
       </div>
-      <div
-        className="md-hidden fixed left-[85vw] z-50 grid h-[40px] w-[40px] items-center md:hidden"
-        onClick={() => setIsHide(true)}
-      >
-        <NavToggle />
-      </div>
+
+      <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </motion.div>
   );
 };

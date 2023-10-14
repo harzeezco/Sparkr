@@ -1,30 +1,26 @@
-import { lazy, useContext } from "react";
+import { lazy } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import useTheme from "../../Hooks/useTheme";
 import { AnimatePresence } from "framer-motion";
-const Sidebar = lazy(() => import("../navigation/SmallScrenNav"));
 import BannerAnimationContextProvider from "../../Contexts/BannerAnimationContext";
-import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
 const Footer = lazy(() => import("./Footer"));
 
 const AppLayout = () => {
   const { theme } = useTheme();
-  const { isHide } = useContext(SmallScreenContext);
 
   return (
     <AnimatePresence>
       <div
-        className={`bg-${theme} text-${theme}-primary theme-transition relative z-10`}
+        className={`bg-${theme} text-${theme}-primary theme-transition relative`}
         id="scrollbar"
       >
         <header>
           <Navbar />
-          {isHide ? <Sidebar /> : null}
         </header>
 
-        <main className="relative z-[-3]">
+        <main className="relative">
           <BannerAnimationContextProvider>
             <Outlet />
           </BannerAnimationContextProvider>

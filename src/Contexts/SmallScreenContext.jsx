@@ -6,27 +6,20 @@ export const SmallScreenContext = createContext();
 
 const SmallScreenContextProvider = ({ children }) => {
   const { theme, toggleTheme } = useTheme();
-  const [isShow, setIsShow] = useState(false);
-  const [isHide, setIsHide] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
-  const toggleMenu = () => {
-    setIsShow((prev) => !prev);
-  };
 
   useEffect(() => {
-    if (isHide) {
-      isShow
-        ? document.querySelector(".sidebar").classList.add("open")
-        : document.querySelector(".sidebar").classList.remove("open");
-      isShow
-        ? document.querySelector("body").classList.add("overflow")
-        : document.querySelector("body").classList.remove("overflow");
+    if (isActive) {
+      document.querySelector("body").classList.add("overflow");
+    } else {
+      document.querySelector("body").classList.remove("overflow");
     }
-  }, [isShow, isHide]);
+  }, [isActive]);
 
   return (
     <SmallScreenContext.Provider
-      value={{ toggleMenu, isShow, theme, toggleTheme, isHide, setIsHide }}
+      value={{ theme, toggleTheme, isActive, setIsActive}}
     >
       {children}
     </SmallScreenContext.Provider>

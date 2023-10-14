@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import RegularList from "../general/RegularList";
-import NavLink from "../navigation/NavLink";
 import useTheme from "../../Hooks/useTheme";
 import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
+import NavLink from "../navigation/NavLink";
 
 const FooterNavDetails = ({ items, heading, link, content, mt }) => {
   const { theme } = useTheme();

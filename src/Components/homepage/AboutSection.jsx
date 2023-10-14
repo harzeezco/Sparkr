@@ -59,7 +59,7 @@ const AboutSection = () => {
 
   return (
     <Container id="about" pt="20">
-      <div className="flex items-center gap-x-1">
+      <div className="flex flex-wrap items-center gap-x-1 md:max-w-[100%]">
         <RegularList
           resourceName="text"
           itemComponent={Header}

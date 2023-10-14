@@ -36,7 +36,7 @@ const HeroSection = () => {
                 duration: 1,
                 delay: 0.4,
               }}
-              className="mr-16 mt-4 max-w-[170px] rounded-[40px] md:mt-0"
+              className="clip mr-16 mt-4 max-w-[170px] rounded-[40px] md:mt-0"
             >
               <video
                 loop
@@ -44,7 +44,7 @@ const HeroSection = () => {
                 muted
                 className="rounded-[50px]"
                 width="100%"
-                height="60"
+                height="40"
               >
                 <source src={branding} type="video/mp4" />
                 <track

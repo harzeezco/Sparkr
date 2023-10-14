@@ -47,35 +47,32 @@ import BlogTutorial5 from "../assets/Images/Blog/tutorial-img-5.png";
 import BlogTutorial6 from "../assets/Images/Blog/tutorial-img-6.png";
 import Star from "../assets/Images/Star.png";
 
-import Branding from "/videos/Branding.mp4";
-import Web from "/videos/Web.mp4";
-import App from "/videos/apps.mp4";
 
 
 export const NAV_LINKS = [
   {
     id: 1,
-    link: "about us",
+    title: "about us",
     path: "/about",
   },
   {
     id: 2,
-    link: "services",
+    title: "services",
     path: "/service",
   },
   {
     id: 3,
-    link: "project",
+    title: "project",
     path: "/project",
   },
   {
     id: 4,
-    link: "blog",
+    title: "blog",
     path: "/blog",
   },
   {
     id: 5,
-    link: "contact",
+    title: "contact",
     path: "/contact",
   },
 ];
@@ -83,22 +80,22 @@ export const NAV_LINKS = [
 export const FOOTER_1_NAV_LINKS = [
   {
     id: 1,
-    link: "home",
+    title: "home",
     path: "/",
   },
   {
     id: 2,
-    link: "about us",
+    title: "about us",
     path: "/about",
   },
   {
     id: 3,
-    link: "services",
+    title: "services",
     path: "/service",
   },
   {
     id: 4,
-    link: "project",
+    title: "project",
     path: "/project",
   },
 ];
@@ -106,17 +103,17 @@ export const FOOTER_1_NAV_LINKS = [
 export const FOOTER_2_NAV_LINKS = [
   {
     id: 1,
-    link: "blog",
+    title: "blog",
     path: "/blog",
   },
   {
     id: 2,
-    link: "contact",
+    title: "contact",
     path: "/contact",
   },
   {
     id: 3,
-    link: "menu",
+    title: "menu",
     path: "/menu",
   },
 ];
@@ -369,40 +366,29 @@ export const PROJECT_DETAILS = [
   },
 ];
 
-export const SERVICE_DATA = [
+export const SERVICES = [
   {
-    id: 1,
-    job: "Social Media Design",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-    video: Branding
+    title: "Social Media Design",
+    src: "apps.mp4",
+    color: "#000000",
   },
   {
-    id: 2,
-    job: "illustrations",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-    video: App
+    title: "Illustrations",
+    src: "Branding.mp4",
+    color: "#8C8C8C",
   },
   {
-    id: 3,
-    job: "logo & branding",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: true,
-    video: Web
+    title: "Iogo & branding",
+    src: "Web.mp4",
+    color: "#EFE8D3",
   },
   {
-    id: 4,
-    job: "development",
-    work: "UI/UX",
-    isOpen: false,
-    borderb: false,
-    video: Branding
+    title: "Development",
+    src: "Branding.mp4",
+    color: "#706D63",
   },
 ];
+
 
 export const PROCESS_DETAILS = [
   {
