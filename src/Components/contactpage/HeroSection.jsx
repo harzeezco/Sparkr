@@ -14,7 +14,7 @@ const HeroSection = () => {
         <BannerRowTop title="a" color="text-mode" />
       </div>
 
-      <div className="-mt-7 flex h-[130px] items-center gap-x-5 overflow-hidden">
+      <div className="-mt-16 flex h-[130px] items-center gap-x-5 overflow-hidden">
         <BannerRowBottom title="project" color="text-mode" />
         <BannerRowBottom title="together" color="text-default" />
       </div>
@@ -24,7 +24,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           stiffness: 300,
-          delay: 2,
+          delay: 1.5,
           type: "spring",
         }}
         className="text-base leading-[30px] md:w-[65%] md:text-xl"

@@ -37,6 +37,7 @@ const AnimatedTextLetters = ({
                 custom={index}
                 animate={isInView ? "open" : "closed"}
                 key={index}
+                style={{ overflow: "hidden" }}
                 {...otherProps}
               >
                 {word}

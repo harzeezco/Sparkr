@@ -19,8 +19,8 @@ const Cursor = ({ scaling, isProjectHovered = true }) => {
     };
   }, []);
 
-  const isBgLight = theme === "light" ? "bg-dark" : "bg-light-primary";
-  const isTextLight = theme === "light" ? "text-dark" : "text-light";
+  const isBgLight = theme === "light" ? "bg-dark text-dark" : "bg-light-primary text-light";
+  // const isTextLight = theme === "light" ? "text-dark" : "text-light";
 
   return (
     <div>
@@ -35,7 +35,7 @@ const Cursor = ({ scaling, isProjectHovered = true }) => {
           width: scaling || isProjectHovered ? "94px" : "16px",
           height: scaling || isProjectHovered ? "94px" : "16px",
         }}
-        className={`pointer-events-none fixed z-30 grid  place-items-center rounded-full text-lg transition-transform duration-100 ${isTextLight} ${isBgLight} hidden md:block`}
+        className={`pointer-events-none fixed z-30 items-center justify-center rounded-full text-lg transition-transform duration-100 hidden md:inline-flex ${scaling ? "bg-white text-orangePrimary" : `${isBgLight}`}`}
       >
         {scaling ? "Swipe" : null}
         {isProjectHovered ? "Explore" : null}

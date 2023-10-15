@@ -7,7 +7,9 @@ const ValueDetails = ({ items }) => {
   const { theme } = useTheme();
 
   return (
-    <div className="flex gap-x-4">
+    <div
+      className={`${theme == "dark" ? "bg-dark-secondary" : ""} flex gap-x-4 px-4 py-8`}
+    >
       <div className="pt-1">
         <img
           height="50"

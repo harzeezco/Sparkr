@@ -1,11 +1,12 @@
 import useTheme from "../../Hooks/useTheme";
 
-import About_webp from "../../assets/Images/About.webp";
-import About_png from "../../assets/Images/About.png";
-import Image from "../general/Image";
 import { BannerRowTop } from "../general/BannerRowTop";
 import { BannerRowBottom } from "../general/BannerRowBottom";
 import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
+import AnimatedImage from "../../Animation/AnimatedImage";
+
+import About_webp from "../../assets/Images/About.webp";
+import About_png from "../../assets/Images/About.png";
 
 const HeroSection = () => {
   const { theme } = useTheme();
@@ -14,15 +15,12 @@ const HeroSection = () => {
     <div className="m-auto w-full px-5 lg:max-w-[1100px]" id="hero">
       <div className="flex h-[130px] items-center gap-x-4 overflow-hidden">
         <BannerRowTop title="Hello," color="text-mode" />
-
         <BannerRowTop title="We're" color="text-mode" />
-
         <BannerRowTop title=" a" color="text-mode" />
       </div>
 
       <div className="-mt-14 flex h-[130px] items-center gap-x-5 overflow-hidden">
         <BannerRowBottom title="Creative" color="text-default" />
-
         <BannerRowBottom title="Agency" color="text-mode" />
       </div>
 
@@ -42,13 +40,13 @@ const HeroSection = () => {
         />
       </div>
 
-      <Image
-        width="100%"
-        height="570"
-        defaultSrc={About_webp}
-        alternateSrc={About_png}
-        alt="community image"
-      />
+        <AnimatedImage
+          defaultSrc={About_webp}
+          alternateSrc={About_png}
+          alt="community image"
+          width="100%"
+          height="570"
+        />
     </div>
   );
 };

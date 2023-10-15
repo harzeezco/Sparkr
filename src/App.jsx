@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { useEffect, useContext, Suspense } from "react";
+import { useEffect, useContext, Suspense, useState } from "react";
 import useTheme from "./Hooks/useTheme";
 import CircleContact from "./Components/general/CircleContact";
 import Loader from "./Components/general/Loader";
@@ -13,8 +13,21 @@ import CurveSideNav from "./Components/navigation/CurveSideNav";
 // const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
 
 function App() {
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
   const { theme } = useTheme();
   const { scaling, isProjectHovered } = useContext(ScaleCursorOnHoverContext);
+
+  // Use useEffect to set isInitialLoad to false after a delay
+  useEffect(() => {
+    const delay = 1000; // Adjust the delay time as needed
+    const initialLoadTimeout = setTimeout(() => {
+      setIsInitialLoad(false);
+    }, delay);
+
+    return () => {
+      clearTimeout(initialLoadTimeout);
+    };
+  }, []);
 
   const isLight = theme === "light" ? "#fff" : "#121418";
 
@@ -42,7 +55,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loader />}>
+      <Suspense>
+        {isInitialLoad && <Loader />}
         <GoogleTag />
         <SmallScreenContextProvider>
           <CurveSideNav />

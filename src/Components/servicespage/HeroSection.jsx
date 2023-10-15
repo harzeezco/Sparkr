@@ -10,7 +10,7 @@ const HeroSection = () => {
       <section className="pt-12">
 
         <div className="flex h-[130px] items-center gap-x-4 overflow-hidden">
-          <BannerRowTop title="guiding" color="text-mode" />
+          <BannerRowTop title="Guiding" color="text-mode" />
           <BannerRowTop title="brands" color="text-default" />
           <BannerRowTop title="through" color="text-default" />
         </div>
@@ -22,7 +22,7 @@ const HeroSection = () => {
         </div>
 
 
-        <div>
+        <div className="mt-20">
           <Services />
         </div>
       </section>

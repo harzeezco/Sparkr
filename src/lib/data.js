@@ -142,7 +142,7 @@ export const COUNT_DETAILS = [
   },
 ];
 
-export const PROJECT_CARD_DETAILS = [
+export const PROJECTS = [
   {
     id: 1,
     defaultSrc: HeroWallet_webp,

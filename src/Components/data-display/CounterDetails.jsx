@@ -14,7 +14,7 @@ const CounterDetails = ({
   const num = `font-primary font-bold text-[40px] leading-[65px] text-${theme} sm:text-[35px] lg:text-[54px] theme-transition flex items-center`;
 
   return (
-    <div className="pb-4 pt-4">
+    <div className={`${theme == "dark" ? "bg-dark-secondary" : ""} p-6`}>
       <p className={`${num}`}>
         <span data-value={data_value} ref={counter}>
           <AnimatedTextLetters
@@ -35,7 +35,7 @@ const CounterDetails = ({
 
       <AnimatedTextLetters
         phrase={header}
-        className={`text-xl font-bold capitalize leading-[30px] text-${theme} pt-5 mb-2`}
+        className={`text-xl font-bold capitalize leading-[30px] text-${theme} mb-2 pt-5`}
         openDuration={0.3}
         closeDuration={0.3}
       />

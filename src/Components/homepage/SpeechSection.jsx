@@ -5,10 +5,16 @@ import Container from "../layouts/Container";
 const SpeechSection = () => {
   return (
     <Container id="speech" py="[3rem]">
-      <article className="py-[2rem]">
+      <article
+        className="py-[2rem]"
+        data-scroll
+        data-scroll-speed="-10"
+        data-scroll-position="top"
+        data-scroll-delay="0.035"
+      >
         <AnimatedTextLetters
           phrase={`We Spark New Ways of Thinking About your Digital Branding`}
-          className="text-primary text-left font-primary text-[30px] font-normal capitalize text-white sm:text-[45px] px-1 lg:text-[65px] lg:leading-[84px]"
+          className="text-primary px-1 text-left font-primary text-[30px] font-normal capitalize text-white sm:text-[45px] lg:text-[65px] lg:leading-[84px]"
           openDuration={0.3}
           closeDuration={0.3}
         />

@@ -100,7 +100,7 @@
     left: -99px;
     width: 100px;
     height: 100%;
-    fill: rgb(41, 41, 41);
+    fill: rgb(199, 197, 197);
     stroke: none;
 }
 
@@ -165,6 +165,7 @@ body::-webkit-scrollbar {
   width: 0;
   background: transparent;
 }
+
 
 #scrollbar {
   margin: 0;

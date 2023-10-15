@@ -1,5 +1,6 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { lazy } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const AppLayout = lazy(() => import("../Components/layouts/AppLayout"));
 const HomePage = lazy(() => import("../Pages/HomePage"));
@@ -11,18 +12,22 @@ const ContactPage = lazy(() => import("../Pages/ContactPage"));
 const PageNotFound = lazy(() => import("../Pages/PageNotFound"));
 
 const AnimateRoute = () => {
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route path="/" element={<AppLayout />}>
-        <Route path="/" index element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/service" element={<ServicesPage />} />
-        <Route path="/project/*" element={<ProjectPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Route>
-      <Route path="*" element={<PageNotFound />} />
-    </Routes>
+    <AnimatePresence>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<AppLayout />}>
+          <Route path="/" index element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/service" element={<ServicesPage />} />
+          <Route path="/project/*" element={<ProjectPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </AnimatePresence>
   );
 };
 

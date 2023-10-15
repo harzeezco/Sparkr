@@ -13,21 +13,38 @@ const HeroSection = () => {
       className="m-auto w-full px-5 lg:max-w-[1100px]"
       id="hero"
       variants={banner}
+      data-scroll
+      data-scroll-speed="1"
+      data-scroll-position="top"
     >
       <div className="grid pt-10">
-        <div className="flex h-[130px] items-center gap-x-5 overflow-hidden md:hidden">
+        <div
+          className="flex h-[130px] items-center gap-x-5 overflow-hidden md:hidden"
+          data-scroll
+          data-scroll-speed="-1"
+          data-scroll-position="top"
+        >
           <BannerRowTop title="We" color="text-mode" text_large />
           <BannerRowTop title="spark" color="text-default" text_large />
-          <BannerRowTop title="Digital" color="text-mode" text_large />
         </div>
         <div>
           <div className="hidden md:block">
-            <div className="flex h-[130px] items-center gap-x-4 overflow-hidden">
+            <div
+              className="flex h-[130px] items-center gap-x-4 overflow-hidden"
+              data-scroll
+              data-scroll-speed="-1"
+              data-scroll-position="top"
+            >
               <BannerRowTop title="We" color="text-mode" text_large />
               <BannerRowTop title="spark" color="text-default" text_large />
             </div>
           </div>
-          <div className="flex h-[130px] items-center overflow-hidden">
+          <div
+            className="flex h-[130px] items-center overflow-hidden md:gap-x-10 gap-x-6"
+            data-scroll
+            data-scroll-speed="-4"
+            data-scroll-position="top"
+          >
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
@@ -36,7 +53,7 @@ const HeroSection = () => {
                 duration: 1,
                 delay: 0.4,
               }}
-              className="clip mr-16 mt-4 max-w-[170px] rounded-[40px] md:mt-0"
+              className="clip mt-4 max-w-[170px] rounded-[40px] md:mt-0"
             >
               <video
                 loop
@@ -60,7 +77,12 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex h-[130px] items-center gap-x-5 overflow-hidden">
+        <div
+          className="flex h-[130px] items-center gap-x-2 overflow-hidden"
+          data-scroll
+          data-scroll-speed="-1"
+          data-scroll-position="top"
+        >
           <BannerRowBottom title="Brands" color="text-default" text_large />
           <BannerRowBottom title="that" color="text-mode" text_large />
           <BannerRowBottom title="Strive" color="text-default" text_large />

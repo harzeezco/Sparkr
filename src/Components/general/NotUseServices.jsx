@@ -27,7 +27,7 @@ const Services = () => {
           resourceName="service"
           onToggleService={handleService}
         />
-      </div>
+    </div>
     </>
   );
 };

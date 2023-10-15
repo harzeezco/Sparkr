@@ -9,8 +9,8 @@ const letterAni = {
   animate: {
     y: 0,
     transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 0.7,
+      ease: [0.9, 0.08, -0.05, 0.95],
+      duration: 0.75,
     },
   },
 };

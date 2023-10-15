@@ -1,33 +1,23 @@
 import PropTypes from "prop-types";
 import useCarouselSlide from "../../Hooks/useCarouselSlide";
 import Slider from "react-slick";
-import { lazy, Suspense, useContext, useEffect, useState } from "react";
+import { lazy, Suspense, useContext } from "react";
 import BlockQuote from "../../assets/Icons/Union.svg";
 import Loader from "../general/Loader";
-import { useInView } from "react-cool-inview";
 import { ScaleCursorOnHoverContext } from "../../Contexts/ScaleCursorOnHoverContext";
 
 const TestimonialsCarouselDetails = ({ testimonials }) => {
   const { activeSlide, sliderRef, settings, goToSlide } = useCarouselSlide();
-  const { setScaling } = useContext(ScaleCursorOnHoverContext);
-
-    const [isElementVisible, setIsElementVisible] = useState(false);
-
-
-  const { observe, inView } = useInView({
-    unobserveOnEnter: true,
-  });
-
-  useEffect(() => {
-    setIsElementVisible(inView);
-  }, [inView]);
+  const { setScaling, isElementVisible } = useContext(
+    ScaleCursorOnHoverContext,
+  );
 
   const SliderComponent = isElementVisible
     ? lazy(() => import("react-slick"))
     : null;
 
   return (
-    <article className="relative w-full" ref={observe}>
+    <article className="relative w-full">
       <Suspense fallback={<Loader />}>
         {SliderComponent && (
           <>
@@ -49,7 +39,7 @@ const TestimonialsCarouselDetails = ({ testimonials }) => {
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className="p-4 cursor-pointer"
+                  className="cursor-pointer p-4"
                   onMouseEnter={() => setScaling(true)}
                   onMouseLeave={() => setScaling(false)}
                 >

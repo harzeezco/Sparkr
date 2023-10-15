@@ -13,21 +13,31 @@ const RootSection = () => {
         <BannerRowTop title="blog " color="text-default" />
       </div>
       <motion.div
-        initial={{ transform: 0, y: 80 }}
-        animate={{ transform: 1, y: 0 }}
+        initial={{ opacity: 0, y: 70 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{
-          ease: "easeInOut",
-          duration: 1,
-          delay: 0.4,
+          stiffness: 300,
+          delay: 1,
+          type: "spring",
         }}
         className="mb-12 mt-2 h-[50px] text-lg"
       >
         The latest in security, access control, IT compliance, and other news.
       </motion.div>
 
-      <BlogNews />
-      <BlogInsight />
-      <BlogTutorial />
+      <motion.div
+        initial={{ opacity: 0, y: 70 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          stiffness: 300,
+          delay: 1,
+          type: "spring",
+        }}
+      >
+        <BlogNews />
+        <BlogInsight />
+        <BlogTutorial />
+      </motion.div>
     </Container>
   );
 };

@@ -20,6 +20,10 @@ const ServiceSection = () => {
           variants={opacity}
           animate={isInView ? "open" : "closed"}
           className={`${headerText}`}
+          data-scroll
+          data-scroll-speed="-10"
+          data-scroll-position="top"
+          data-scroll-delay="0.035"
         >
           <span className="text-orangePrimary">Customer-Centric</span> Design
         </motion.h1>

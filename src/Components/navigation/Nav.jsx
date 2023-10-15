@@ -3,30 +3,10 @@ import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Curve from "./Curve";
 import { NAV_LINKS } from "../../lib/data";
-import ScrollToTopLink from "../../Animation/ScrollToTopLink";
-import useTheme from "../../Hooks/useTheme";
 import SideLink from "./Link";
 import ThemeSwitcher from "../general/ThemeSwitcher";
 import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
-const navItems = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "Work",
-    href: "/work",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
-];
 
 export default function Nav() {
   const location = useLocation();
@@ -67,7 +47,7 @@ export default function Nav() {
             })}
           </ul>
 
-          <div className="text-light flex items-center gap-x-5 text-base">
+          <div className="text-light flex flex-col sm:flex-row sm:items-center items-start gap-5 text-base">
             <div className="text-normal">
               <p>Get in touch</p>
               <p className="">info@sparkr.studio</p>

@@ -14,8 +14,7 @@ const RootSection = () => {
       <section
         aria-labelledby="service-slider"
         className={`bg-${theme}-secondary mb-20`}
-      >
-      </section>
+      ></section>
       <section aria-labelledby="idea">
         <IdeaSection />
       </section>

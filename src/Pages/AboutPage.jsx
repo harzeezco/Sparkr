@@ -1,8 +1,10 @@
 import RootSection from "../Components/aboutpage/RootSection";
+import withPageAnimation from "../Components/HOC/withPageAnimation";
 import SEOData from "../Components/SEO/helmet/SEO-data";
 import AboutPageSchema from "../Components/SEO/schemas/AboutPageSchema";
 import { HelmetProvider } from "react-helmet-async";
 
+const PageWithAnimation = withPageAnimation(RootSection);
 
 const AboutPage = () => {
   const title = "Sparkr - We are always Reliable and Responsive";
@@ -18,7 +20,7 @@ const AboutPage = () => {
     <>
       <HelmetProvider>
         <SEOData title={title} description={description} metaTags={metaTags} />
-        <RootSection />
+        <PageWithAnimation />
         <AboutPageSchema />
       </HelmetProvider>
     </>

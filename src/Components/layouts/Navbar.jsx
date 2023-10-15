@@ -20,9 +20,11 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -180 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
+        type: "spring",
+        stiffness: 300,
         ease: "easeInOut",
         duration: 1,
-        delay: 0.6,
+        delay: 0.5,
       }}
       className="theme-transition m-auto flex w-full items-center justify-between px-5 py-7 pb-6 lg:max-w-[1100px]"
     >

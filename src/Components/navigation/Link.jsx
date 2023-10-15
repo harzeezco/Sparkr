@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
 import ScrollToTopLink from "../../Animation/ScrollToTopLink";
+import { useContext } from "react";
+import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
 const slide = {
   initial: { x: 80 },
@@ -20,12 +22,9 @@ const scale = {
   closed: { scale: 0, transition: { duration: 0.4 } },
 };
 
-export default function SideLink({
-  data,
-  isActive,
-  setSelectedIndicator,
-}) {
+export default function SideLink({ data, isActive, setSelectedIndicator }) {
   const { title, path, index } = data;
+  const { setIsActive } = useContext(SmallScreenContext);
 
   return (
     <motion.div
@@ -38,13 +37,17 @@ export default function SideLink({
       initial="initial"
       animate="enter"
       exit="exit"
+      onClick={() => setIsActive(false)}
     >
       <motion.div
         variants={scale}
         animate={isActive ? "open" : "closed"}
         className="indicator"
       ></motion.div>
-      <ScrollToTopLink to={path} className="py-2 text-5xl capitalize text-light">
+      <ScrollToTopLink
+        to={path}
+        className="text-light py-2 text-5xl capitalize"
+      >
         {title}
       </ScrollToTopLink>
     </motion.div>

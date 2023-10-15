@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import useTheme from "../../Hooks/useTheme";
-import Image from "../general/Image";
 import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
+import AnimatedImage from "../../Animation/AnimatedImage";
 
 const Row = ({
   defaultSrc,
@@ -16,18 +16,16 @@ const Row = ({
 }) => {
   const { theme } = useTheme();
 
+
   return (
     <div className="grid items-center justify-between gap-x-20 gap-y-10 pt-2 md:grid-cols-2 md:flex-row lg:pt-12">
-      <div className="mx-auto w-full max-w-[100vw]">
-        <Image
-          defaultSrc={defaultSrc}
-          alternateSrc={alternateSrc}
-          alt="The image showing our meeting curriculum"
-          loading="lazy"
-          height="470"
-          width="100%"
-        />
-      </div>
+      <AnimatedImage
+        defaultSrc={defaultSrc}
+        alternateSrc={alternateSrc}
+        alt="The image showing our meeting curriculum"
+        height="470"
+        width="100%"
+      />
 
       <article
         className={`${img_first && "order-first md:order-last"}
@@ -78,7 +76,9 @@ const Row = ({
         ) : null}
 
         <a href="/about">
-          {button && <button className="btn">Let’s Spark Your Brand Today</button>}
+          {button && (
+            <button className="btn">Let’s Spark Your Brand Today</button>
+          )}
         </a>
       </article>
     </div>

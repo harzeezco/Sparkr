@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link as RouterLink } from "react-router-dom";
+import { NavLink as RouterLink } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
@@ -24,7 +24,15 @@ const ScrollToTopLink = ({ to, children, ...otherProps }) => {
 
   return (
     <motion.div animate={controls} {...otherProps}>
-      <RouterLink to={to} onClick={handleClick}>
+      <RouterLink
+        to={to}
+        onClick={handleClick}
+        exact
+        activeStyle={{
+          fontWeight: "bold",
+          color: "red",
+        }}
+      >
         {children}
       </RouterLink>
     </motion.div>
