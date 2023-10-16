@@ -34,20 +34,20 @@ const Row = ({
       >
         {header && (
           <h1
-            className={`pb-4 font-primary text-4xl leading-[48px] text-${theme} flex items-center font-bold`}
+            className={`pb-4 font-primary text-4xl leading-[48px] text-${theme} flex flex-col sm:flex-row items-center font-bold`}
           >
             <AnimatedTextLetters
               phrase={header}
-              openDuration={0.5}
-              closeDuration={0.5}
+              openDuration={0.3}
+              closeDuration={0.3}
               delay={0.1}
             />
-            <span>
+            <span className="pl-2">
               <AnimatedTextLetters
                 phrase={header_highlight}
                 className={`text-orangePrimary`}
-                openDuration={0.5}
-                closeDuration={0.5}
+                openDuration={0.3}
+                closeDuration={0.3}
                 delay={0.1}
               />
             </span>
@@ -58,7 +58,7 @@ const Row = ({
           <AnimatedTextLetters
             openDuration={0.5}
             closeDuration={0.5}
-            delay={0.3}
+            delay={0.2}
             phrase={first_prgh}
             className="leading-[30px] sm:text-lg"
           />
@@ -68,7 +68,7 @@ const Row = ({
             <AnimatedTextLetters
               openDuration={0.5}
               closeDuration={0.5}
-              delay={0.5}
+              delay={0.2}
               phrase={second_prgh}
               className="leading-[30px] sm:text-lg"
             />

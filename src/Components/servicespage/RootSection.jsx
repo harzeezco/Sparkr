@@ -1,7 +1,7 @@
 import useTheme from "../../Hooks/useTheme";
 import FeatureSection from "./FeatureSection";
 import HeroSection from "./HeroSection";
-import SpeechSetion from "./SpeechSetion";
+import SpeechSection from "./SpeechSection";
 import TrustedCompanies from "./TrustedCompanies";
 
 const RootSection = () => {
@@ -17,7 +17,7 @@ const RootSection = () => {
         className={`bg-${theme}-secondary theme-transition`}
         aria-labelledby="hero"
       >
-        <SpeechSetion />
+        <SpeechSection />
       </section>
 
       <section aria-labelledby="feature">

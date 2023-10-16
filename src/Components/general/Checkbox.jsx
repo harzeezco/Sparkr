@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 
 const Checkbox = React.forwardRef(
-  ({ isLight, type = "checkbox", name, labelFor, ...otherProps }, ref) => {
+  ({ isLight, type = "checkbox", name, labelFor, otherProps }, ref) => {
     return (
       <div className="flex items-center gap-x-2">
         <input
@@ -22,6 +22,7 @@ const Checkbox = React.forwardRef(
 );
 
 Checkbox.propTypes = {
+  otherProps: PropTypes.node,
   isLight: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string,

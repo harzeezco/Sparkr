@@ -12,7 +12,7 @@ export default function Project({ index, title, manageModal }) {
       onMouseLeave={(e) => {
         manageModal(false, index, e.clientX, e.clientY);
       }}
-      className="flex w-full cursor-pointer items-center justify-between border-b border-t p-8 transition duration-200 hover:opacity-50"
+      className="flex flex-col sm:flex-row gap-y-2 w-full cursor-pointer items-center justify-between border-b border-t p-8 transition duration-200 hover:opacity-50"
     >
       <h2 className={`heading-secondary lg:text-6xl text-${theme}`}>{title}</h2>
       <p className="duration-400 text-lg font-light transition-transform">

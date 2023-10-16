@@ -7,11 +7,10 @@ import AnimatedTextLetters from "../../Animation/AnimatedTextLetters";
 import Image from "../general/Image";
 
 const ProjectDetails = ({ card }) => {
-  const [hover, setHover] = useState(false)
+  const [hover, setHover] = useState(false);
   const { theme } = useTheme();
   const { setIsProjectHovered } = useContext(ScaleCursorOnHoverContext);
   const { defaultSrc, alternateSrc, job_title, id } = card;
-
 
   const project_btn = `rounded-2xl border border-${theme} px-4 py-1 text-sm font-normal text-${theme}-primary opacity-[70%] capitalize theme-transition`;
 

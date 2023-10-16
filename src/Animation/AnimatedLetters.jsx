@@ -32,7 +32,7 @@ const AnimatedLetters = ({ title, color, text_large }) => {
         return (
           <motion.span
             key={idx}
-            className={`theme-transition relative inline-block whitespace-nowrap font-primary font-bold  sm:text-[45px] lg:text-[65px] ${textColor} ${
+            className={`theme-transition relative inline-block whitespace-nowrap font-primary font-bold text-4xl sm:text-[45px] lg:text-[65px] ${textColor} ${
               text_large ? large_text : null
             }`}
             variants={letterAni}

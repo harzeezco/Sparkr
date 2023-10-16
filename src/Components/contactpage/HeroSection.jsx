@@ -14,7 +14,7 @@ const HeroSection = () => {
         <BannerRowTop title="a" color="text-mode" />
       </div>
 
-      <div className="-mt-16 flex h-[130px] items-center gap-x-5 overflow-hidden">
+      <div className="-mt-[4.9rem] flex h-[130px] items-center gap-x-5 overflow-hidden">
         <BannerRowBottom title="project" color="text-mode" />
         <BannerRowBottom title="together" color="text-default" />
       </div>

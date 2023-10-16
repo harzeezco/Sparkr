@@ -7,7 +7,7 @@ const JobOpeningSection = () => {
   return (
     <Container id="job-opening">
       <h1
-        className={`font-primary text-[4vw] font-bold leading-[60px] md:max-w-[87%] text-${theme}`}
+        className={`font-primary text-[4vw] font-bold leading-[25px] md:leading-[60px] md:max-w-[87%] text-${theme}`}
       >
         If you prefer,{" "}
         <a href="#" className={`underline transition-all hover:no-underline`}>
@@ -16,7 +16,7 @@ const JobOpeningSection = () => {
         for new business opportunities or job openings.
       </h1>
 
-      <div className="mt-[3.5rem] grid grid-cols-1 grid-rows-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 md:mt-14 grid grid-cols-1 grid-rows-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <div
           className={`${
             theme === "dark" && "bg-dark-secondary"

@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <Container id="project">
       <section className="pt-12">
-        <div className="flex h-[130px] items-center gap-x-4 overflow-hidden">
+        <div className="flex sm2h-[130px] items-center gap-x-4 overflow-hidden flex-wrap">
           <BannerRowTop title="Our" color="text-mode" />
           <BannerRowTop title="Latest" color="text-mode" />
           <BannerRowTop title="Project" color="text-default" />

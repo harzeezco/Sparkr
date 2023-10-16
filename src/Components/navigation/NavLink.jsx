@@ -9,9 +9,9 @@ const NavLink = ({ navlink }) => {
     <li>
       <ScrollToTopLink to={path} key={title}>
         <AnimatedTextLetters
-          openDuration={0.5}
-          closeDuration={0.5}
-          delay={0.5}
+          openDuration={0.2}
+          closeDuration={0.2}
+          delay={0.2}
           phrase={title}
           className="mt-2 leading-[20px] sm:text-[18px]"
         />

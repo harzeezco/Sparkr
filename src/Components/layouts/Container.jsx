@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { forwardRef } from "react";
 
-const Container = forwardRef(({ id, children, pt, py, ...otherProps }, ref) => {
+const Container = forwardRef(({ id, children, pt, py, otherProps }, ref) => {
   return (
     <div
       id={id}
@@ -17,6 +17,7 @@ const Container = forwardRef(({ id, children, pt, py, ...otherProps }, ref) => {
 Container.displayName = "Container";
 
 Container.propTypes = {
+  otherProps: PropTypes.node,
   id: PropTypes.string,
   children: PropTypes.node,
   pt: PropTypes.string,

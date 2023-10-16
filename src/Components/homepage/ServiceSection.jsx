@@ -25,13 +25,14 @@ const ServiceSection = () => {
           data-scroll-position="top"
           data-scroll-delay="0.035"
         >
-          <span className="text-orangePrimary">Customer-Centric</span> Design
+          <span className="text-orangePrimary">Customer-Centric</span> Design{" "}
+          <span className="inline-block sm:hidden">Services</span>
         </motion.h1>
         <div className="mb-20 flex flex-col gap-x-4 md:flex-row lg:max-w-[86%]">
           <motion.h1
             variants={opacity}
             animate={isInView ? "open" : "closed"}
-            className={`${headerText}`}
+            className={`${headerText} hidden sm:inline-flex`}
           >
             Services
           </motion.h1>

@@ -13,9 +13,9 @@ const Card = ({ item }) => {
     <div className={`${isLight} p-5`}>
       <div className="mb-2 flex items-center gap-x-4">
         <AnimatedTextLetters
-          openDuration={0.5}
-          closeDuration={0.5}
-          delay={0.3}
+          openDuration={0.2}
+          closeDuration={0.2}
+          delay={0.2}
           phrase={num}
           className="text-[20px] font-medium text-btnColor md:text-[30px]"
         />
@@ -24,16 +24,16 @@ const Card = ({ item }) => {
         <AnimatedTextLetters
           phrase={heading}
           className={`text-[20px] font-medium capitalize text-${theme} md:text-[30px]`}
-          openDuration={0.5}
-          closeDuration={0.5}
-          delay={0.1}
+          openDuration={0.2}
+          closeDuration={0.2}
+          delay={0.2}
         />
       </div>
       <div></div>
       <AnimatedTextLetters
-        openDuration={0.5}
-        closeDuration={0.5}
-        delay={0.3}
+        openDuration={0.2}
+        closeDuration={0.2}
+        delay={0.2}
         phrase={prgh}
         className="leading-7 md:text-[17px]"
       />
