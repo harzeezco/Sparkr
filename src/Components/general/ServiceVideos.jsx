@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 
 import { SERVICES } from "../../lib/data";
 import VideoPlaceholder from "./VideoPlaceholder";
-import Video from "../../assets/Images/Hero.webp";
 
 const ServiceVideos = ({ index }) => {
   return (
@@ -17,7 +16,7 @@ const ServiceVideos = ({ index }) => {
             className="flex h-full w-full items-center justify-center"
             key={`modal_${index}`}
           >
-            <VideoPlaceholder src={`/videos/${src}`} image={Video} />
+            <VideoPlaceholder src={`/videos/${src}`} />
           </div>
         );
       })}

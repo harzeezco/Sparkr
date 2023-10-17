@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import Placeholder from "../../assets/Icons/Placeholder.webp";
 
-const VideoPlaceholder = ({ src, image }) => {
+const VideoPlaceholder = ({ src }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
 
@@ -22,12 +23,11 @@ const VideoPlaceholder = ({ src, image }) => {
   if (isLoading) {
     return (
       <img
-        src={image}
+        src={Placeholder}
         alt="Placeholder image"
         style={{ filter: "blur(10px)" }}
         width="100%"
         height="800"
-        loading="lazy"
       />
     );
   } else {
@@ -41,7 +41,6 @@ const VideoPlaceholder = ({ src, image }) => {
 
 VideoPlaceholder.propTypes = {
   src: PropTypes.string,
-  image: PropTypes.string,
 };
 
 export default VideoPlaceholder;

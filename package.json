@@ -21,7 +21,8 @@
     "react-hook-form": "^7.46.2",
     "react-router-dom": "^6.15.0",
     "react-slick": "^0.29.0",
-    "smooth-scrollbar": "^8.8.4"
+    "smooth-scrollbar": "^8.8.4",
+    "vite-plugin-sw": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

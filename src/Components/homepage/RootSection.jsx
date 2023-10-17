@@ -10,7 +10,6 @@ const ProcessSection = lazy(() => import("./ProcessSection"));
 const ProjectSection = lazy(() => import("./ProjectSection"));
 const SpeechSection = lazy(() => import("./SpeechSection"));
 const AboutSection = lazy(() => import("./AboutSection"));
-import Hero from "../../assets/Images/Hero.webp";
 import ServiceSection from "./ServiceSection";
 
 const RootSection = () => {
@@ -26,7 +25,7 @@ const RootSection = () => {
           data-scroll-position="top"
           data-scroll-delay="0.035"
         >
-          <VideoPlaceholder src={Branding} image={Hero} />
+          <VideoPlaceholder src={Branding}  />
         </div>
       </section>
       <section
