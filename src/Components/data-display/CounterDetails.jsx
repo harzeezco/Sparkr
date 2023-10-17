@@ -15,7 +15,7 @@ const CounterDetails = ({
 
   return (
     <div className={`${theme == "dark" ? "bg-dark-secondary" : ""} p-6`}>
-      <p className={`${num}`}>
+      <div className={`${num}`}>
         <span data-value={data_value} ref={counter}>
           <AnimatedTextLetters
             phrase={data_value}
@@ -31,7 +31,7 @@ const CounterDetails = ({
           closeDuration={0.3}
           delay={0.1}
         />
-      </p>
+      </div>
 
       <AnimatedTextLetters
         phrase={header}

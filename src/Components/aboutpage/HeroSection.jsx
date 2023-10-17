@@ -33,7 +33,7 @@ const HeroSection = () => {
         />
         <AnimatedTextLetters
           openDuration={0.2}
-          closeDuration={0.5}
+          closeDuration={0.2}
           delay={0.2}
           phrase={`A team of creative thinkers and doers who believe in the power of creativity to inspire change. Working seamlessly across brand and digital, we build modern brands with heart and spirit.`}
           className="text-base leading-[30px] md:text-xl"

@@ -7,7 +7,6 @@ import SideLink from "./Link";
 import ThemeSwitcher from "../general/ThemeSwitcher";
 import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
-
 export default function Nav() {
   const location = useLocation();
   const [pathname, setPathname] = useState(location.pathname);
@@ -17,7 +16,7 @@ export default function Nav() {
 
   const toggleSwitch = () => {
     toggleTheme();
-    setIsActive(false)
+    setIsActive(false);
   };
 
   return (
@@ -47,7 +46,7 @@ export default function Nav() {
             })}
           </ul>
 
-          <div className="text-light flex flex-col sm:flex-row sm:items-center items-start gap-5 text-base">
+          <div className="text-light flex flex-col items-start gap-5 text-base sm:flex-row sm:items-center">
             <div className="text-normal">
               <p>Get in touch</p>
               <p className="">info@sparkr.studio</p>
@@ -57,7 +56,9 @@ export default function Nav() {
               onClick={toggleSwitch}
             >
               <ThemeSwitcher />
-              <span className="pl-2 whitespace-nowrap">Switch to {themeMode} mode</span>
+              <span className="whitespace-nowrap pl-2">
+                Switch to {themeMode} mode
+              </span>
             </div>
           </div>
         </div>

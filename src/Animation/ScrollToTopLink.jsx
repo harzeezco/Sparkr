@@ -24,15 +24,7 @@ const ScrollToTopLink = ({ to, children, ...otherProps }) => {
 
   return (
     <motion.div animate={controls} {...otherProps}>
-      <RouterLink
-        to={to}
-        onClick={handleClick}
-        exact
-        activeStyle={{
-          fontWeight: "bold",
-          color: "red",
-        }}
-      >
+      <RouterLink to={to} onClick={handleClick}>
         {children}
       </RouterLink>
     </motion.div>

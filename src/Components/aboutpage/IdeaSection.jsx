@@ -20,9 +20,9 @@ const IdeaSection = () => {
 
       <div className="m-auto text-center md:w-[70%] mt-2">
         <AnimatedTextLetters
-          openDuration={0.5}
-          closeDuration={0.5}
-          delay={0.5}
+          openDuration={0.3}
+          closeDuration={0.3}
+          delay={0.2}
           phrase={`Our culture is built on a foundation of taking care of our own, investing in continued education and wellness, and developing skills, because we know you can’t pour from an empty cup.`}
           className="text-base leading-[30px] md:text-xl"
         />

@@ -2,7 +2,6 @@ import { lazy, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import useTheme from "../../Hooks/useTheme";
-import { AnimatePresence } from "framer-motion";
 import BannerAnimationContextProvider from "../../Contexts/BannerAnimationContext";
 import Transition from "../general/Transition";
 
@@ -20,7 +19,7 @@ const AppLayout = () => {
   }, []);
 
   return (
-    <AnimatePresence mode="wait">
+    <>
       <Transition />
       <div
         className={`bg-${theme} text-${theme}-primary theme-transition relative`}
@@ -40,7 +39,7 @@ const AppLayout = () => {
           <Footer />
         </footer>
       </div>
-    </AnimatePresence>
+    </>
   );
 };
 

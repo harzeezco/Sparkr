@@ -663,17 +663,17 @@ export const SERVICE_SLIDER_DATA = [
     icon: Star,
   },
   {
-    id: 1,
+    id: 3,
     name: "Landing Page",
     icon: Star,
   },
   {
-    id: 1,
+    id: 4,
     name: "Product Design",
     icon: Star,
   },
   {
-    id: 1,
+    id: 5,
     name: "Mobile Design",
     icon: Star,
   },
@@ -690,17 +690,17 @@ export const SERVICE_SLIDER2_DATA = [
     icon: Star,
   },
   {
-    id: 1,
+    id: 3,
     name: "Copy Writing",
     icon: Star,
   },
   {
-    id: 1,
+    id: 4,
     name: "Animation",
     icon: Star,
   },
   {
-    id: 1,
+    id: 5,
     name: "Illustration",
     icon: Star,
   },

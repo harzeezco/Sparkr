@@ -14,7 +14,7 @@ const SpeechSection = () => {
         closeDuration={0.1}
       />
 
-      <p className="mt-5">
+      <div className="mt-5">
         <AnimatedTextLetters
           openDuration={0.3}
           closeDuration={0.3}
@@ -22,7 +22,7 @@ const SpeechSection = () => {
           phrase="David Droga, British advertising creative director"
           className="text-lg"
         />
-      </p>
+      </div>
     </Container>
   );
 };
