@@ -16,8 +16,8 @@ const SpeechSection = () => {
 
       <p className="mt-5">
         <AnimatedTextLetters
-          openDuration={0.5}
-          closeDuration={0.5}
+          openDuration={0.3}
+          closeDuration={0.3}
           delay={0.2}
           phrase="David Droga, British advertising creative director"
           className="text-lg"

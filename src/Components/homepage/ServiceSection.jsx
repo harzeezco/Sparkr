@@ -38,9 +38,9 @@ const ServiceSection = () => {
           </motion.h1>
 
           <AnimatedTextLetters
-            openDuration={0.5}
-            closeDuration={0.5}
-            delay={0.5}
+            openDuration={0.3}
+            closeDuration={0.3}
+            delay={0.2}
             phrase={`With best-in-class design and engineering, our work maximizes value by putting your customers at the center of everything we do.`}
             className="mt-2 leading-[20px] sm:text-[18px]"
           />

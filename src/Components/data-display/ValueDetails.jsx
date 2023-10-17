@@ -27,9 +27,9 @@ const ValueDetails = ({ items }) => {
           closeDuration={0.3}
         />
         <AnimatedTextLetters
-          openDuration={0.5}
-          closeDuration={0.5}
-          delay={0.5}
+          openDuration={0.3}
+          closeDuration={0.3}
+          delay={0.2}
           phrase={prgh_text}
           className="leading-[20px]"
         />

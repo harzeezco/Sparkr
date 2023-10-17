@@ -57,8 +57,8 @@ const ProjectDetails = ({ card }) => {
         className={`theme-transition whitespace-nowrap text-[1.3rem] font-bold  md:text-[2.4vw] ${
           hover ? "text-orangePrimary" : `text-${theme}`
         }`}
-        openDuration={0.5}
-        closeDuration={0.5}
+        openDuration={0.3}
+        closeDuration={0.3}
       />
     </article>
   );

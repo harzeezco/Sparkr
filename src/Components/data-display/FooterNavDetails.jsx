@@ -12,8 +12,8 @@ const FooterNavDetails = ({ items, heading, link, content, mt }) => {
       <AnimatedTextLetters
         phrase={heading}
         className={`text-[20px] font-bold capitalize leading-8 text-${theme} theme-transition`}
-        openDuration={0.5}
-        closeDuration={0.5}
+        openDuration={0.3}
+        closeDuration={0.3}
         delay={0.1}
       />
       <ul className={`mt-${mt} grid gap-y-4 capitalize`}>
@@ -26,9 +26,9 @@ const FooterNavDetails = ({ items, heading, link, content, mt }) => {
         ) : (
           <li className="mt-7 capitalize">
             <AnimatedTextLetters
-              openDuration={0.5}
-              closeDuration={0.5}
-              delay={0.5}
+              openDuration={0.3}
+              closeDuration={0.3}
+              delay={0.2}
               phrase={content}
               className="mt-2 capitalize"
             />

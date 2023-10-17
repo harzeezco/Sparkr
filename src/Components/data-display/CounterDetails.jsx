@@ -19,16 +19,16 @@ const CounterDetails = ({
         <span data-value={data_value} ref={counter}>
           <AnimatedTextLetters
             phrase={data_value}
-            openDuration={0.5}
-            closeDuration={0.5}
+            openDuration={0.3}
+            closeDuration={0.3}
             delay={0.1}
           />
         </span>
         <AnimatedTextLetters
           phrase={percent_symb}
           className={`text-orangePrimary`}
-          openDuration={0.5}
-          closeDuration={0.5}
+          openDuration={0.3}
+          closeDuration={0.3}
           delay={0.1}
         />
       </p>
@@ -41,9 +41,9 @@ const CounterDetails = ({
       />
 
       <AnimatedTextLetters
-        openDuration={0.5}
-        closeDuration={0.5}
-        delay={0.5}
+        openDuration={0.3}
+        closeDuration={0.3}
+        delay={0.2}
         phrase={prgh_text}
         className="leading-[20px]"
       />
