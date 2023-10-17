@@ -65,7 +65,7 @@ const HeroSection = () => {
         </div>
 
         <div
-          className="-mt-5 flex h-[130px] items-center gap-x-2 overflow-hidden sm:gap-x-4"
+          className="sm:-mt-5 mt-8 flex sm:h-[130px] items-center gap-x-2 overflow-hidden sm:gap-x-4 flex-wrap"
           data-scroll
           data-scroll-speed="-1"
           data-scroll-position="top"

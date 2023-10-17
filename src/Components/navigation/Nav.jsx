@@ -57,7 +57,7 @@ export default function Nav() {
               onClick={toggleSwitch}
             >
               <ThemeSwitcher />
-              <span className="pl-2">Switch to {themeMode} mode</span>
+              <span className="pl-2 whitespace-nowrap">Switch to {themeMode} mode</span>
             </div>
           </div>
         </div>

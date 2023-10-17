@@ -20,7 +20,7 @@ const AnimatedLetters = ({ title, color, text_large }) => {
   const { theme } = useTheme();
   const textColor = color === "text-mode" ? `text-${theme}` : color;
 
-  const large_text = `lg:text-[95px] sm:text-[55px] text-4xl`;
+  const large_text = `lg:text-[95px] sm:text-[55px] text-5xl`;
   return (
     <motion.span
       className="row-title"
