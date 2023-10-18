@@ -1,43 +1,45 @@
+import { lazy, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import useTheme from "../../Hooks/useTheme";
-import { motion } from "framer-motion";
-import Sidebar from "../navigation/Sidebar";
-import Cursor from "../../Animation/Cursor";
-import StickyCursorProvider from "../../Contexts/StickyCursorContext";
-import SideNavContextProvider from "../../Contexts/SideNavContext";
+import BannerAnimationContextProvider from "../../Contexts/BannerAnimationContext";
+import Transition from "../general/Transition";
+
+const Footer = lazy(() => import("./Footer"));
 
 const AppLayout = () => {
   const { theme } = useTheme();
 
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      // eslint-disable-next-line no-unused-vars
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }} // Translate from the bottom
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }} // Translate to the bottom on exit
-      transition={{ duration: 0.6, delay: 0, ease: "easeInOut" }}
-    >
+    <>
+      <Transition />
       <div
-        className={`bg-${theme} text-${theme}-primary theme-transition relative z-10`}
+        className={`bg-${theme} text-${theme}-primary theme-transition relative`}
+        // animate={isInView ? "open" : "closed"}
       >
-        <StickyCursorProvider>
-          <Cursor />
-          <header className="">
-            <SideNavContextProvider>
-              <Navbar />
-              <Sidebar />
-            </SideNavContextProvider>
-          </header>
-        </StickyCursorProvider>
-        <main className="relative z-[-3]">
-          <Outlet />
+        <header>
+          <Navbar />
+        </header>
+
+        <main className="relative">
+          <BannerAnimationContextProvider>
+            <Outlet />
+          </BannerAnimationContextProvider>
         </main>
-        <footer className="" aria-labelledby="footer">
+
+        <footer aria-labelledby="footer">
           <Footer />
         </footer>
       </div>
-    </motion.div>
+    </>
   );
 };
 

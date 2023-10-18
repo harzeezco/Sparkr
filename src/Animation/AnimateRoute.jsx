@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { lazy } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const AppLayout = lazy(() => import("../Components/layouts/AppLayout"));
 const HomePage = lazy(() => import("../Pages/HomePage"));
@@ -9,8 +10,6 @@ const ProjectPage = lazy(() => import("../Pages/ProjectPage"));
 const BlogPage = lazy(() => import("../Pages/BlogPage"));
 const ContactPage = lazy(() => import("../Pages/ContactPage"));
 const PageNotFound = lazy(() => import("../Pages/PageNotFound"));
-
-import { AnimatePresence } from "framer-motion";
 
 const AnimateRoute = () => {
   const location = useLocation();

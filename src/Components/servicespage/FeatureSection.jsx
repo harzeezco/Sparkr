@@ -1,16 +1,15 @@
 import Container from "../layouts/Container";
-import ColumnGrid2 from "../layouts/2ColumnGrid";
-
 import Feature1_webp from "../../assets/Images/Feature1.webp";
 import Feature1_png from "../../assets/Images/Feature1.png";
 import Feature2_webp from "../../assets/Images/Feature2.png";
 import Feature2_png from "../../assets/Images/Feature2.png";
+import Row from "../layouts/Row";
 
 const FeatureSection = () => {
   return (
     <Container id="feature" pb="[6rem]" pt="20">
       <div className="grid gap-10 md:gap-14">
-        <ColumnGrid2
+        <Row
           img_first={true}
           header="A Fresh"
           header_highlight="Perspective"
@@ -21,7 +20,7 @@ const FeatureSection = () => {
           button={false}
         />
 
-        <ColumnGrid2
+        <Row
           text_first={true}
           header="Working"
           header_highlight="Together"

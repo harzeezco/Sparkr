@@ -1,22 +1,18 @@
 import PropTypes from "prop-types";
-import { Link as RouterLink } from "react-router-dom";
-import { motion, useAnimation } from "framer-motion"; // Import useAnimation
+import { NavLink as RouterLink } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
-const ScrollToTopLink = ({ to, children }) => {
-  const controls = useAnimation(); // Initialize Framer Motion controls
+const ScrollToTopLink = ({ to, children, ...otherProps }) => {
+  const controls = useAnimation();
 
   const handleClick = async () => {
-    // Trigger opacity animation
     await controls.start({
       opacity: 0,
       transition: { duration: 0.6, ease: "easeInOut" },
     });
 
-    // Scroll to the top
     window.scrollTo({ top: 0, behavior: "smooth" });
-
-    // Trigger opacity animation when scrolling is complete
   };
 
   useEffect(() => {
@@ -27,7 +23,7 @@ const ScrollToTopLink = ({ to, children }) => {
   });
 
   return (
-    <motion.div animate={controls}>
+    <motion.div animate={controls} {...otherProps}>
       <RouterLink to={to} onClick={handleClick}>
         {children}
       </RouterLink>

@@ -1,56 +1,58 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import RegularList from "../general/RegularList";
-import ServiceDetails from "../data-display/ServiceDetails";
+import { motion } from "framer-motion";
 
-import { SERVICE_DATA } from "../../lib/data";
-import useTheme from "../../Hooks/useTheme";
+import Service from "./Service";
+import useModalCursor from "../../Hooks/useModalCursor";
+import ServiceVideos from "./ServiceVideos";
 
-const Services = ({ header }) => {
-  const [services, setServices] = useState(SERVICE_DATA);
-  const { theme } = useTheme();
-
-  const handleService = (id, condition) => {
-    setServices((prev) =>
-      prev.map((current) => {
-        return current.id === id
-          ? { ...current, isOpen: condition }
-          : { ...current };
-      }),
-    );
-  };
+const Services = () => {
+  const {
+    active,
+    index,
+    manageModal,
+    moveItems,
+    modalContainer,
+    cursor,
+    cursorLabel,
+    scaleAnimation,
+  } = useModalCursor();
 
   return (
-    <>
-      {header && (
-        <>
-          <h1
-            className={`font-primary text-[30px] font-bold capitalize text-${theme} theme-transition sm:text-[45px] md:leading-[74px] lg:text-[60px]`}
-          >
-            <span className="text-orangePrimary">services </span> we provide
-          </h1>
-          <p className="leading-[30px] sm:text-[18px] lg:max-w-[60%]">
-            Design services We are providing. With best-in-class design and
-            engineering, our work maximizes value by putting your customers at
-            the center of everything we do.
-          </p>
-        </>
-      )}
-
-      <div className="mx-auto mt-10">
-        <RegularList
-          items={services}
-          itemComponent={ServiceDetails}
-          resourceName="service"
-          onToggleService={handleService}
-        />
-      </div>
-    </>
+    <div
+      onMouseMove={(e) => {
+        moveItems(e.clientX, e.clientY);
+      }}
+      className="flex flex-col items-center"
+    >
+      <Service manageModal={manageModal} />
+      <>
+        <motion.div
+          ref={modalContainer}
+          variants={scaleAnimation}
+          initial="initial"
+          animate={active ? "enter" : "closed"}
+          className="pointer-events-none fixed left-1/2 top-1/2 z-10 h-96 w-96 overflow-hidden"
+        >
+          <ServiceVideos index={index} />
+        </motion.div>
+        <motion.div
+          ref={cursor}
+          className="pointer-events-none fixed z-10 flex h-20 w-20 items-center justify-center rounded-full bg-blue-700 font-light text-white"
+          variants={scaleAnimation}
+          initial="initial"
+          animate={active ? "enter" : "closed"}
+        ></motion.div>
+        <motion.div
+          ref={cursorLabel}
+          className="pointer-events-none fixed z-10 flex h-20 w-20 items-center justify-center bg-transparent text-lg font-light text-white"
+          variants={scaleAnimation}
+          initial="initial"
+          animate={active ? "enter" : "closed"}
+        >
+          View
+        </motion.div>
+      </>
+    </div>
   );
-};
-
-Services.propTypes = {
-  header: PropTypes.bool,
 };
 
 export default Services;

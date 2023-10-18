@@ -1,7 +1,6 @@
 import useTheme from "../../Hooks/useTheme";
-import { Link } from "react-router-dom";
 
-import gif from "../../assets/gif/Jonny.mp4";
+import Jonny from "/videos/Jonny.mp4";
 import useCreateCircleText from "../../Hooks/useCreateCircleText";
 
 const CircleContact = () => {
@@ -10,16 +9,14 @@ const CircleContact = () => {
 
   return (
     <div className="fixed bottom-5 right-[40px] z-50 hidden lg:block">
-      <Link to="/contact" className="circle">
+      <a href="/contact" className="circle">
         <div className={`text text-${theme}`}>
-          <p ref={textRef}>
-            Contact - Contact - Contact - Contact -
-          </p>
+          <p ref={textRef}>Contact - Contact - Contact - Contact -</p>
         </div>
 
         <div className="centered-image">
           <video loop autoPlay muted>
-            <source src={gif} type="video/mp4" />
+            <source src={Jonny} type="video/mp4" />
             <track
               label="English Captions"
               kind="captions"
@@ -28,7 +25,7 @@ const CircleContact = () => {
             ></track>
           </video>
         </div>
-      </Link>
+      </a>
     </div>
   );
 };

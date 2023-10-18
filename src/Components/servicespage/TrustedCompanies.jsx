@@ -35,7 +35,7 @@ const TrustedCompanies = () => {
       <h1 className={`text-${theme} theme-transition pb-5 text-lg font-bold`}>
         Trusted by the best companies
       </h1>
-      <div className="flex items-center justify-around gap-x-2">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 items-center justify-around gap-5">
         <ImageWrapper
           src={ProlineLight}
           srcForDarkMode={Pro}
@@ -71,8 +71,7 @@ const TrustedCompanies = () => {
           height="100%"
           alt="greenish logo"
         />
-      </div>
-      <div className="flex items-center justify-around gap-x-2 pt-5">
+
         <ImageWrapper
           src={SnoflakeLight}
           srcForDarkMode={Snowflake}

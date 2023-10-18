@@ -1,5 +1,4 @@
-import logo from "../../assets/Svg/LogoLightMode.svg";
-import logoDark from "../../assets/Svg/LogoDarkMode.svg";
+import logo from "../../assets/Svg/SparkLogoIcon.svg";
 import ImageWrapper from "../data-display/ImageWrapper";
 
 const Loader = () => {
@@ -7,11 +6,10 @@ const Loader = () => {
     <div className="flex min-h-[100vh] w-screen items-center justify-center">
       <div className="loading-bar">
         <ImageWrapper
-          srcForDarkMode={logoDark}
           src={logo}
           alt="Logo"
           height="34"
-          width="110"
+          width="40"
           className="relative z-[-3]"
         />
       </div>

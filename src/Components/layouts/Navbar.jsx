@@ -1,27 +1,43 @@
-import LogoDarkMode from "../../assets/Svg/LogoDarkMode.svg";
-import LogoLightMode from "../../assets/Svg/LogoLightMode.svg";
+import { useContext } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
+import ThemeSwitcher from "../general/ThemeSwitcher";
 import RegularList from "../general/RegularList";
 import { NAV_LINKS } from "../../lib/data";
 import NavLink from "../navigation/NavLink";
-import { Link } from "react-router-dom";
-import ThemeSwitcher from "../general/ThemeSwitcher";
 import ImageWrapper from "../data-display/ImageWrapper";
-import NavToggle from "../general/NavToggleIcon";
+import ScrollToTopLink from "../../Animation/ScrollToTopLink";
+import LogoDarkMode from "../../assets/Svg/LogoDarkMode.svg";
+import LogoLightMode from "../../assets/Svg/LogoLightMode.svg";
+import Nav from "../navigation/Nav";
+import { SmallScreenContext } from "../../Contexts/SmallScreenContext";
 
 const Navbar = () => {
+  const { isActive } = useContext(SmallScreenContext);
+
   return (
-    <div className="theme-transition m-auto flex w-full items-center justify-between px-5 py-7 pb-6 lg:max-w-[1100px]">
-      <Link to={"/"}>
+    <motion.div
+      initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        ease: "easeInOut",
+        duration: 1,
+        delay: 0.5,
+      }}
+      className="theme-transition m-auto flex w-full items-center justify-between px-5 py-7 pb-6 lg:max-w-[1100px]"
+    >
+      <ScrollToTopLink to="/">
         <ImageWrapper
           srcForDarkMode={LogoDarkMode}
           src={LogoLightMode}
           alt="Logo"
           height="34"
           width="150"
-          className="relative z-[-3]"
+          className="relative"
         />
-      </Link>
+      </ScrollToTopLink>
 
       <nav className="hidden md:inline-flex" id="nav-menu" role="navigation">
         <ul
@@ -42,19 +58,13 @@ const Navbar = () => {
         >
           Let&apos;s talk
         </button>
-        <div className="inline-block pl-4" role="button">
+        <div className="inline-block pl-4">
           <ThemeSwitcher />
         </div>
       </div>
-      <div
-        aria-label="Toggle Navigation Menu"
-        role="button"
-        aria-controls="nav-menu"
-        className="md-hidden fixed left-[85vw] z-50 grid h-[40px] w-[40px] items-center md:hidden"
-      >
-        <NavToggle />
-      </div>
-    </div>
+
+      <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
+    </motion.div>
   );
 };
 

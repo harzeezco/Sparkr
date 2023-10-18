@@ -17,7 +17,138 @@
   .heading-primary {
     @apply font-primary text-[30px] font-bold capitalize text-white sm:text-[45px] md:leading-[74px] lg:text-[60px];
   }
- 
+  /* .btn {
+    @apply  
+  } */
+}
+.zIndex {
+  z-index: -3;
+}
+
+.clip {
+  clip-path: circle(50% at 50% 50%);
+}
+
+.headerButtonContainer {
+    transform: scale(0);
+    position: fixed;
+    right: 0px;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    position: relative;
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger {
+    width: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+.burger::after,
+.burger::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    transition: transform 0.3s;
+    z-index: 100;
+}
+
+.colorDark.burger::after,
+.colorDark.burger::before {
+    background-color: #111111;
+}
+
+.colorLight.burger::after,
+.colorLight.burger::before {
+    background-color: #fff;
+}
+
+.burger::after {
+    top: -5px;
+}
+
+.burger::before {
+    top: 5px;
+}
+
+.burgerActive::after {
+    transform: rotate(45deg);
+    top: -1px;
+}
+
+.burgerActive::before {
+    transform: rotate(-45deg);
+    top: 0px;
+}
+
+.svgCurve{
+    position: absolute;
+    top: 0;
+    left: -99px;
+    width: 100px;
+    height: 100%;
+    fill: rgb(199, 197, 197);
+    stroke: none;
+}
+
+.link{
+    position: relative;
+    display: flex;
+    align-items: center;}
+    
+    .indicator{
+        width: 10px;
+        height: 10px;
+        background-color: #222;
+        border-radius: 50%;
+        position: absolute;
+        left: -30px;
+    }
+
+.btn {
+  position: relative;
+  background-color: #ff463a;
+  border-radius: 5px;
+  padding: 15px 25px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  background-color: #cf2d21;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 700ms ease-in-out;
+  display: inline-block;
+}
+
+.btn:hover::before {
+  width: 100%;
 }
 
 html {
@@ -25,7 +156,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-weight: 400;
 }
 
@@ -33,6 +164,30 @@ body {
 body::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+
+
+#scrollbar {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+::selection {
+  background-color: #ff463a;
+  color: inherit;
+}
+
+.scrollbar-track {
+  background-color: transparent !important;
+}
+
+.scrollbar-track-y {
+  width: 0 !important;
+}
+
+.scrollbar-thumb {
+  width: 0 !important;
 }
 
 .overflow {
@@ -86,12 +241,35 @@ input[type="checkbox"]:checked {
   color: #fff;
 }
 
+.text-default {
+  color: #ec4e39 !important;
+}
+
 .text-dark-primary {
   color: #b3b3b3;
 }
 
 .bg-light-secondary {
   background-color: #eaeaea;
+}
+
+.description .body {
+  position: relative;
+  display: inline;
+}
+
+.description .body {
+  margin: 0px;
+}
+
+.description .body:nth-of-type(1) span {
+  margin-right: 3px;
+}
+
+.description .body:nth-of-type(1) .masked {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
 }
 
 .mask {
@@ -158,17 +336,17 @@ input[type="checkbox"]:checked {
 .visibility {
   visibility: visible;
 }
+
 .loading-bar {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: transparent;
   border-radius: 50%;
   text-transform: uppercase;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .loading-bar:before {
@@ -259,34 +437,27 @@ input[type="checkbox"]:checked {
   transition-delay: calc(0s + 0.35s * 1.3), calc(0s + 0.35s * 1.3);
 }
 
-.sidebar.open {
-  right: 0;
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Updated Fade-in animation */
-@keyframes fadeFromRight {
+@keyframes slideFromTop {
   0% {
-    right: -70vw; /* Off-screen to the right */
+    right: -100vh;
     opacity: 0;
     visibility: visible;
   }
 
   25% {
-    right: -30vw;
+    right: -70vh;
     opacity: 0.25;
     visibility: visible;
   }
 
   50% {
-    right: -10vw;
+    right: -50vh;
     opacity: 0.5;
     visibility: visible;
   }
 
   75% {
-    right: -5vw;
+    right: -30vh;
     opacity: 0.75;
     visibility: visible;
   }
@@ -300,41 +471,47 @@ input[type="checkbox"]:checked {
 
 .sidebar {
   position: fixed;
-  top: 0;
+  right: -100vh;
   z-index: -2;
-  right: -70vw; /* Start off-screen to the right */
+  right: 0;
   width: 100%;
   height: 100%;
   transition:
     right 1s ease-in-out,
     opacity 1s ease-in-out,
-    visibility 1s ease-in-out; /* Add smooth transitions */
+    visibility 1s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .sidebar.open {
-  animation: fadeFromRight 0.5s ease-out;
+  animation: slideFromTop 0.6s ease-out;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
-.cursor {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.image-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s ease;
   pointer-events: none;
 }
 
-.bounds {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: all;
+.image-container:hover::before {
+  opacity: 1;
 }
 
-.bounds:hover {
-  transform: scale(5);
+.row-letter {
+  font-size: 28rem;
+  font-weight: 500;
+  position: relative;
+  letter-spacing: -0.8rem;
+  display: inline-block;
+  white-space: nowrap;
 }

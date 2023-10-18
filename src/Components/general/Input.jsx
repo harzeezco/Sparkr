@@ -1,17 +1,20 @@
-import * as React from "react"
+import * as React from "react";
 import PropTypes from "prop-types";
 
 const Input = React.forwardRef(
-  ({
-    label,
-    labelText,
-    autoComplete,
-    placeholder,
-    type,
-    className,
-    labelClass,
-    ...otherProps
-  }, ref) => {
+  (
+    {
+      label,
+      labelText,
+      autoComplete,
+      placeholder,
+      type,
+      className,
+      labelClass,
+      otherProps,
+    },
+    ref,
+  ) => {
     return (
       <div className="pb-2">
         <label htmlFor={label} className={labelClass}>
@@ -40,9 +43,9 @@ Input.propTypes = {
   type: PropTypes.string,
   className: PropTypes.string,
   labelClass: PropTypes.string,
+  otherProps: PropTypes.node,
 };
 
 Input.displayName = "Input";
 
 export default Input;
-

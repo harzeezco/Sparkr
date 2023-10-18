@@ -1,44 +1,36 @@
 import { BrowserRouter } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useContext, Suspense, useState } from "react";
 import useTheme from "./Hooks/useTheme";
-import { Suspense } from "react";
 import CircleContact from "./Components/general/CircleContact";
 import Loader from "./Components/general/Loader";
 import AnimateRoute from "./Animation/AnimateRoute";
+import Cursor from "./Animation/Cursor";
+import { ScaleCursorOnHoverContext } from "./Contexts/ScaleCursorOnHoverContext";
+import SmallScreenContextProvider from "./Contexts/SmallScreenContext";
+import GoogleTag from "./Components/general/GoogleAnalyticsTag";
+import CurveSideNav from "./Components/navigation/CurveSideNav";
+
+// const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
 
 function App() {
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
   const { theme } = useTheme();
+  const { scaling, isProjectHovered } = useContext(ScaleCursorOnHoverContext);
 
-  const isLight = theme === "light" ? "#fff" : "#121418";
-  const websocketInstance = useRef(null);
-
+  // Use useEffect to set isInitialLoad to false after a delay
   useEffect(() => {
-    // Initialize WebSocket connection
-    try {
-      websocketInstance.current = new WebSocket("ws://localhost:5173");
+    const delay = 1000; // Adjust the delay time as needed
+    const initialLoadTimeout = setTimeout(() => {
+      setIsInitialLoad(false);
+    }, delay);
 
-      websocketInstance.current.onopen = () => {};
-    } catch (error) {
-      console.log("WebSocket could not be initialized:", error);
-    }
-
-    // Attach event listener to close WebSocket
-    const handleBeforeUnload = () => {
-      if (websocketInstance.current) {
-        websocketInstance.current.close();
-      }
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    // Cleanup
     return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-      if (websocketInstance.current) {
-        websocketInstance.current.close();
-      }
+      clearTimeout(initialLoadTimeout);
     };
   }, []);
+
+  const isLight = theme === "light" ? "#fff" : "#121418";
+
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/service-worker")
@@ -63,9 +55,16 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loader />}>
-        <CircleContact />
-        <AnimateRoute />
+      <Suspense>
+        {isInitialLoad && <Loader />}
+        <GoogleTag />
+        <SmallScreenContextProvider>
+          <CurveSideNav />
+          <CircleContact />
+          <Cursor scaling={scaling} isProjectHovered={isProjectHovered} />
+
+          <AnimateRoute />
+        </SmallScreenContextProvider>
       </Suspense>
     </BrowserRouter>
   );
