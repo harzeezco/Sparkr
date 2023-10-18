@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import Placeholder from "../../assets/Icons/Placeholder.webp";
+import Placeholder from "../../assets/Images/Placeholder.webp";
 
 const VideoPlaceholder = ({ src }) => {
   const [isLoading, setIsLoading] = useState(true);
