@@ -9,6 +9,7 @@ import { ScaleCursorOnHoverContext } from "./Contexts/ScaleCursorOnHoverContext"
 import SmallScreenContextProvider from "./Contexts/SmallScreenContext";
 import GoogleTag from "./Components/general/GoogleAnalyticsTag";
 import CurveSideNav from "./Components/navigation/CurveSideNav";
+import { registerSW } from "virtual:pwa-register";
 
 // const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
 
@@ -31,18 +32,23 @@ function App() {
 
   const isLight = theme === "light" ? "#fff" : "#121418";
 
+  // if ("serviceWorker" in navigator) {
+  //   navigator.serviceWorker
+  //     .register("/service-worker")
+  //     .then((registration) => {
+  //       console.log(
+  //         "Service Worker registered with scope:",
+  //         registration.scope,
+  //       );
+  //     })
+  //     .catch((error) => {
+  //       console.error("Service Worker registration failed:", error);
+  //     });
+  // }
+
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("/service-worker")
-      .then((registration) => {
-        console.log(
-          "Service Worker registered with scope:",
-          registration.scope,
-        );
-      })
-      .catch((error) => {
-        console.error("Service Worker registration failed:", error);
-      });
+    // && !/localhost/.test(window.location)) {
+    registerSW();
   }
 
   useEffect(() => {
